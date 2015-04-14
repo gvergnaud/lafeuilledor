@@ -9,6 +9,7 @@ angular.module('App', [
         'App.contact',
 
         'ui.router',
+        'ngAnimate',
 
         'directives.menu',
 
@@ -18,7 +19,7 @@ angular.module('App', [
 
         $locationProvider.html5Mode(false);
         $urlRouterProvider.otherwise('/');
-        
+
     })
     .controller('AppCtrl', function($scope) {
         var app = this;

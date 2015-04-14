@@ -8,13 +8,8 @@
     <timeline></timeline>
 
     <div
-        ng-repeat="section in atlr.history"
         class="center {{section.name}}"
-        ng-class="{
-            after: atlr.current < atlr.history.indexOf(section),
-            before: atlr.current > atlr.history.indexOf(section),
-            active: atlr.current === atlr.history.indexOf(section)
-        }"
+        ng-repeat="section in atlr.history | index:atlr.current"
     >
         <p class="baseline">{{section.baseline}}</p>
         <div class="fioriture"> // </div>

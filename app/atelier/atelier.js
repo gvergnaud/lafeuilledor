@@ -2,8 +2,14 @@
 
 angular.module('App.atelier', [
         'ui.router',
+        'ngAnimate',
+
+        'animations.atelier',
+
         'directives.timeline',
-        'directives.onWheel'
+        'directives.onWheel',
+
+        'filters.index'
     ])
     .config(function($stateProvider) {
 
