@@ -1,0 +1,61 @@
+.translate(@value){
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -ms-transition: @value;
+    transition: @value;
+}
+
+@black: #202020;
+@appBorder: 40px;
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+[ui-view="main"]{
+
+    background: #EEE;
+
+    left: @appBorder;
+    right: @appBorder;
+    top: @appBorder;
+    bottom: @appBorder;
+
+    position: absolute;
+    overflow: hidden;
+
+}
+
+menu.mainMenu{
+
+    padding: 0;
+    margin: 0;
+    height: @appBorder;
+    text-align: center;
+
+    tab{
+
+        margin: 0 10px;
+        padding: 10px;
+        display: inline-block;
+
+        &.active{
+            border-bottom: 2px solid @black;
+        }
+    }
+}
+
+
+menu.lang{
+
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 75px;
+    height: @appBorder;
+
+
+}

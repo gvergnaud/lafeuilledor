@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="App">
+	<head>
+		<meta charset="utf-8">
+		<title>La Feuille d'Or</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet/less" href="styles/main.less">
+		<script src="bower_components/less.js/dist/less.js"></script>
+	</head>
+	<body ng-controller="AppCtrl as app">
+
+		<div id="container">
+			<menu class="mainMenu">
+				<tab ui-sref="atelier">atelier</tab>
+				<tab ui-sref="savoirfaire">savoir-faire</tab>
+				<tab ui-sref="galerie">réalisations</tab>
+				<tab ui-sref="formation">formations / conférences</tab>
+				<tab ui-sref="contact">contact</tab>
+			</menu>
+
+			<menu class="lang">
+				<tab>fr</tab>
+				 /
+				<tab>en</tab>
+			</menu>
+
+			<div ui-view="main"></div>
+		</div>
+
+		<!-- Lib -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<!-- Services -->
+        <script src="common/services/Api.js"></script>
+		<!-- Directives -->
+		<script src="common/directives/menu.js"></script>
+		<script src="common/directives/timeline.js"></script>
+        <script src="common/directives/onWheel.js"></script>
+		<!-- Constants -->
+        <script src="app/Constants.js"></script>
+        <!-- Controllers -->
+		<script src="app/home/home.js"></script>
+		<script src="app/atelier/atelier.js"></script>
+		<script src="app/contact/contact.js"></script>
+		<script src="app/galerie/galerie.js"></script>
+		<script src="app/formation/formation.js"></script>
+		<script src="app/savoirfaire/savoirfaire.js"></script>
+        <script src="app/app.js"></script>
+	</body>
+</html>
