@@ -4,8 +4,23 @@
     height: 100%;
     width: 100%;
 
+    div.background{
+        position: position;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+
+        img{
+            opacity: .1;
+        }
+    }
+
     div.center{
         position: absolute;
+        top: 0;
+        left: 50%;
         width: 600px;
         max-width: 100%;
         height: 100%;
@@ -16,6 +31,31 @@
         flex-direction: column;
 
         text-align: center;
+        z-index: 1;
+
+
+        .transform(translateX(-50%));
+
+        .title{
+            font-family: 'Pistilli';
+            font-size: 10rem;
+            font-weight: normal;
+        }
+
+        .baseline{
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: bold;
+        }
+
+        .fioriture{
+
+        }
+
+        .content{
+
+        }
     }
 
     &.rencontre{

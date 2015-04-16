@@ -7,14 +7,21 @@
 
     <timeline></timeline>
 
-    <div
-        class="center {{section.name}}"
-        ng-repeat="section in atlr.history | index:atlr.current"
-    >
-        <p class="baseline">{{section.baseline}}</p>
-        <div class="fioriture"> // </div>
-        <h1 class="title">{{section.title}}</h1>
-        <p class="content">{{section.content}}</p>
+
+    <div class="background" ng-repeat="section in atlr.history | index:atlr.current">
+        <img full-frame ng-src="{{section.bg}}" alt="{{name}}">
+    </div>
+
+    <div>
+        <div
+            class="center {{section.name}}"
+            ng-repeat="section in atlr.history | index:atlr.current"
+        >
+            <p class="stagger baseline">{{section.baseline}}</p>
+            <div class="stagger fioriture"> // </div>
+            <h1 class="stagger title">{{section.title}}</h1>
+            <p class="stagger content">{{section.content}}</p>
+        </div>
     </div>
 
 </div>

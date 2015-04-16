@@ -4,11 +4,7 @@ angular.module('filters.index', [])
 
         return function(array, index){
 
-            var out = [];
-
-            out.push(array[index]);
-
-            return out;
+            return [array[index]];
 
         }
 
