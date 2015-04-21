@@ -5,10 +5,15 @@
     data-up="atlr.up()"
 >
 
-    <timeline></timeline>
+    <timeline
+        frame-count="atlr.history.length"
+        data-drag-down="atlr.down()"
+        data-drag-up="atlr.up()"
+    ></timeline>
 
-
-    <div class="background" ng-repeat="section in atlr.history | index:atlr.current">
+    <div class="background" ng-repeat="(index, section) in atlr.history" ng-class="{
+        active: atlr.current === index
+    }">
         <img full-frame ng-src="{{section.bg}}" alt="{{name}}">
     </div>
 
@@ -18,7 +23,7 @@
             ng-repeat="section in atlr.history | index:atlr.current"
         >
             <p class="stagger baseline">{{section.baseline}}</p>
-            <div class="stagger fioriture"> // </div>
+            <div class="stagger fioriture"></div>
             <h1 class="stagger title">{{section.title}}</h1>
             <p class="stagger content">{{section.content}}</p>
         </div>

@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('App.savoirfaire', [
-        'ui.router'
+        'ui.router',
+        'directives.textClip'
     ])
     .config(function($stateProvider) {
 
