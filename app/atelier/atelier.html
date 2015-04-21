@@ -18,6 +18,13 @@
     </div>
 
     <div>
+
+        <div class="infos" ng-repeat="section in atlr.history | index:atlr.current">
+            <p class="date">{{section.date}}</p>
+            <div class="trait"></div>
+            <p class="lieu">{{section.lieu}}</p>
+        </div>
+
         <div
             class="center {{section.name}}"
             ng-repeat="section in atlr.history | index:atlr.current"

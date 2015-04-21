@@ -56,6 +56,50 @@
         }
     }
 
+    div.infos{
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        width: 100px;
+        font-family: 'Montserrat';
+
+        .date{
+            color: @saumon;
+            font-size: 1rem;
+            font-weight: bold;
+
+        }
+
+        .trait{
+            background-color: @gray;
+            width: 40px;
+            height: 1px;
+
+            .transition(.3s ease);
+
+            &.hidden{
+                .transition(0s);
+                width: 0;
+            }
+        }
+
+        .lieu{
+            color: @gray;
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: bold;
+
+            opacity: 1;
+
+            .transition(.7s ease);
+
+            &.hidden{
+                .transition(0s);
+                opacity: 0;
+            }
+        }
+    }
+
     div.center{
         position: absolute;
         top: 0;

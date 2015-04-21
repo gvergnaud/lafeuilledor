@@ -54,19 +54,19 @@ angular.module('App.atelier', [
 
             },
             {
-                title: 'Et maintenant !?',
+                title: 'Now !?',
                 baseline: 'la formation niga',
                 content: 'et bein maintenant, la famille ça va, inchala, sisi trankil, mais bon l temps passe vite, les enfants sont grand, la vie est court, mais bon on se plein pas, on a trop de gold tout façon donc easylife.',
-                date: 9000,
+                date: 2007,
                 lieu: 'BLcity',
                 name: 'formation',
                 bg: 'assets/images/IMG_9650.jpg'
             },
             {
-                title: 'Et maintenant !?',
+                title: 'Now !?',
                 baseline: 'la formation niga',
                 content: 'et bein maintenant, la famille ça va, inchala, sisi trankil, mais bon l temps passe vite, les enfants sont grand, la vie est court, mais bon on se plein pas, on a trop de gold tout façon donc easylife.',
-                date: 9000,
+                date: 2015,
                 lieu: 'BLcity',
                 name: 'formation',
                 bg: 'assets/images/IMG_9650.jpg'
