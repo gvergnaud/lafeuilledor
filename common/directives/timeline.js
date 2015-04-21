@@ -51,29 +51,43 @@ angular.module('directives.timeline', [])
                     timeline = generateTimeline(frameHeight, scope.frameCount);
 
                 element.append(timeline);
+
                 var pointsContainer = element[0].querySelector('.pointsContainer');
+                var bigPoints = pointsContainer.querySelectorAll('.big');
+
                 TweenMax.set(pointsContainer, {y: - frameHeight * scroll});
+
                 // Scroll down event
                 $rootScope.$on('ATELIER_SCROLL_DOWN', function(e){
                     if(scroll + 1 < scrollMax)
                         scroll += 1;
-
-                    TweenMax.to(pointsContainer, 2, {
-                        y: - frameHeight * scroll,
-                        ease: Power3.easeOut
-                    });
-
+                    animate();
                 });
                 // Scroll up event
                 $rootScope.$on('ATELIER_SCROLL_UP', function(e){
                     if(scroll > scrollMin)
                         scroll -= 1;
+                    animate();
+                });
 
-                    TweenMax.to(pointsContainer, 2, {
+
+                var animate = function(){
+                    TweenMax.set(bigPoints, {width: '', height: ''});
+
+                    var tl = new TimelineLite();
+                    tl.to(pointsContainer, 2, {
                         y: - frameHeight * scroll,
                         ease: Power3.easeOut
                     });
-                });
+                    if(bigPoints[scroll -.5]){
+                        tl.to(bigPoints[scroll -.5], 1, {
+                            y: - 1,
+                            height: 13,
+                            width: 13,
+                            ease: Elastic.easeOut
+                        });
+                    }
+                };
 
                 // DragNDrop
                 var startYPos,
