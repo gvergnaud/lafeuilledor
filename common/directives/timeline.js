@@ -102,7 +102,7 @@ angular.module('directives.timeline', [])
 
                     startYPos = e.clientY;
 
-                    element[0].style.cursor = '-webkit-grabbing';
+                    document.body.classList.add('grabbing');
 
                     document.addEventListener('mousemove', drag, false);
                     document.addEventListener('mouseup', onMouseUp, false);
@@ -114,16 +114,16 @@ angular.module('directives.timeline', [])
 
                     endYPos = e.clientY;
 
-                    element[0].style.cursor = '-webkit-grab';
+                    document.body.classList.remove('grabbing');
 
                     var diff = startYPos - endYPos;
 
-                    if(diff >= 200 && scroll + 1 < scrollMax){ // dépalcement de la timeline vers le haut
+                    if(!!attrs.dragDown && diff >= 200 && scroll + 1 < scrollMax){ // dépalcement de la timeline vers le haut
                         scope.$apply(function(){
                             scope.$eval(scope.dragDown);
                         });
                     }
-                    else if(diff <= -200 && scroll > scrollMin){ // dépalcement de la timeline vers le bas
+                    else if(!!attrs.dragUp && diff <= -200 && scroll > scrollMin){ // dépalcement de la timeline vers le bas
                         scope.$apply(function(){
                             scope.$eval(scope.dragUp);
                         });
@@ -139,7 +139,12 @@ angular.module('directives.timeline', [])
                     document.removeEventListener('mouseup', onMouseUp, false);
                 };
 
-                element.on('mousedown', onMouseDown);
+                document.addEventListener('mousedown', onMouseDown);
+
+
+                element.on('$destroy', function(){
+                    document.removeEventListener('mousedown', onMouseDown);
+                })
 
             }
         };

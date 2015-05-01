@@ -29,7 +29,7 @@ angular.module('directives.fullFrame', [])
                     parent.css({
                         overflow: 'hidden'
                     });
-					
+
                     if( (parentWidth / parentHeight) > (elementWidth / elementHeight) ){
                         element.css({
                             width: parentWidth + 'px',

@@ -50,7 +50,7 @@ angular.module('App.atelier', [
                 date: 1989,
                 lieu: 'Paris',
                 name: 'fondation',
-                bg: 'assets/images/IMG_9470.jpg'
+                bg: ''
 
             },
             {
@@ -69,7 +69,7 @@ angular.module('App.atelier', [
                 date: 2015,
                 lieu: 'BLcity',
                 name: 'formation',
-                bg: 'assets/images/IMG_9650.jpg'
+                bg: ''
             }
         ];
 

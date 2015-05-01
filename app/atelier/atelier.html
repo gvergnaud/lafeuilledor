@@ -1,4 +1,5 @@
 <div
+    id="atelierContainer"
     class="container {{atlr.history[atlr.current].name}}"
     data-on-wheel
     data-down="atlr.down()"
@@ -18,8 +19,7 @@
     </div>
 
     <div>
-
-        <div class="infos" ng-repeat="section in atlr.history | index:atlr.current">
+        <div class="infos" ng-repeat="section in atlr.history | index:atlr.current | limitTo:1">
             <p class="date">{{section.date}}</p>
             <div class="trait"></div>
             <p class="lieu">{{section.lieu}}</p>
@@ -27,11 +27,19 @@
 
         <div
             class="center {{section.name}}"
-            ng-repeat="section in atlr.history | index:atlr.current"
+            ng-repeat="section in atlr.history | index:atlr.current | limitTo:1"
         >
             <p class="stagger baseline">{{section.baseline}}</p>
             <div class="stagger fioriture"></div>
-            <h1 class="stagger title">{{section.title}}</h1>
+            <text-clip
+                class="stagger title"
+                image-url="assets/images/texture.jpg"
+                image-width="300"
+                image-height="200"
+                content="{{section.title}}"
+                text-size="200"
+            ></text-clip>
+            <!-- <h1 class="stagger title">{{section.title}}</h1> -->
             <p class="stagger content">{{section.content}}</p>
         </div>
     </div>

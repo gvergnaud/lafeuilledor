@@ -1,0 +1,26 @@
+#galerieContainer{
+
+    gallery.center{
+        position: relative;
+        max-width: 100%;
+        width: 800px;
+        height : 100%;
+        margin: 0 auto;
+
+        .thumbnail{
+
+            position: relative;
+            margin: .6%;
+
+            &:nth-child(odd){
+                height: 30%;
+            }
+
+            &:nth-child(even){
+                height: 60%;
+            }
+        }
+
+
+    }
+}

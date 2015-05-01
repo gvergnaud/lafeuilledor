@@ -1,1 +1,25 @@
-<p>galerie</p>
+<div
+    id="galerieContainer"
+    class="container"
+    data-on-wheel
+    data-down="glr.down()"
+    data-up="glr.up()"
+>
+
+    <timeline
+        data-frame-count="2"
+    ></timeline>
+
+    <gallery
+        class="center"
+        gallery-nb-col="3"
+        gallery-col-margin="10"
+        gallery-col-width="300"
+    >
+        <div gallery-element class="thumbnail" ng-repeat="post in glr.posts">
+            <img full-frame ng-src="{{post.url}}" alt="post.title"/>
+            {{post.title}}
+        </div>
+    </gallery>
+
+</div>

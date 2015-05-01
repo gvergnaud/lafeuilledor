@@ -10,15 +10,36 @@ angular.module('directives.textClip', [])
             scope: {
                 imageUrl: '@',
                 content: '@',
-                textSize: '@'
+                textSize: '@',
+                imageWidth: '@',
+                imageHeight: '@',
             },
 
             templateUrl: 'common/directives/partials/textClip.html',
 
             link: function(scope, element, attrs){
 
-                console.log(scope);
-
             }
         };
-    });
+    })
+    .directive('ngY', function (){
+
+        return {
+
+            restrict: 'A',
+
+            scope: {
+                ngY: '='
+            },
+
+            link: function(scope, element, attrs){
+                scope.$watch('ngY', function(newValue){
+                    if(newValue){
+                        element[0].setAttribute('y', newValue);
+                    }else{
+                        element[0].setAttribute('y', 0);
+                    }
+                });
+            }
+        }
+    })

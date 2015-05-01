@@ -12,22 +12,37 @@
     transform: @value;
 }
 
-// Variables
+// Colors
 @black: #202020;
-@border: 20px;
 @gray: #474747;
 @beige: #d3c6b4;
 @saumon: #ce7259;
+// sizes
+@border: 20px;
+@topBorder: 40px;
+
 
 body {
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
+
+    &.grabbing{
+        cursor: -webkit-grabbing;
+
+        #atelierContainer div.center{
+            cursor: -webkit-grabbing;
+        }
+
+        timeline{
+            cursor: -webkit-grabbing;
+        }
+    }
 }
 
 .grayscale{
-	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+  	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
@@ -60,7 +75,7 @@ div.border {
     &.top {
         top: 0;
         width: 100%;
-        height: @border;
+        height: @topBorder;
     }
     &.bottom {
         bottom: 0;
@@ -83,8 +98,7 @@ div.border {
     }
 }
 [ui-view="main"] {
-    background: #222;
-    color: #fff;
+    background-color: @saumon;
     left: 0;
     right: 0;
     top: 0;
@@ -92,6 +106,7 @@ div.border {
     position: absolute;
     overflow: hidden;
     padding: @border;
+    padding-top: @topBorder;
 }
 menu {
     z-index: 10;
@@ -118,4 +133,10 @@ menu {
         width: 75px;
         height: @border;
     }
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
