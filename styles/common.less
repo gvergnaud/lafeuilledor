@@ -16,10 +16,18 @@
 @black: #202020;
 @gray: #474747;
 @beige: #d3c6b4;
+@white: #E0D5C4;
 @saumon: #ce7259;
 // sizes
-@border: 20px;
+@border: 15px;
 @topBorder: 40px;
+// FONTS
+@title: 'Pistilli';
+@subtitle: 'Montserrat';
+// EASEs
+@easeInOut: cubic-bezier(.4,.01,.6,1);
+@easeIn: cubic-bezier(.66,.01,.66,.73);
+@easeOut: cubic-bezier(.03,.45,.08,1);
 
 
 body {
@@ -98,7 +106,6 @@ div.border {
     }
 }
 [ui-view="main"] {
-    background-color: @saumon;
     left: 0;
     right: 0;
     top: 0;
@@ -110,6 +117,12 @@ div.border {
 }
 menu {
     z-index: 10;
+    font-family: @subtitle;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    color: @gray;
+
     &.mainMenu {
         position: relative;
         padding: 0;
@@ -121,7 +134,8 @@ menu {
             padding: 10px;
             display: inline-block;
             &.active {
-                border-bottom: 2px solid @black;
+                border-bottom: 4px solid @saumon;
+                color: @saumon;
             }
         }
     }

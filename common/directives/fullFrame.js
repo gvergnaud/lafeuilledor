@@ -45,8 +45,8 @@ angular.module('directives.fullFrame', [])
 
                 style();
 
-                element[0].addEventListener('load', style);
-                window.addEventListener('resize', style);
+                element.on('load', style);
+                angular.element(window).on('resize', style);
 
             }
         }

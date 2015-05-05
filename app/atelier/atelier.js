@@ -107,6 +107,6 @@ angular.module('App.atelier', [
 
         atlr.down = function(){
             atlr.changeCurrent('down');
-        }
+        };
 
     });

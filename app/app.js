@@ -21,6 +21,10 @@ angular.module('App', [
         $urlRouterProvider.otherwise('/');
 
     })
-    .controller('AppCtrl', function($scope) {
+    .controller('AppCtrl', function($scope, Api) {
         var app = this;
+
+        Api.getAll().then(function(data){
+            console.log(data);
+        });
     });

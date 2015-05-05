@@ -12,14 +12,24 @@
 
     <gallery
         class="center"
-        gallery-nb-col="3"
-        gallery-col-margin="10"
-        gallery-col-width="300"
+        gallery-nb-col="{{glr.config.nbCol}}"
+        gallery-col-margin="{{glr.config.margin}}"
+        gallery-col-width="{{glr.config.width}}"
     >
-        <div gallery-element class="thumbnail" ng-repeat="post in glr.posts">
-            <img full-frame ng-src="{{post.url}}" alt="post.title"/>
-            {{post.title}}
+        <div
+            gallery-element
+            gallery-open-on-click="{{post.slug}}"
+            class="thumbnail"
+            ng-repeat="post in glr.posts">
+
+            <img full-frame ng-src="{{post.meta.cover.sizes.medium}}" alt="post.title"/>
+            <div class="hover">
+                <h2>{{post.title}}</h2>
+                <p>{{post.meta.description}}</p>
+            </div>
         </div>
+
+        <div ui-view="single"></div>
     </gallery>
 
 </div>

@@ -1,23 +1,94 @@
 #galerieContainer{
 
+    timeline .pointsContainer .point{
+        background-color: #000;
+    }
+
     gallery.center{
         position: relative;
         max-width: 100%;
-        width: 800px;
-        height : 100%;
+        height : 80%;
         margin: 0 auto;
 
         .thumbnail{
 
             position: relative;
-            margin: .6%;
 
             &:nth-child(odd){
-                height: 30%;
+                height: 35%;
             }
 
             &:nth-child(even){
                 height: 60%;
+            }
+
+
+
+            img {
+                .transform(translate(-50%,-50%)) !important;
+                .transition(.3s @easeInOut);
+            }
+
+            &:hover{
+                img {
+                    .transform(translate(-47%,-50%)) !important;
+                }
+            }
+
+            .hover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+
+                z-index: 1;
+
+                opacity: 0;
+                background-color: rgba(0,0,0,.5);
+
+                .transition(.4s ease);
+
+                h2 {
+                    position: absolute;
+                    bottom: 60px;
+                    width: 100%;
+                    text-align: center;
+                    font-family: @title;
+                    color: @beige;
+                    opacity: 0;
+
+                    .transform(translateY(50px));
+                    .transition(.2s @easeIn .3s);
+                }
+
+                p {
+                    position: absolute;
+                    bottom: 20px;
+                    width: 100%;
+                    text-align: center;
+                    font-family: @subtitle;
+                    color: @white;
+                    opacity: 0;
+                    .transform(translateY(50px));
+                    .transition(.2s @easeIn .2s);
+                }
+
+                &:hover{
+                    opacity: 1;
+
+                    h2{
+                        .transform(translateY(0));
+                        .transition(.4s @easeOut .2s);
+                        opacity: 1;
+                    }
+
+                    p {
+                        .transform(translateY(0));
+                        .transition(.4s @easeOut .3s);
+                        opacity: 1;
+                    }
+                }
             }
         }
 
