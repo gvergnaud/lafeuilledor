@@ -7,7 +7,9 @@
 >
 
     <timeline
-        data-frame-count="2"
+        data-frame-count="glr.nbTabs"
+        data-drag-down="glr.down()"
+        data-drag-up="glr.up()"
     ></timeline>
 
     <gallery
@@ -20,8 +22,9 @@
             gallery-element
             gallery-open-on-click="{{post.slug}}"
             class="thumbnail"
-            ng-repeat="post in glr.posts">
+            ng-repeat="post in glr.posts | slice : glr.config.postsPerPage : glr.current">
 
+            <div class="shadow"></div>
             <img full-frame ng-src="{{post.meta.cover.sizes.medium}}" alt="post.title"/>
             <div class="hover">
                 <h2>{{post.title}}</h2>

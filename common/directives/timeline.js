@@ -58,13 +58,13 @@ angular.module('directives.timeline', [])
                 TweenMax.set(pointsContainer, {y: - frameHeight * scroll});
 
                 // Scroll down event
-                $rootScope.$on('ATELIER_SCROLL_DOWN', function(e){
+                $rootScope.$on('TIMELINE_SCROLL_DOWN', function(e){
                     if(scroll + 1 < scrollMax)
                         scroll += 1;
                     animate();
                 });
                 // Scroll up event
-                $rootScope.$on('ATELIER_SCROLL_UP', function(e){
+                $rootScope.$on('TIMELINE_SCROLL_UP', function(e){
                     if(scroll > scrollMin)
                         scroll -= 1;
                     animate();

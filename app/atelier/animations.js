@@ -6,11 +6,11 @@ angular.module('animations.atelier', [])
             stagger = .1,
             translateY = 30;
 
-        $rootScope.$on('ATELIER_SCROLL_DOWN', function(){
+        $rootScope.$on('TIMELINE_SCROLL_DOWN', function(){
             direction = 'down';
         });
 
-        $rootScope.$on('ATELIER_SCROLL_UP', function(){
+        $rootScope.$on('TIMELINE_SCROLL_UP', function(){
             direction = 'up';
         });
 
@@ -20,12 +20,13 @@ angular.module('animations.atelier', [])
                 var elements = element[0].querySelectorAll('.stagger');
                 var y = direction === 'down' ? translateY : -translateY;
                 var staggerDuration = direction === 'down' ? stagger : -stagger;
+                var delay = .2 + duration + stagger * (elements.length - 1);
 
                 TweenMax.staggerFrom(elements, duration, {
                     y: y,
                     opacity: 0,
                     ease: Power2.easeOut,
-                    delay: .2 + duration + stagger * (elements.length - 1),
+                    delay: delay,
                 }, staggerDuration, done);
             },
 

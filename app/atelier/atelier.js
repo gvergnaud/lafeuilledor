@@ -78,10 +78,8 @@ angular.module('App.atelier', [
         atlr.transitionDuration = 1000;
 
         atlr.changeCurrent = function(direction){
-
             if(!atlr.isAnimate){
                 atlr.isAnimate = true;
-
 
                 setTimeout(function(){
                     atlr.isAnimate = false
@@ -89,12 +87,12 @@ angular.module('App.atelier', [
 
                 if(direction === 'up'){
                     if( atlr.current !== 0 ){
-                        $rootScope.$emit('ATELIER_SCROLL_UP');
+                        $rootScope.$emit('TIMELINE_SCROLL_UP');
                         atlr.current -= 1;
                     }
                 }else if(direction === 'down'){
                     if( atlr.current !== atlr.history.length - 1 ){
-                        $rootScope.$emit('ATELIER_SCROLL_DOWN');
+                        $rootScope.$emit('TIMELINE_SCROLL_DOWN');
                         atlr.current += 1;
                     }
                 }

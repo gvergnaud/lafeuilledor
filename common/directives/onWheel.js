@@ -24,9 +24,28 @@ angular.module('directives.onWheel', [])
                     }
                 };
 
+                var onKeydown = function(e){
+                    switch(e.which){
+                        case 38 :
+                            scope.$apply(function(){
+                                scope.$eval(attrs.up);
+                            });
+                            break;
+
+                        case 40 :
+                            scope.$apply(function(){
+                                scope.$eval(attrs.down);
+                            });
+                            break;
+                    }
+                };
+
+
                 element.on('mousewheel', onWheel);
+                angular.element(window).on('keydown', onKeydown);
 
                 element.on('$destroy', function(){
+                    angular.element(window).off('keydown', onKeydown);
                     element.off('mousewheel', onWheel);
                 });
             }

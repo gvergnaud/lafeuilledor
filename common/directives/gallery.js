@@ -109,9 +109,12 @@ angular.module('directives.gallery', [])
                     }, .1, callback);
                 };
 
-                window.addEventListener('resize', function(){
+                this.restart = function(){
                     elements = [];
-                });
+                };
+
+                window.addEventListener('resize', this.restart);
+                $rootScope.$on('GALLERY_RESTART', this.restart);
             }
         };
     })
@@ -132,7 +135,8 @@ angular.module('directives.gallery', [])
                     element.css({
                         position: 'absolute',
                         width: position.width + 'px',
-                        transform: 'translate(' + position.x + 'px, ' + position.y + 'px)'
+                        left: position.x + 'px',
+                        top: position.y + 'px'
                     });
                 };
 

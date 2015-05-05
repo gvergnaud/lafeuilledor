@@ -14,6 +14,28 @@
 
             position: relative;
 
+            .transition(1s ease);
+
+            &.ng-enter{
+                .transform(translateY(1000px));
+                opacity: 0;
+                transition-delay: .5s;
+            }
+
+            &.ng-enter-active, &.ng-leave{
+                .transform(translateY(0));
+                opacity: 1;
+            }
+
+            &.ng-leave-active{
+                .transform(translateY(-1000px));
+                opacity: 0;
+            }
+
+            &.ng-enter-stagger, &.ng-leave-stagger{
+                .transition(0s ease .05s);
+            }
+
             &:nth-child(odd){
                 height: 35%;
             }
@@ -22,7 +44,13 @@
                 height: 60%;
             }
 
-
+            .shadow{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                .box-shadow(inset 0px 0px 50px 10px rgba(0, 0, 0, .7));
+            }
 
             img {
                 .transform(translate(-50%,-50%)) !important;

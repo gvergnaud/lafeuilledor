@@ -12,6 +12,13 @@
     transform: @value;
 }
 
+.box-shadow(@value){
+    box-shadow: @value;
+    -webkit-box-shadow: @value;
+    -moz-box-shadow: @value;
+    -o-box-shadow: @value;
+}
+
 // Colors
 @black: #202020;
 @gray: #474747;
@@ -114,6 +121,8 @@ div.border {
     overflow: hidden;
     padding: @border;
     padding-top: @topBorder;
+
+    background-color: #eee;
 }
 menu {
     z-index: 10;
