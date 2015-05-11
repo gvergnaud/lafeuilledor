@@ -7,6 +7,7 @@ angular.module('services.Api', [
         // Service logic
 
         var _data= {
+            menu: false,
             histoire: false,
             savoirFaire: false,
             realisations: false,
@@ -14,35 +15,52 @@ angular.module('services.Api', [
             formations: false
         };
 
+        var _language = 'fr';
+
         // Public API here
         var Api = {
 
-            url: SERVER.API_FR,
 
             setLanguage: function(language){
                 switch (language){
                     case 'fr':
-                        Api.url = SERVER.API_FR;
+                        _language = 'fr';
                         break;
 
                     case 'en':
-                        Api.url = SERVER.API_EN;
+                        _language = 'en';
                         break;
                 }
             },
 
             getHistoire: function(){
 
-                var deferred = $q.defer();
+                var deferred = $q.defer(),
+                    histoire = [];
 
                 if(!_data.histoire){
 
-                    $http.get(Api.url + '/posts?type=histoire')
+                    $http.get(SERVER.API + '/posts?type=histoire')
                         .success(function(data){
-                            _data.histoire = data;
-                            deferred.resolve(data);
+
+
+                            angular.forEach(data, function(story){
+                                histoire.push({
+                                    name: story.meta.name,
+                                    date: story.meta.date,
+                                    lieu: story.meta.lieu,
+                                    image: story.meta.image,
+                                    title: (_language === 'fr') ? story.title : story.meta.en_title,
+                                    content: (_language === 'fr') ? story.meta.content : story.meta.en_content,
+                                    baseline: (_language === 'fr') ? story.meta.baseline : story.meta.en_baseline
+                                });
+                            });
+
+
+                            _data.histoire = histoire;
+                            deferred.resolve(histoire);
                         })
-                        .error(function (data, status){
+                        .error(function(data, status){
                             deferred.reject(data);
                         });
                 }else{
@@ -53,14 +71,26 @@ angular.module('services.Api', [
             },
 
             getSavoirFaire: function(){
-                var deferred = $q.defer();
+                var deferred = $q.defer(),
+                    savoirFaire = [];
 
                 if(!_data.savoirFaire){
 
-                    $http.get(Api.url + '/posts?type=savoir_faire')
+                    $http.get(SERVER.API + '/posts?type=savoir_faire')
                         .success(function(data){
-                            _data.savoirFaire = data;
-                            deferred.resolve(data);
+
+
+                            angular.forEach(data, function(savoir){
+                                savoirFaire.push({
+                                    image: savoir.meta.image,
+                                    title: (_language === 'fr') ? savoir.title : savoir.meta.en_title,
+                                    content: (_language === 'fr') ? savoir.meta.content : savoir.meta.en_content,
+                                    baseline: (_language === 'fr') ? savoir.meta.baseline : savoir.meta.en_baseline
+                                });
+                            });
+
+                            _data.savoirFaire = savoirFaire;
+                            deferred.resolve(savoirFaire);
                         })
                         .error(function (data, status){
                             deferred.reject(data);
@@ -73,15 +103,29 @@ angular.module('services.Api', [
             },
 
             getRealisations: function(){
-                var deferred = $q.defer();
+                var deferred = $q.defer(),
+                    realisations = [];
 
                 if(!_data.realisations){
 
-                    // $http.get(Api.url + '/posts?type=realisations')
+                    // $http.get(SERVER.API + '/posts?type=realisations')
                     $http.get('realisations.json')
                         .success(function(data){
-                            _data.realisations = data;
-                            deferred.resolve(data);
+
+
+                            angular.forEach(data, function(realisation){
+                                realisations.push({
+                                    date: realisation.meta.date,
+                                    pictures: realisation.meta.pictures,
+                                    cover: realisation.meta.cover,
+                                    title: (_language === 'fr') ? realisation.title : realisation.meta.en_title,
+                                    description: (_language === 'fr') ? realisation.meta.description : realisation.meta.en_description
+                                });
+                            });
+
+
+                            _data.realisations = realisations;
+                            deferred.resolve(realisations);
                         })
                         .error(function (data, status){
                             deferred.reject(data);
@@ -94,14 +138,28 @@ angular.module('services.Api', [
             },
 
             getConferences: function(){
-                var deferred = $q.defer();
+                var deferred = $q.defer(),
+                    conferences = [];
 
                 if(!_data.conferences){
 
-                    $http.get(Api.url + '/posts?type=conference')
+                    $http.get(SERVER.API + '/posts?type=conference')
                         .success(function(data){
-                            _data.conferences = data;
-                            deferred.resolve(data);
+
+
+                            angular.forEach(data, function(conference){
+                                conferences.push({
+                                    image: conference.meta.image,
+                                    title: (_language === 'fr') ? conference.title : conference.meta.en_title,
+                                    description: (_language === 'fr') ? conference.meta.description : conference.meta.en_description,
+                                    level: (_language === 'fr') ? conference.meta.level : conference.meta.en_level,
+                                    duree: (_language === 'fr') ? conference.meta.duree : conference.meta.en_duree
+                                });
+                            });
+
+
+                            _data.conferences = conferences;
+                            deferred.resolve(conferences);
                         })
                         .error(function (data, status){
                             deferred.reject(data);
@@ -114,14 +172,28 @@ angular.module('services.Api', [
             },
 
             getFormations: function(){
-                var deferred = $q.defer();
+                var deferred = $q.defer(),
+                    formations = [];
 
                 if(!_data.formations){
 
-                    $http.get(Api.url + '/posts?type=formation')
+                    $http.get(SERVER.API + '/posts?type=formation')
                         .success(function(data){
-                            _data.formations = data;
-                            deferred.resolve(data);
+
+
+                            angular.forEach(data, function(formation){
+                                formations.push({
+                                    image: formation.meta.image,
+                                    title: (_language === 'fr') ? formation.title : formation.meta.en_title,
+                                    description: (_language === 'fr') ? formation.meta.description : formation.meta.en_description,
+                                    level: (_language === 'fr') ? formation.meta.level : formation.meta.en_level,
+                                    duree: (_language === 'fr') ? formation.meta.duree : formation.meta.en_duree
+                                });
+                            });
+
+
+                            _data.formations = formations;
+                            deferred.resolve(formations);
                         })
                         .error(function (data, status){
                             deferred.reject(data);
@@ -133,36 +205,51 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-            getAll: function(){
 
+            getMenu: function(){
                 var deferred = $q.defer(),
-                    resolved = {};
+                    menu = {};
 
-                function resolve(name) {
-                    resolved[name] = true;
-                    if (resolved.histoire && resolved.savoirFaire && resolved.realisations && resolved.formations && resolved.conferences) {
-                        deferred.resolve(_data);
-                    }
+                if(!_data.menu){
+
+                    $http.get(SERVER.API + '/posts?type=menu')
+                        .success(function(data){
+                            console.log(data);
+
+                            menu.atelier = (_language === 'fr') ? data[0].meta.atelier : data[0].meta.en_atelier;
+                            menu.savoir_faire = (_language === 'fr') ? data[0].meta.savoir_faire : data[0].meta.en_savoir_faire;
+                            menu.galerie = (_language === 'fr') ? data[0].meta.galerie : data[0].meta.en_galerie;
+                            menu.transmission = (_language === 'fr') ? data[0].meta.transmission : data[0].meta.en_transmission;
+                            menu.contact = data[0].meta.contact;
+
+
+                            _data.menu = menu;
+                            deferred.resolve(menu);
+                        })
+                        .error(function (data, status){
+                            deferred.reject(data);
+                        });
+                }else{
+                    deferred.resolve(_data.menu);
                 }
 
-                this.getHistoire().then(function(){
-                    resolve('histoire');
-                });
+                return deferred.promise;
+            },
 
-                this.getSavoirFaire().then(function(){
-                    resolve('savoirFaire');
-                });
 
-                this.getRealisations().then(function(){
-                    resolve('realisations');
-                });
+            getAll: function(){
 
-                this.getFormations().then(function(){
-                    resolve('formations');
-                });
+                var deferred = $q.defer();
 
-                this.getConferences().then(function(){
-                    resolve('conferences');
+                $q.all([
+                    this.getHistoire(),
+                    this.getSavoirFaire(),
+                    this.getRealisations(),
+                    this.getFormations(),
+                    this.getConferences(),
+                    this.getMenu()
+                ]).then(function(){
+                    deferred.resolve(_data);
                 });
 
                 return deferred.promise;

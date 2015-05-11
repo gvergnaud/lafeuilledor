@@ -25,14 +25,14 @@
             ng-repeat="post in glr.posts | slice : glr.config.postsPerPage : glr.current">
 
             <div class="shadow"></div>
-            <img full-frame ng-src="{{post.meta.cover.sizes.medium}}" alt="post.title"/>
+            <img full-frame ng-src="{{post.cover.sizes.medium}}" alt="post.title"/>
             <div class="hover">
                 <h2>{{post.title}}</h2>
-                <p>{{post.meta.description}}</p>
+                <p>{{post.description}}</p>
             </div>
         </div>
 
-        <div ui-view="single"></div>
     </gallery>
+    <div ui-view="single"></div>
 
 </div>
