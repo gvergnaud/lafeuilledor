@@ -46,6 +46,7 @@ angular.module('services.Api', [
 
                             angular.forEach(data, function(story){
                                 histoire.push({
+                                    slug: story.slug,
                                     name: story.meta.name,
                                     date: story.meta.date,
                                     lieu: story.meta.lieu,
@@ -82,6 +83,7 @@ angular.module('services.Api', [
 
                             angular.forEach(data, function(savoir){
                                 savoirFaire.push({
+                                    slug: savoir.slug,
                                     image: savoir.meta.image,
                                     title: (_language === 'fr') ? savoir.title : savoir.meta.en_title,
                                     content: (_language === 'fr') ? savoir.meta.content : savoir.meta.en_content,
@@ -115,6 +117,7 @@ angular.module('services.Api', [
 
                             angular.forEach(data, function(realisation){
                                 realisations.push({
+                                    slug: realisation.slug,
                                     date: realisation.meta.date,
                                     pictures: realisation.meta.pictures,
                                     cover: realisation.meta.cover,
@@ -149,6 +152,7 @@ angular.module('services.Api', [
 
                             angular.forEach(data, function(conference){
                                 conferences.push({
+                                    slug: conference.slug,
                                     image: conference.meta.image,
                                     title: (_language === 'fr') ? conference.title : conference.meta.en_title,
                                     description: (_language === 'fr') ? conference.meta.description : conference.meta.en_description,
@@ -183,6 +187,7 @@ angular.module('services.Api', [
 
                             angular.forEach(data, function(formation){
                                 formations.push({
+                                    slug: formation.slug,
                                     image: formation.meta.image,
                                     title: (_language === 'fr') ? formation.title : formation.meta.en_title,
                                     description: (_language === 'fr') ? formation.meta.description : formation.meta.en_description,
@@ -214,7 +219,6 @@ angular.module('services.Api', [
 
                     $http.get(SERVER.API + '/posts?type=menu')
                         .success(function(data){
-                            console.log(data);
 
                             menu.atelier = (_language === 'fr') ? data[0].meta.atelier : data[0].meta.en_atelier;
                             menu.savoir_faire = (_language === 'fr') ? data[0].meta.savoir_faire : data[0].meta.en_savoir_faire;

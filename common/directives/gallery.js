@@ -11,11 +11,12 @@ angular.module('directives.gallery', [])
                 nbCol: '@galleryNbCol',
                 margin: '@galleryColMargin',
                 width: '@galleryColWidth',
+                isThumbnailsOpen: '='
             },
 
             transclude: true,
 
-            template: '<ng-transclude></ng-transclude>',
+            template: '<div ng-transclude></div>',
 
             link: function(scope, gallery, attrs){
 
@@ -49,10 +50,9 @@ angular.module('directives.gallery', [])
                 scope.$watch('galleryColMargin', emitChange);
                 scope.$watch('galleryColWidth', emitChange);
 
-
             },
 
-            controller: function($scope){
+            controller: function($scope, $state){
                 var elements = [];
 
                 // recupère la position en x en fonction de index de l'element modulo le nombre de colone
@@ -96,22 +96,40 @@ angular.module('directives.gallery', [])
                 };
 
                 this.closeThumbnails = function(callback){
-                    TweenMax.staggerTo(elements, .7, {
-                        width: 0,
-                        ease: Power4.easeInOut
-                    }, .1, callback);
+                    if ($scope.isThumbnailsOpen) {
+
+                        $scope.isThumbnailsOpen = false;
+
+                        TweenMax.staggerTo(elements, .7, {
+                            width: 0,
+                            ease: Power4.easeInOut
+                        }, .1, callback);
+                    }
                 };
 
                 this.openThumbnails = function(callback){
-                    TweenMax.staggerTo(elements, .7, {
-                        width: $scope.width,
-                        ease: Power4.easeInOut
-                    }, .1, callback);
+                    if (!$scope.isThumbnailsOpen) {
+
+                        $scope.isThumbnailsOpen = true;
+
+                        TweenMax.staggerTo(elements, .7, {
+                            width: $scope.width,
+                            ease: Power4.easeInOut
+                        }, .1, callback);
+                    }
                 };
 
                 this.restart = function(){
                     elements = [];
                 };
+
+                var that = this;
+
+                $rootScope.$on('$stateChangeSuccess', function($event, state, lastState){
+                    if(state.name === 'galerie'){
+                        that.openThumbnails();
+                    }
+                });
 
                 window.addEventListener('resize', this.restart);
                 $rootScope.$on('GALLERY_RESTART', this.restart);
@@ -164,24 +182,6 @@ angular.module('directives.gallery', [])
                 element.on('click', function(){
                     galleryCtrl.closeThumbnails(function(){
                         $state.go('galerie.single', {slug: attrs.galleryOpenOnClick});
-                    });
-                });
-            }
-        };
-    })
-    .directive('galleryCloseOnClick', function($state){
-
-        return {
-
-            restrict: 'A',
-
-            require: '^gallery',
-
-            link: function(scope, element, attrs, galleryCtrl){
-
-                element.on('click', function(){
-                    galleryCtrl.openThumbnails(function(){
-                        $state.go('galerie');
                     });
                 });
             }

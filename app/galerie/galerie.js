@@ -32,7 +32,7 @@ angular.module('App.galerie', [
                 }
             });
     })
-    .controller('GalerieCtrl', function($scope, $rootScope, realisations) {
+    .controller('GalerieCtrl', function($scope, $rootScope, $state, realisations) {
 
         var glr = this;
 
@@ -48,11 +48,13 @@ angular.module('App.galerie', [
         glr.current = 0;
         glr.nbTabs = Math.ceil(glr.posts.length / glr.config.postsPerPage);
 
+        glr.isThumbnailsOpen = $state.current.name === 'galerie';
+
         glr.isAnimate = false;
         glr.transitionDuration = 1000;
 
         glr.changeCurrent = function(direction){
-            if(!glr.isAnimate){
+            if(!glr.isAnimate && glr.isThumbnailsOpen){
                 glr.isAnimate = true;
 
                 setTimeout(function(){

@@ -1,0 +1,81 @@
+[ui-view="single"]{
+
+
+
+    #singleContainer{
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        .infos{
+            position: absolute;
+            width: 300px;
+            top: 50px;
+            right: 50px;
+
+            z-index: 5;
+            background-color: rgba(0,0,0,.5);
+
+            h1{
+                font-family: @title;
+            }
+        }
+
+        .Slider{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            background-color: @black;
+
+            &-arrow{
+
+                position: absolute;
+                height: 50px;
+                width: 50px;
+                top: 50%;
+
+                z-index: 10;
+
+                background-color: #fff;
+                .transform(translateY(-50%));
+
+                &.left{
+                    left: 0;
+                }
+
+                &.right{
+                    right: 0;
+                }
+            }
+
+            &-count{
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+
+                z-index: 5;
+
+                color: #fff;
+                font-family: @subtitle;
+                font-size: 14px;
+            }
+
+            slider-image{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+                &.ng-leave{
+                    z-index: 0;
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -4,7 +4,10 @@ angular.module('App.galerie.single', [
         'ui.router',
         'ngAnimate',
 
+        'directives.slider',
         'directives.fullFrame',
+
+        'filters.index'
     ])
     .config(function($stateProvider) {
 

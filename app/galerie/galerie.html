@@ -17,6 +17,7 @@
         gallery-nb-col="{{glr.config.nbCol}}"
         gallery-col-margin="{{glr.config.margin}}"
         gallery-col-width="{{glr.config.width}}"
+        is-thumbnails-open="glr.isThumbnailsOpen"
     >
         <div
             gallery-element
@@ -31,8 +32,8 @@
                 <p>{{post.description}}</p>
             </div>
         </div>
-
     </gallery>
+
     <div ui-view="single"></div>
 
 </div>

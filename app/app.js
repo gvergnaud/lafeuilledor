@@ -24,8 +24,7 @@ angular.module('App', [
     .controller('AppCtrl', function($scope, Api) {
         var app = this;
 
-        Api.setLanguage('en');
         Api.getAll().then(function(data){
-            console.log(data);
+            
         });
     });
