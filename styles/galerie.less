@@ -1,3 +1,54 @@
+
+.animate-down{
+    &.ng-enter, &.ng-leave{
+        .transition(.9s ease);
+    }
+    &.ng-enter{
+        .transform(translateY(1000px));
+        opacity: 0;
+        transition-delay: .5s;
+    }
+
+    &.ng-enter-active, &.ng-leave{
+        .transform(translateY(0));
+        opacity: 1;
+    }
+
+    &.ng-leave-active{
+        .transform(translateY(-1000px));
+        opacity: 0;
+    }
+
+    &.ng-enter-stagger, &.ng-leave-stagger{
+        .transition(0s ease .05s);
+    }
+}
+
+.animate-up{
+    &.ng-enter, &.ng-leave{
+        .transition(.9s ease);
+    }
+    &.ng-enter{
+        .transform(translateY(-1000px));
+        opacity: 0;
+        transition-delay: .5s;
+    }
+
+    &.ng-enter-active, &.ng-leave{
+        .transform(translateY(0));
+        opacity: 1;
+    }
+
+    &.ng-leave-active{
+        .transform(translateY(1000px));
+        opacity: 0;
+    }
+
+    &.ng-enter-stagger, &.ng-leave-stagger{
+        .transition(0s ease -.05s);
+    }
+}
+
 #galerieContainer{
 
     timeline .pointsContainer .point{
@@ -13,29 +64,7 @@
         .thumbnail{
 
             position: relative;
-
-            &.ng-enter, &.ng-leave{
-                .transition(1s ease);
-            }
-            &.ng-enter{
-                .transform(translateY(1000px));
-                opacity: 0;
-                transition-delay: .5s;
-            }
-
-            &.ng-enter-active, &.ng-leave{
-                .transform(translateY(0));
-                opacity: 1;
-            }
-
-            &.ng-leave-active{
-                .transform(translateY(-1000px));
-                opacity: 0;
-            }
-
-            &.ng-enter-stagger, &.ng-leave-stagger{
-                .transition(0s ease .05s);
-            }
+            background-color: @black;
 
             &:nth-child(odd){
                 height: 35%;

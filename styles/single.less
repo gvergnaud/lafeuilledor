@@ -10,16 +10,37 @@
 
         .infos{
             position: absolute;
-            width: 300px;
-            top: 50px;
-            right: 50px;
+            width: 200px;
+            top: 20px;
+            right: 20px;
 
-            z-index: 5;
-            background-color: rgba(0,0,0,.5);
+            padding: 50px;
+
+            z-index: 11;
+            background-color: @opaqueBlack;
 
             h1{
+                color: @saumon;
                 font-family: @title;
+                font-size: 1.5rem;
             }
+
+            p{
+                color: #fff;
+            }
+        }
+
+        .back{
+            width: 275px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            z-index: 11;
+
+            font-weight: normal;
+            font-size: 13px;
+            text-transform: none;
+            .transform(translateX(-50%));
         }
 
         .Slider{
@@ -28,7 +49,7 @@
             height: 100%;
             overflow: hidden;
 
-            background-color: @black;
+            background-color: @opaqueBlack;
 
             &-arrow{
 
@@ -37,41 +58,46 @@
                 width: 50px;
                 top: 50%;
 
-                z-index: 10;
+                cursor: pointer;
+                z-index: 11;
 
-                background-color: #fff;
                 .transform(translateY(-50%));
 
                 &.left{
-                    left: 0;
+                    left: 20px;
                 }
 
                 &.right{
-                    right: 0;
+                    right: 20px;
                 }
             }
 
             &-count{
                 position: absolute;
-                bottom: 20px;
-                right: 20px;
+                bottom: 0px;
+                width: 100%;
+                height: 6px;
 
-                z-index: 5;
+                background-color: rgba(0,0,0, .5);
+                z-index: 11;
 
-                color: #fff;
-                font-family: @subtitle;
-                font-size: 14px;
+                &-progress{
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+
+                    background-color: @darkSaumon;
+                    .transition(1s ease);
+                }
             }
 
             slider-image{
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                z-index: 1;
+                z-index: 10;
 
-                &.ng-leave{
-                    z-index: 0;
-                }
+                .box-shadow(0px 0px 300px 10px @opaqueBlack);
             }
 
         }

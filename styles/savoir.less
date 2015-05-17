@@ -1,0 +1,85 @@
+#savoirContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+
+    nav{
+
+    }
+
+    .Details{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: 0;
+        padding-right: 7%;
+        box-sizing: border-box;
+        overflow: auto;
+
+        background-color: @beige;
+
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        arrow-left{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+
+            cursor: pointer;
+            z-index: 11;
+
+            .transform(translateY(-50%));
+
+            left: 20px;
+        }
+
+        &-content{
+            width: 500px;
+            max-width: 90%;
+
+            h1{
+                margin: 2rem 0;
+                text-align: right;
+                font-family: @title;
+                font-size: 2.5rem;
+                color: @black;
+            }
+
+            h2{
+                margin: 2rem 0;
+                text-align: right;
+                font-family: @subtitle;
+                font-weight: normal;
+                font-size: 1.5rem;
+                color: @saumon;
+            }
+
+            p{
+                margin: 2rem 0;
+                margin-left: 50px;
+                text-align: right;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            &-contact{
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .Picture{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0;
+
+        background-color: @black;
+    }
+}

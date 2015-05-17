@@ -37,5 +37,4 @@ angular.module('App.galerie.single', [
         });
 
         sgl.post = post[0];
-
     });

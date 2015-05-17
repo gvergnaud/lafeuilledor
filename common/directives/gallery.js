@@ -40,6 +40,7 @@ angular.module('directives.gallery', [])
                 var emitChange = function(){
                     parseValues();
                     setStyle();
+                    // $rootScope.$emit('GALLERY_RESTART');
                     $rootScope.$emit('GALLERY_VALUE_CHANGE');
                 };
 
@@ -49,6 +50,8 @@ angular.module('directives.gallery', [])
                 scope.$watch('galleryNbCol', emitChange);
                 scope.$watch('galleryColMargin', emitChange);
                 scope.$watch('galleryColWidth', emitChange);
+
+                window.addEventListener('resize', emitChange);
 
             },
 
@@ -131,7 +134,6 @@ angular.module('directives.gallery', [])
                     }
                 });
 
-                window.addEventListener('resize', this.restart);
                 $rootScope.$on('GALLERY_RESTART', this.restart);
             }
         };
@@ -161,7 +163,6 @@ angular.module('directives.gallery', [])
                 setPosition();
 
                 $rootScope.$on('GALLERY_VALUE_CHANGE', setPosition);
-                window.addEventListener('resize', setPosition);
 
                 element.on('$destroy', function(){
                     galleryCtrl.removeElement(element);

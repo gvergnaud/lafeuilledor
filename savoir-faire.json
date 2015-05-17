@@ -1,0 +1,463 @@
+[{
+    "ID": 154,
+    "title": "Personnalisation Press-Book",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/personnalisation-press-book\/",
+    "date": "2015-05-14T17:59:44",
+    "modified": "2015-05-14T17:59:44",
+    "format": "standard",
+    "slug": "personnalisation-press-book",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=154",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:59:44",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T16:59:44",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/154",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/154\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/154\/revisions"
+        },
+        "baseline": "Des objets qui vous ressemblent",
+        "content": "Nous pouvons rendre uniques tous les objets qui vous sont pr\u00e9cieux:\r\nLivres d'Or\r\nLivres de Mariages\r\nLivres de Naissance\r\nLivres d'anniversaire\r\nLivres de Famille : G\u00e9n\u00e9alogie\r\nInitiales\r\nPress-book\r\nLogos\r\nLivres et coffrets de Pr\u00e9sentations",
+        "image": "",
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 153,
+    "title": "Faux-Livre",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/faux-livres\/",
+    "date": "2015-05-14T17:57:55",
+    "modified": "2015-05-14T17:57:55",
+    "format": "standard",
+    "slug": "faux-livres",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=153",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:57:55",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T16:57:55",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/153",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/153\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/153\/revisions"
+        },
+        "baseline": "Une fausse Biblioth\u00e8que",
+        "content": "Pour maquiller une porte de biblioth\u00e8que ancienne ou pour une ambiance intimiste, nous cr\u00e9ons de fausses biblioth\u00e8ques et de faux livres s'adaptant \u00e0 votre int\u00e9rieur",
+        "image": "",
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 152,
+    "title": "Restauration",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/restauration\/",
+    "date": "2015-05-14T17:57:05",
+    "modified": "2015-05-14T19:19:56",
+    "format": "standard",
+    "slug": "restauration",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=152",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:57:05",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T18:19:56",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/152",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/152\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/152\/revisions"
+        },
+        "baseline": "Retouches de dorure",
+        "content": "Anciens restaurateurs des ateliers de la Biblioth\u00e8que Nationale de France, Pascale Th\u00e9rond & Michel Vatonne ont appris \u00e0 maitriser les techniques de restauration, retouches et patinage des diverses \u00e9poques pour compl\u00e9ter toutes vos restaurations",
+        "image": {
+            "ID": 164,
+            "id": 164,
+            "alt": "",
+            "title": "IMG_9505",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_95051.jpg",
+            "width": 0,
+            "height": 0,
+            "sizes": {
+                "thumbnail": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_95051.jpg",
+                "thumbnail-width": 1,
+                "thumbnail-height": 1,
+                "medium": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_95051.jpg",
+                "medium-width": 1,
+                "medium-height": 1,
+                "large": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_95051.jpg",
+                "large-width": 1,
+                "large-height": 1
+            }
+        },
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 151,
+    "title": "Pastiche d'Anciens",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/pastiches-danciens\/",
+    "date": "2015-05-14T17:55:44",
+    "modified": "2015-05-14T17:55:44",
+    "format": "standard",
+    "slug": "pastiches-danciens",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=151",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:55:44",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T16:55:44",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/151",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/151\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/151\/revisions"
+        },
+        "baseline": "Dorures de style",
+        "content": "Une connaissance bien maitris\u00e9e de l'histoire du livre, de la reliure et des styles de d\u00e9cors \u00e0 travers les \u00e2ges alli\u00e9e \u00e0 une collection de fers bien choisis permettent \u00e0 l'Atelier La Feuille d'Or de r\u00e9aliser des d\u00e9cors de toutes \u00e9poques",
+        "image": "",
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 149,
+    "title": "Dorure Contemporaine",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/dorure-contemporaine\/",
+    "date": "2015-05-14T17:53:12",
+    "modified": "2015-05-14T17:53:12",
+    "format": "standard",
+    "slug": "dorure-contemporaine",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=149",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:53:12",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T16:53:12",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/149",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/149\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/149\/revisions"
+        },
+        "baseline": "Du XX\u00b0 si\u00e8cle \u00e0 nos jours",
+        "content": "L'explosion artistique du XX\u00b0 si\u00e8cle a impliqu\u00e9 une \u00e9volution des techniques de dorure et de d\u00e9cor du livre. La diversification des mat\u00e9riaux de couvrure utilis\u00e9s et des structures de reliures ont conduit tout naturellement l'Atelier La Feuille d'Or \u00e0 entrer dans ce mouvement de recherche et d'innovation des techniques pour servir vos cr\u00e9ations.\r\nLes cr\u00e9ateurs de reliures font appel \u00e0 nous pour la r\u00e9alisation de leurs \u0153uvres, et le nom de \"La Feuille d'Or\" appara\u00eet dans de nombreux catalogues d\u2019exposition au titre de collaborateur ou en remerciement\r\n",
+        "image": "",
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 132,
+    "title": "Dorure Courante",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 2,
+        "username": "Pascale",
+        "name": "Pascale Th\u00e9rond",
+        "first_name": "Pascale",
+        "last_name": "Th\u00e9rond",
+        "nickname": "Pascale",
+        "slug": "pascale",
+        "URL": "http:\/\/lafeuilledor.paris",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/7f01146904ae8a917cea4975d65f0fae?s=96",
+        "description": "",
+        "registered": "2015-05-13T13:01:20+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/dorure-courante\/",
+    "date": "2015-05-14T17:04:42",
+    "modified": "2015-05-14T18:39:35",
+    "format": "standard",
+    "slug": "dorure-courante",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=132",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-14T16:04:42",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T17:39:35",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/132",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/2",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/132\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/132\/revisions"
+        },
+        "baseline": "marquage \u00e0 chaud en dor\u00e9 ou couleur",
+        "content": "- \u00e9tiquettes et pi\u00e8ces de titre en simili-cuir pour reliure en toile \r\n- marquages sur emboitages\r\n- petites s\u00e9ries pour maroquinerie",
+        "image": {
+            "ID": 163,
+            "id": 163,
+            "alt": "",
+            "title": "IMG_9470",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_94702.jpg",
+            "width": 0,
+            "height": 0,
+            "sizes": {
+                "thumbnail": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_94702.jpg",
+                "thumbnail-width": 1,
+                "thumbnail-height": 1,
+                "medium": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_94702.jpg",
+                "medium-width": 1,
+                "medium-height": 1,
+                "large": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_94702.jpg",
+                "large-width": 1,
+                "large-height": 1
+            }
+        },
+        "en_title": "current gilt",
+        "en_baseline": "hotstamping in gold and foil",
+        "en_content": ""
+    },
+    "terms": []
+}, {
+    "ID": 18,
+    "title": "Dorure Classique",
+    "status": "publish",
+    "type": "savoir_faire",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/savoir_faire\/alors-voila-voila\/",
+    "date": "2015-05-01T12:38:05",
+    "modified": "2015-05-14T18:30:49",
+    "format": "standard",
+    "slug": "alors-voila-voila",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=savoir_faire&#038;p=18",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-01T11:38:05",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-14T17:30:49",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/18",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/18\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/18\/revisions"
+        },
+        "content": "Nous utilisons tous nos outils : filets, fleurons, palettes, roulettes et caract\u00e8res pour titrer et d\u00e9corer \u00e0 la feuille vos reliures et objets en cuir",
+        "image": {
+            "ID": 137,
+            "id": 137,
+            "alt": "",
+            "title": "IMG_9562",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9562.jpg",
+            "width": 0,
+            "height": 0,
+            "sizes": {
+                "thumbnail": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9562.jpg",
+                "thumbnail-width": 1,
+                "thumbnail-height": 1,
+                "medium": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9562.jpg",
+                "medium-width": 1,
+                "medium-height": 1,
+                "large": "http:\/\/lafeuilledor.paris\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9562.jpg",
+                "large-width": 1,
+                "large-height": 1
+            }
+        },
+        "baseline": "\u00e0 la feuille d'or 22 carats",
+        "en_title": "",
+        "en_baseline": "",
+        "en_content": ""
+    },
+    "terms": []
+}]

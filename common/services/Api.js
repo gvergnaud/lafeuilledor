@@ -33,6 +33,10 @@ angular.module('services.Api', [
                 }
             },
 
+            getLanguage: function(){
+                return _language;
+            },
+
             getHistoire: function(){
 
                 var deferred = $q.defer(),
@@ -77,7 +81,8 @@ angular.module('services.Api', [
 
                 if(!_data.savoirFaire){
 
-                    $http.get(SERVER.API + '/posts?type=savoir_faire')
+                    // $http.get(SERVER.API + '/posts?type=savoir_faire')
+                    $http.get('savoir-faire.json')
                         .success(function(data){
 
 

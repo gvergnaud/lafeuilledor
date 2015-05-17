@@ -22,7 +22,7 @@
         <div
             gallery-element
             gallery-open-on-click="{{post.slug}}"
-            class="thumbnail"
+            class="thumbnail animate-{{glr.direction}}"
             ng-repeat="post in glr.posts | slice : glr.config.postsPerPage : glr.current">
 
             <div class="shadow"></div>

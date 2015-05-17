@@ -12,7 +12,8 @@ angular.module('directives.onWheel', [])
             link: function(scope, element, attrs){
 
                 var onWheel = function(e){
-                    if(e.wheelDelta < 0){
+                    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                    if(delta < 0){
                         scope.$apply(function(){
                             scope.$eval(attrs.down);
                         });
@@ -41,12 +42,16 @@ angular.module('directives.onWheel', [])
                 };
 
 
+
+
                 element.on('mousewheel', onWheel);
+                element.on('DOMMouseScroll', onWheel);
                 angular.element(window).on('keydown', onKeydown);
 
                 element.on('$destroy', function(){
                     angular.element(window).off('keydown', onKeydown);
                     element.off('mousewheel', onWheel);
+                    element.off('wheel', onWheel);
                 });
             }
         };

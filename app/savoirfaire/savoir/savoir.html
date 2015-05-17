@@ -1,0 +1,26 @@
+<div
+    id="savoirContainer"
+    class="container"
+>
+<!-- 
+    <nav>
+        <arrow-right class="arrow right" data-color="#353535" ng-click="sf.next()"></arrow-right>
+    </nav> -->
+
+    <section class="Details">
+
+        <arrow-left class="arrow left" data-color="#353535" ui-sref="savoirfaire"></arrow-left>
+
+        <div class="Details-content">
+            <h1>{{s.savoir.title}}</h1>
+            <h2>{{s.savoir.baseline}}</h2>
+            <p>{{s.savoir.content}}</p>
+            <button class="Details-content-contact" ui-sref="contact">Contact</button>
+        </div>
+    </section>
+
+    <section class="Picture">
+        <img full-frame ng-src="{{s.savoir.image.sizes.large || 'assets/images/IMG_9470.jpg'}}" alt="" />
+    </section>
+
+</div>

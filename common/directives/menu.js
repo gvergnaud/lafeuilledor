@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('directives.menu', [])
-    .directive('menu', function($state){
+    .directive('menu', function(){
 
         return {
 
@@ -12,7 +12,7 @@ angular.module('directives.menu', [])
             }
         };
     })
-    .directive('tab', function($rootScope){
+    .directive('tab', function($rootScope, $state){
 
         return {
 
@@ -21,7 +21,7 @@ angular.module('directives.menu', [])
             link: function(scope, element, attrs){
 
                 function onStateChange(event, toState){
-                    if(toState.name === attrs.uiSref){
+                    if($state.includes(attrs.uiSref)){
                         element[0].classList.add('active');
                     }else{
                         element[0].classList.remove('active');

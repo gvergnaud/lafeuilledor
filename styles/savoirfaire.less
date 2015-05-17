@@ -1,0 +1,78 @@
+#savoirFaireContainer{
+
+    overflow: hidden;
+
+    .background{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+
+        background-color: @black;
+
+        img{
+            opacity: 0;
+        }
+
+        &.active img{
+            opacity: .4;
+            .transition(4s ease);
+        }
+    }
+
+    .center{
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        overflow: auto;
+
+        text-align: center;
+
+        .transition(.5s ease);
+        opacity: 1;
+        &.hidden{
+            opacity: 0;
+        }
+
+        h2{
+            margin: 100px 0 50px 0;
+            color: @beige;
+            font-family: @subtitle;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .fioriture{
+            margin: 0 auto;
+        }
+
+        .savoir-list{
+
+            width: 660px;
+            max-width: 100%;
+            margin: 50px auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+            .savoir{
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                font-size: 11px;
+                letter-spacing: 2px;
+                font-weight: 400;
+                width: 300px;
+                margin: 15px auto;
+            }
+        }
+    }
+}

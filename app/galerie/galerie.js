@@ -32,11 +32,16 @@ angular.module('App.galerie', [
                 }
             });
     })
-    .controller('GalerieCtrl', function($scope, $rootScope, $state, realisations) {
+    .controller('GalerieCtrl', function($scope, $rootScope, $state, $timeout, realisations) {
 
         var glr = this;
 
-        glr.posts = realisations;
+        glr.posts = [];
+
+        $timeout(function(){
+            glr.posts = realisations;
+            glr.nbTabs = Math.ceil(glr.posts.length / glr.config.postsPerPage);
+        }, 200);
 
         glr.config = {
             nbCol: 3,
@@ -46,10 +51,10 @@ angular.module('App.galerie', [
         };
 
         glr.current = 0;
-        glr.nbTabs = Math.ceil(glr.posts.length / glr.config.postsPerPage);
 
         glr.isThumbnailsOpen = $state.current.name === 'galerie';
 
+        glr.direction = 'down';
         glr.isAnimate = false;
         glr.transitionDuration = 1000;
 
@@ -78,17 +83,25 @@ angular.module('App.galerie', [
         };
 
         glr.up = function(){
-            glr.changeCurrent('up');
+            glr.direction = 'up';
+            $timeout(function () {
+                glr.changeCurrent('up');
+            }, 50);
         };
 
         glr.down = function(){
-            glr.changeCurrent('down');
+            glr.direction = 'down';
+            $timeout(function () {
+                glr.changeCurrent('down');
+            }, 50);
         };
 
 
 
-        // angular.element(window).on('resize', function(){
-        //     glr.config.width = (window.innerWidth < 3 * (glr.config.margin + glr.config.width)) ? window.innerWidth /3 : glr.config.width;
-        // });
+        angular.element(window).on('resize', function(){
+            var nbCol = (window.innerWidth > 1000) ? 3 : ((window.innerWidth > 700) ? 2 : 1);
+            if (glr.config.nbCol !== nbCol)
+                glr.config.nbCol = nbCol;
+        });
 
     });

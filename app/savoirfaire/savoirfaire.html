@@ -1,1 +1,28 @@
-<text-clip image-url="assets/images/IMG_9470.jpg" content="salut" text-size="200"></text-clip>
+<div
+    id="savoirFaireContainer"
+    class="container"
+>
+    <div class="background" ng-class="{ active: sf.loaded }">
+        <img full-frame ng-src="{{sf.bg}}" />
+    </div>
+
+    <div class="center" ng-class="{ hidden: sf.detailsOpen }">
+
+        <h2>{{sf.baseline}}</h2>
+
+        <div class="fioriture"></div>
+
+        <div class="savoir-list">
+            <button class="savoir"
+                ng-repeat="savoir in sf.savoirs"
+                ng-click="sf.openDetails(savoir.slug)"
+            >
+                {{savoir.title}}
+            </button>
+        </div>
+
+    </div>
+
+    <div class="savoirView" ui-view="savoir"></div>
+
+</div>
