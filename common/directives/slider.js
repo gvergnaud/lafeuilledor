@@ -26,8 +26,8 @@ angular.module('directives.slider', [
                 '   data-down="next()"',
                 '>',
                 '   <nav>',
-                '       <arrow-left data-color="{{arrowsColor}}" class="Slider-arrow left" ng-click="prev()"></arrow-left>',
-                '       <arrow-right data-color="{{arrowsColor}}" class="Slider-arrow right" ng-click="next()"></arrow-right>',
+                '       <arrow-left class="Slider-arrow left" ng-click="prev()"></arrow-left>',
+                '       <arrow-right class="Slider-arrow right" ng-click="next()"></arrow-right>',
                 '   </nav>',
                 '    <slider-image class="Slider-image" ng-repeat="picture in pictures | index:currentIndex"></slider-image>',
                 '    <slider-count class="Slider-count"></slider-count>', //{{ currentIndex + 1 + \' / \' + pictures.length}}
@@ -37,7 +37,7 @@ angular.module('directives.slider', [
 
             link: function(scope, element, attrs){
 
-                scope.arrowsColor = '#ce7259';
+                scope.arrowsColor = '#353535';
 
                 var nextPrevOnArrowKeyDown = function(e){
                     switch (e.which) {

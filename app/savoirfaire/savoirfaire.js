@@ -33,18 +33,10 @@ angular.module('App.savoirfaire', [
         sf.baseline = 'Découvrez le savoir-faire de La Feuille d\'Or';
         sf.bg = '../../wordpress/wp-content/uploads/2015/05/IMG_9535-2000x1333.jpg';
         sf.savoirs = savoirs;
-        sf.current = 0;
 
         $timeout(function(){
             sf.loaded = true;
         }, 200);
-
-        sf.openDetails = function(slug){
-            sf.detailsOpen = true;
-            $timeout(function(){
-                $state.go('savoirfaire.savoir', {slug: slug});
-            }, 500);
-        };
 
         $rootScope.$on('$stateChangeSuccess', function($event, nextState){
             if (nextState.name === 'savoirfaire' && sf.detailsOpen){
@@ -54,14 +46,55 @@ angular.module('App.savoirfaire', [
             }
         });
 
+
+        var slugArray = savoirs.map(function(savoir){
+            return savoir.slug;
+        });
+        var isOpening = false;
+
+        sf.current = 0;
+        sf.detailsOpen = ($state.current.name !== 'savoirfaire');
+
+        sf.openDetails = function(slug){
+            if (!isOpening) {
+
+                isOpening = true;
+                $timeout(function(){
+                    isOpening = false;
+                }, 1000);
+
+                sf.detailsOpen = true;
+
+                sf.current = slugArray.indexOf(slug);
+
+                $timeout(function(){
+                    $state.go('savoirfaire.savoir', {slug: slug});
+                }, 500);
+            }
+        };
+
+
+
         sf.next = function(){
-            sf.current += 1;
-            sf.openDetails(sf.savoirs[sf.current].slug);
+            if(!sf.detailsOpen) return;
+
+            if(slugArray[sf.current + 1]){
+                sf.openDetails(slugArray[sf.current + 1]);
+            }
+            else{
+                sf.openDetails(slugArray[0]);
+            }
         };
 
         sf.prev = function(){
-            sf.current -= 1;
-            sf.openDetails(sf.savoirs[sf.current].slug);
+            if(!sf.detailsOpen) return;
+
+            if(slugArray[sf.current - 1]){
+                sf.openDetails(slugArray[sf.current - 1]);
+            }
+            else{
+                sf.openDetails(slugArray[slugArray.length - 1]);
+            }
         };
 
     });

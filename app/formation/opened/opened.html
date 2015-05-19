@@ -1,0 +1,19 @@
+<div
+    id="openedContainer"
+    class="container {{type}}"
+>
+    <section class="Image">
+        <img
+            full-frame
+            ng-src="{{post.image.sizes.large}}" />
+    </section>
+
+    <section class="Details textureBg">
+        <div class="Details-content">
+            <h1>{{post.title}}</h1>
+            <p><strong>Niveau : </strong>{{post.level}}</p>
+            <p><strong>Durée : </strong>{{post.duree}}</p>
+            <button ui-sref="contact">Contacter l'atelier</button>
+        </div>
+    </section>
+</div>

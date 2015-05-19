@@ -20,7 +20,6 @@ angular.module('directives.gallery', [])
 
             link: function(scope, gallery, attrs){
 
-
                 var parseValues = function(){
                     scope.nbCol = parseInt(scope.nbCol);
                     scope.margin = parseInt(scope.margin);

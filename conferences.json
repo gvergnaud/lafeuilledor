@@ -1,0 +1,405 @@
+[{
+    "ID": 112,
+    "title": "dorure contemporaine",
+    "status": "publish",
+    "type": "conference",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/conference\/dorure-contemporaine\/",
+    "date": "2015-05-17T22:57:13",
+    "modified": "2015-05-17T22:57:13",
+    "format": "standard",
+    "slug": "dorure-kontempreine",
+    "guid": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/?post_type=conference&#038;p=112",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-17T21:57:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-17T21:57:13",
+    "meta": {
+        "links": {
+            "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112",
+            "author": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/comments",
+            "version-history": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/revisions"
+        },
+        "description": "Une immersion historique dans la dorure pour en arriver \u00e0 nos jours",
+        "level": "baleze",
+        "duree": "2heurs",
+        "en_title": "contemporain gilding",
+        "en_description": "A travel in space and time from the bigining of imprimery to today's creations.",
+        "en_level": "hard",
+        "en_duree": "2 hours",
+        "image": {
+            "ID": 84,
+            "id": 84,
+            "alt": "",
+            "title": "IMG_9636",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636.jpg",
+            "width": 5472,
+            "height": 3648,
+            "sizes": {
+                "thumbnail": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-200x200.jpg",
+                "thumbnail-width": 200,
+                "thumbnail-height": 200,
+                "medium": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-500x333.jpg",
+                "medium-width": 500,
+                "medium-height": 333,
+                "large": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-2000x1333.jpg",
+                "large-width": 2000,
+                "large-height": 1333
+            }
+        }
+    },
+    "terms": []
+},
+{
+    "ID": 112,
+    "title": "dorure contemporaine",
+    "status": "publish",
+    "type": "conference",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/conference\/dorure-contemporaine\/",
+    "date": "2015-05-17T22:57:13",
+    "modified": "2015-05-17T22:57:13",
+    "format": "standard",
+    "slug": "dorure-contemporaine",
+    "guid": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/?post_type=conference&#038;p=112",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-17T21:57:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-17T21:57:13",
+    "meta": {
+        "links": {
+            "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112",
+            "author": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/comments",
+            "version-history": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/revisions"
+        },
+        "description": "Une immersion historique dans la dorure pour en arriver \u00e0 nos jours",
+        "level": "baleze",
+        "duree": "2heurs",
+        "en_title": "contemporain gilding",
+        "en_description": "A travel in space and time from the bigining of imprimery to today's creations.",
+        "en_level": "hard",
+        "en_duree": "2 hours",
+        "image": {
+            "ID": 84,
+            "id": 84,
+            "alt": "",
+            "title": "IMG_9636",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636.jpg",
+            "width": 5472,
+            "height": 3648,
+            "sizes": {
+                "thumbnail": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-200x200.jpg",
+                "thumbnail-width": 200,
+                "thumbnail-height": 200,
+                "medium": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-500x333.jpg",
+                "medium-width": 500,
+                "medium-height": 333,
+                "large": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-2000x1333.jpg",
+                "large-width": 2000,
+                "large-height": 1333
+            }
+        }
+    },
+    "terms": []
+},
+{
+    "ID": 112,
+    "title": "dorure contemporaine",
+    "status": "publish",
+    "type": "conference",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/conference\/dorure-contemporaine\/",
+    "date": "2015-05-17T22:57:13",
+    "modified": "2015-05-17T22:57:13",
+    "format": "standard",
+    "slug": "dorure-contemporaine",
+    "guid": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/?post_type=conference&#038;p=112",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-17T21:57:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-17T21:57:13",
+    "meta": {
+        "links": {
+            "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112",
+            "author": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/comments",
+            "version-history": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/revisions"
+        },
+        "description": "Une immersion historique dans la dorure pour en arriver \u00e0 nos jours",
+        "level": "baleze",
+        "duree": "2heurs",
+        "en_title": "contemporain gilding",
+        "en_description": "A travel in space and time from the bigining of imprimery to today's creations.",
+        "en_level": "hard",
+        "en_duree": "2 hours",
+        "image": {
+            "ID": 84,
+            "id": 84,
+            "alt": "",
+            "title": "IMG_9636",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636.jpg",
+            "width": 5472,
+            "height": 3648,
+            "sizes": {
+                "thumbnail": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-200x200.jpg",
+                "thumbnail-width": 200,
+                "thumbnail-height": 200,
+                "medium": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-500x333.jpg",
+                "medium-width": 500,
+                "medium-height": 333,
+                "large": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-2000x1333.jpg",
+                "large-width": 2000,
+                "large-height": 1333
+            }
+        }
+    },
+    "terms": []
+},
+{
+    "ID": 112,
+    "title": "dorure contemporaine",
+    "status": "publish",
+    "type": "conference",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/conference\/dorure-contemporaine\/",
+    "date": "2015-05-17T22:57:13",
+    "modified": "2015-05-17T22:57:13",
+    "format": "standard",
+    "slug": "dorure-contemporaine",
+    "guid": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/?post_type=conference&#038;p=112",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-17T21:57:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-17T21:57:13",
+    "meta": {
+        "links": {
+            "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112",
+            "author": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/comments",
+            "version-history": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/revisions"
+        },
+        "description": "Une immersion historique dans la dorure pour en arriver \u00e0 nos jours",
+        "level": "baleze",
+        "duree": "2heurs",
+        "en_title": "contemporain gilding",
+        "en_description": "A travel in space and time from the bigining of imprimery to today's creations.",
+        "en_level": "hard",
+        "en_duree": "2 hours",
+        "image": {
+            "ID": 84,
+            "id": 84,
+            "alt": "",
+            "title": "IMG_9636",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636.jpg",
+            "width": 5472,
+            "height": 3648,
+            "sizes": {
+                "thumbnail": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-200x200.jpg",
+                "thumbnail-width": 200,
+                "thumbnail-height": 200,
+                "medium": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-500x333.jpg",
+                "medium-width": 500,
+                "medium-height": 333,
+                "large": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-2000x1333.jpg",
+                "large-width": 2000,
+                "large-height": 1333
+            }
+        }
+    },
+    "terms": []
+},
+{
+    "ID": 112,
+    "title": "dorure contemporaine",
+    "status": "publish",
+    "type": "conference",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/conference\/dorure-contemporaine\/",
+    "date": "2015-05-17T22:57:13",
+    "modified": "2015-05-17T22:57:13",
+    "format": "standard",
+    "slug": "dorure-contemporaine",
+    "guid": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/?post_type=conference&#038;p=112",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-17T21:57:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-17T21:57:13",
+    "meta": {
+        "links": {
+            "self": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112",
+            "author": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/comments",
+            "version-history": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-json\/posts\/112\/revisions"
+        },
+        "description": "Une immersion historique dans la dorure pour en arriver \u00e0 nos jours",
+        "level": "baleze",
+        "duree": "2heurs",
+        "en_title": "contemporain gilding",
+        "en_description": "A travel in space and time from the bigining of imprimery to today's creations.",
+        "en_level": "hard",
+        "en_duree": "2 hours",
+        "image": {
+            "ID": 84,
+            "id": 84,
+            "alt": "",
+            "title": "IMG_9636",
+            "caption": "",
+            "description": "",
+            "url": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636.jpg",
+            "width": 5472,
+            "height": 3648,
+            "sizes": {
+                "thumbnail": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-200x200.jpg",
+                "thumbnail-width": 200,
+                "thumbnail-height": 200,
+                "medium": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-500x333.jpg",
+                "medium-width": 500,
+                "medium-height": 333,
+                "large": "http:\/\/localhost\/projets\/lafeuilledor\/wordpress\/wp-content\/uploads\/2015\/05\/IMG_9636-2000x1333.jpg",
+                "large-width": 2000,
+                "large-height": 1333
+            }
+        }
+    },
+    "terms": []
+}]

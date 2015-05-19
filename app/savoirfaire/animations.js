@@ -24,8 +24,8 @@ angular.module('animations.savoirFaire', [])
                 tl
                     .to(details, .7, {
                         x: '0%',
-                        delay: .7,
-                        ease: Ease.easeOut
+                        delay: .6,
+                        ease: Power2.easeOut
                     })
                     .set(picture, {
                         opacity: 1

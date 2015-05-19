@@ -25,6 +25,10 @@ angular.module('App', [
         var app = this;
 
         Api.getAll().then(function(data){
-            
+
         });
+
+        app.stopEventPropagation = function(e){
+            e.stopPropagation();
+        };
     });

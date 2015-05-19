@@ -151,7 +151,8 @@ angular.module('services.Api', [
 
                 if(!_data.conferences){
 
-                    $http.get(SERVER.API + '/posts?type=conference')
+                    // $http.get(SERVER.API + '/posts?type=conference')
+                    $http.get('conferences.json')
                         .success(function(data){
 
 
@@ -186,7 +187,8 @@ angular.module('services.Api', [
 
                 if(!_data.formations){
 
-                    $http.get(SERVER.API + '/posts?type=formation')
+                    // $http.get(SERVER.API + '/posts?type=formation')
+                    $http.get('conferences.json')
                         .success(function(data){
 
 

@@ -1,6 +1,9 @@
 <div
     id="savoirFaireContainer"
     class="container"
+    data-on-wheel
+    data-up="sf.prev()"
+    data-down="sf.next()"
 >
     <div class="background" ng-class="{ active: sf.loaded }">
         <img full-frame ng-src="{{sf.bg}}" />

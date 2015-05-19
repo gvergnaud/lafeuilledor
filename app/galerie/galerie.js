@@ -11,7 +11,9 @@ angular.module('App.galerie', [
         'directives.fullFrame',
         'directives.gallery',
 
-        'filters.slice'
+        'filters.slice',
+
+        'animations.galerie'
     ])
     .config(function($stateProvider) {
 
@@ -41,7 +43,7 @@ angular.module('App.galerie', [
         $timeout(function(){
             glr.posts = realisations;
             glr.nbTabs = Math.ceil(glr.posts.length / glr.config.postsPerPage);
-        }, 200);
+        }, 50);
 
         glr.config = {
             nbCol: 3,

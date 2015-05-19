@@ -22,7 +22,7 @@
 // Colors
 @black: #262626;
 @opaqueBlack: rgba(0,0,0,.8);
-@gray: #474747;
+@gray: #515151;
 @beige: #e6dcd1;
 @white: #E0D5C4;
 @saumon: #ce7259;
@@ -75,8 +75,10 @@ body {
 
 button{
     height: 45px;
-    width: 200px;
+    width: 250px;
     margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
 
     background-color: @black;
     text-align: center;
@@ -135,6 +137,7 @@ div.border {
     position: absolute;
     background-color: #fff;
     .transition(.5s ease);
+    z-index: 5;
     &.out {
         &.top {
             .transform(translateY(-@border));
@@ -186,6 +189,7 @@ div.border {
 
     background-color: @beige;
 }
+
 menu {
     z-index: 10;
     font-family: @subtitle;
@@ -226,4 +230,19 @@ menu {
     position: relative;
     height: 100%;
     width: 100%;
+    z-index: 1;
+}
+
+.textureBg{
+    &::after {
+        content: "";
+        background: url('../assets/images/bgtexture.jpg');
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }

@@ -1,0 +1,36 @@
+arrow-left, arrow-right{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+
+    cursor: pointer;
+    z-index: 11;
+
+    .transform(translateY(-50%));
+
+    line{
+        stroke: @black;
+    }
+
+    &:hover{
+        line{
+            .transition(.2s ease);
+            stroke: @saumon;
+        }
+    }
+
+    &:active{
+        line{
+            stroke: @darkSaumon;
+        }
+    }
+}
+
+arrow-left{
+    left: 10px;
+}
+
+arrow-right{
+    right: 10px;
+}

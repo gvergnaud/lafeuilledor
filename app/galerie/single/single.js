@@ -35,6 +35,6 @@ angular.module('App.galerie.single', [
         var post = realisations.filter(function(realisation){
             return realisation.slug === $stateParams.slug;
         });
-
+        
         sgl.post = post[0];
     });

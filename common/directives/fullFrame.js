@@ -2,7 +2,7 @@
 
 angular.module('directives.fullFrame', [])
 
-	.directive('fullFrame', function(){
+	.directive('fullFrame', function($rootScope){
 
         return {
 
@@ -47,6 +47,8 @@ angular.module('directives.fullFrame', [])
 
                 element.on('load', style);
                 angular.element(window).on('resize', style);
+
+				$rootScope.$on('FULL_FRAME_RESIZE', style);
 
 				element.on('$destroy', function(){
 					angular.element(window).off('resize', style);
