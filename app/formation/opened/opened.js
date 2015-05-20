@@ -43,12 +43,34 @@ angular.module('App.formation.opened', [
                 }
             });
     })
-    .controller('OpenedCtrl', function($scope, $stateParams, data, type) {
+    .controller('OpenedCtrl', function($scope, $rootScope, $stateParams, Api, data, type) {
 
         var post = data.filter(function(d){
             return d.slug === $stateParams.slug;
         });
-        $scope.type = type;
         $scope.post = post[0];
+        $scope.type = type;
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            switch (type) {
+                case 'formation':
+                    Api.getFormations().then(function(data){
+                        var post = data.filter(function(d){
+                            return d.slug === $stateParams.slug;
+                        });
+                        $scope.post = post[0];
+                    });
+                    break;
+                case 'conference':
+                    Api.getConferences().then(function(data){
+                        var post = data.filter(function(d){
+                            return d.slug === $stateParams.slug;
+                        });
+                        $scope.post = post[0];
+                    });
+                    break;
+
+            }
+        });
 
     });

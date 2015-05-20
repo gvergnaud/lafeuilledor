@@ -25,14 +25,20 @@ angular.module('App.savoirfaire', [
                 }
             });
     })
-    .controller('SfCtrl', function($scope, $rootScope, $state, $timeout, savoirs) {
+    .controller('SfCtrl', function($scope, $rootScope, $state, $timeout, Api, savoirs) {
 
         var sf = this;
+        sf.savoirs = savoirs;
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            Api.getSavoirFaire().then(function(savoirs){
+                sf.savoirs = savoirs;
+            });
+        });
 
         sf.loaded = false;
         sf.baseline = 'Découvrez le savoir-faire de La Feuille d\'Or';
         sf.bg = '../../wordpress/wp-content/uploads/2015/05/IMG_9535-2000x1333.jpg';
-        sf.savoirs = savoirs;
 
         $timeout(function(){
             sf.loaded = true;
@@ -96,5 +102,4 @@ angular.module('App.savoirfaire', [
                 sf.openDetails(slugArray[slugArray.length - 1]);
             }
         };
-
     });

@@ -46,4 +46,15 @@ angular.module('App.formation', [
             fc.detailsOpen = (state.name !== 'formation');
         });
 
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+
+            fc.headerTitle = (Api.getLanguage() === 'fr') ? 'Transmettre un savoir-faire à l\'international' : '';
+            
+            Api.getConferences().then(function(conferences){
+                fc.conferences = conferences;
+            });
+            Api.getFormations().then(function(formations){
+                fc.formations = formations;
+            });
+        });
     });

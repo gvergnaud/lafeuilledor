@@ -11,6 +11,8 @@ angular.module('App.atelier', [
         'directives.fullFrame',
         'directives.textClip',
 
+        'services.Api',
+
         'filters.index'
     ])
     .config(function($stateProvider) {
@@ -20,6 +22,11 @@ angular.module('App.atelier', [
                 url: '/atelier',
                 views: {
                     'main': {
+                        resolve: {
+                            histoire: function(Api){
+                                return Api.getHistoire();
+                            }
+                        },
                         templateUrl: 'app/atelier/atelier.html',
                         controller: 'AtelierCtrl',
                         controllerAs: 'atlr'
@@ -27,7 +34,7 @@ angular.module('App.atelier', [
                 }
             });
     })
-    .controller('AtelierCtrl', function($scope, $rootScope) {
+    .controller('AtelierCtrl', function($scope, $rootScope, Api, histoire) {
 
         var atlr = this;
 
@@ -106,5 +113,12 @@ angular.module('App.atelier', [
         atlr.down = function(){
             atlr.changeCurrent('down');
         };
+
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            Api.getHistoire().then(function(histoire){
+                atlr.histoire = histoire;
+            });
+        });
 
     });

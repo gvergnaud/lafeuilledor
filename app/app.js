@@ -21,12 +21,22 @@ angular.module('App', [
         $urlRouterProvider.otherwise('/');
 
     })
-    .controller('AppCtrl', function($scope, Api) {
+    .controller('AppCtrl', function($scope, $rootScope, Api) {
         var app = this;
 
-        Api.getAll().then(function(data){
+        app.language = 'fr';
 
-        });
+        Api.getAll();
+
+        app.changeLanguage = function(language){
+            if(app.language === language) return;
+
+            app.language = language;
+            Api.setLanguage(language);
+            Api.getAll(true).then(function(data){
+                $rootScope.$emit('APP_LANGUAGE_CHANGE', language);
+            });
+        };
 
         app.stopEventPropagation = function(e){
             e.stopPropagation();

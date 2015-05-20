@@ -34,11 +34,18 @@ angular.module('App.galerie', [
                 }
             });
     })
-    .controller('GalerieCtrl', function($scope, $rootScope, $state, $timeout, realisations) {
+    .controller('GalerieCtrl', function($scope, $rootScope, $state, $timeout, Api, realisations) {
 
         var glr = this;
 
         glr.posts = [];
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            Api.getRealisations().then(function(realisations){
+                $rootScope.$emit('GALLERY_RESTART');
+                glr.posts = realisations;
+            });
+        });
 
         $timeout(function(){
             glr.posts = realisations;

@@ -6,6 +6,8 @@ angular.module('services.Api', [
     .factory('Api', function($q, $http, SERVER) {
         // Service logic
 
+        
+
         var _data= {
             menu: false,
             histoire: false,
@@ -37,12 +39,12 @@ angular.module('services.Api', [
                 return _language;
             },
 
-            getHistoire: function(){
+            getHistoire: function(reload){
 
                 var deferred = $q.defer(),
                     histoire = [];
 
-                if(!_data.histoire){
+                if(!_data.histoire || reload){
 
                     $http.get(SERVER.API + '/posts?type=histoire')
                         .success(function(data){
@@ -53,8 +55,8 @@ angular.module('services.Api', [
                                     slug: story.slug,
                                     name: story.meta.name,
                                     date: story.meta.date,
-                                    lieu: story.meta.lieu,
                                     image: story.meta.image,
+                                    lieu: (_language === 'fr') ? story.lieu : story.meta.en_lieu,
                                     title: (_language === 'fr') ? story.title : story.meta.en_title,
                                     content: (_language === 'fr') ? story.meta.content : story.meta.en_content,
                                     baseline: (_language === 'fr') ? story.meta.baseline : story.meta.en_baseline
@@ -75,11 +77,11 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-            getSavoirFaire: function(){
+            getSavoirFaire: function(reload){
                 var deferred = $q.defer(),
                     savoirFaire = [];
 
-                if(!_data.savoirFaire){
+                if(!_data.savoirFaire || reload){
 
                     // $http.get(SERVER.API + '/posts?type=savoir_faire')
                     $http.get('savoir-faire.json')
@@ -109,11 +111,11 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-            getRealisations: function(){
+            getRealisations: function(reload){
                 var deferred = $q.defer(),
                     realisations = [];
 
-                if(!_data.realisations){
+                if(!_data.realisations || reload){
 
                     // $http.get(SERVER.API + '/posts?type=realisations')
                     $http.get('realisations.json')
@@ -145,11 +147,11 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-            getConferences: function(){
+            getConferences: function(reload){
                 var deferred = $q.defer(),
                     conferences = [];
 
-                if(!_data.conferences){
+                if(!_data.conferences || reload){
 
                     // $http.get(SERVER.API + '/posts?type=conference')
                     $http.get('conferences.json')
@@ -181,11 +183,11 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-            getFormations: function(){
+            getFormations: function(reload){
                 var deferred = $q.defer(),
                     formations = [];
 
-                if(!_data.formations){
+                if(!_data.formations || reload){
 
                     // $http.get(SERVER.API + '/posts?type=formation')
                     $http.get('conferences.json')
@@ -218,11 +220,11 @@ angular.module('services.Api', [
             },
 
 
-            getMenu: function(){
+            getMenu: function(reload){
                 var deferred = $q.defer(),
                     menu = {};
 
-                if(!_data.menu){
+                if(!_data.menu || reload){
 
                     $http.get(SERVER.API + '/posts?type=menu')
                         .success(function(data){
@@ -248,17 +250,17 @@ angular.module('services.Api', [
             },
 
 
-            getAll: function(){
+            getAll: function(reload){
 
                 var deferred = $q.defer();
 
                 $q.all([
-                    this.getHistoire(),
-                    this.getSavoirFaire(),
-                    this.getRealisations(),
-                    this.getFormations(),
-                    this.getConferences(),
-                    this.getMenu()
+                    this.getHistoire(reload),
+                    this.getSavoirFaire(reload),
+                    this.getRealisations(reload),
+                    this.getFormations(reload),
+                    this.getConferences(reload),
+                    this.getMenu(reload)
                 ]).then(function(){
                     deferred.resolve(_data);
                 });

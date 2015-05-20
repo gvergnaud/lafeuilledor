@@ -28,13 +28,24 @@ angular.module('App.galerie.single', [
                 }
             });
     })
-    .controller('SingleCtrl', function($scope, realisations, $stateParams) {
+    .controller('SingleCtrl', function($scope, $rootScope, $stateParams, Api, realisations) {
 
         var sgl = this;
 
         var post = realisations.filter(function(realisation){
             return realisation.slug === $stateParams.slug;
         });
-        
+
         sgl.post = post[0];
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            Api.getRealisations().then(function(realisations){
+                var post = realisations.filter(function(realisation){
+                    return realisation.slug === $stateParams.slug;
+                });
+
+                sgl.post = post[0];
+            });
+        });
+
     });

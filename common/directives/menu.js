@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('directives.menu', [])
+angular.module('directives.menu', [
+    'ui.router'
+])
     .directive('menu', function(){
 
         return {
@@ -12,7 +14,7 @@ angular.module('directives.menu', [])
             }
         };
     })
-    .directive('tab', function($rootScope, $state){
+    .directive('tab', function($rootScope, $state, Api){
 
         return {
 
@@ -28,13 +30,18 @@ angular.module('directives.menu', [])
                     }
                 }
 
+                function onLanguageChange(){
+
+                }
+
                 $rootScope.$on('$stateChangeSuccess', onStateChange);
 
 
                 element.on('$destroy', function(){
-                    console.log('destroy tab')
                     $rootScope.$on('$stateChangeSuccess', onStateChange);
                 });
+
+
 
             }
         };

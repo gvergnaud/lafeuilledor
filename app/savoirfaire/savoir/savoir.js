@@ -24,7 +24,7 @@ angular.module('App.savoirfaire.savoir', [
                 }
             });
     })
-    .controller('SavoirCtrl', function($scope, $stateParams, savoirs) {
+    .controller('SavoirCtrl', function($scope, $rootScope, $stateParams, Api, savoirs) {
 
         var s = this;
 
@@ -33,5 +33,14 @@ angular.module('App.savoirfaire.savoir', [
         });
 
         s.savoir = savoir[0];
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
+            Api.getSavoirFaire().then(function(savoirs){
+                var savoir = savoirs.filter(function(savoir){
+                    return savoir.slug === $stateParams.slug;
+                });
+                s.savoir = savoir[0];
+            });
+        });
 
     });

@@ -22,9 +22,15 @@
 			</menu>
 
 			<menu class="lang">
-				<tab>fr</tab>
+				<tab
+					ng-click="app.changeLanguage('fr')"
+					ng-class="{currentLang: app.language === 'fr'}"
+				>fr</tab>
 				 /
-				<tab>en</tab>
+				<tab
+					ng-click="app.changeLanguage('en')"
+					ng-class="{currentLang: app.language === 'en'}"
+				>en</tab>
 			</menu>
 			<!-- Main View -->
 			<div class="mainView" ui-view="main"></div>
