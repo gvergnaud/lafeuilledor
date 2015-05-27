@@ -1,5 +1,99 @@
+.halfScreen {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
 #contactContainer{
+	header {
+		.firstTitle {
+			padding: 60px 0 40px;
+		}
+		.fioriture {
+			position: relative;
+			margin: 0 auto;
+			opacity: .5;
+			padding-bottom: 35px;
+		}
+	}
 
-    
+	form {
+		font-family: @subtitle;
+		color: @grey-light;
+		font-size: .95rem;
+		line-height: 2rem;
+		font-weight: 100;
 
+		label, input, textarea {
+			border: none;
+			width: 100%;
+			outline: none;
+		}
+
+		input[type="text"], input[type="email"], textarea {
+			color: @black;
+			opacity: .5;
+			font-style: italic;
+			font-weight: 700;
+			font-size: .7rem;
+			line-height: 17px;
+			letter-spacing: .5px;
+			border-radius: 8px;
+			padding: 20px 30px;
+			max-width: 260px;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			padding-right: 25px;
+		}
+
+		span {
+			display: block;
+			margin-bottom: 20px;
+			text-align: right;
+			padding-right: 40px;
+		}
+		textarea {
+			height: 110px;
+		}
+	}
+
+
+	h1 {
+		color: @grey-dark;
+		font-family: @title;
+		font-size: 3.3rem;
+		line-height: 3.3rem;
+		width: 280px;
+		padding-left: 40px;
+	}
+	.address {
+		color: @saumon;
+		font-family: @subtitle;
+		font-weight: lighter;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		padding: 30px 0 30px 40px;
+	}
+
+	h4 {
+		font-family: @subtitle;
+		color: @grey-light;
+		font-size: .95rem;
+		line-height: 2rem;
+		padding-left: 40px;
+
+		&:nth-child(6) {
+			padding-left: 118px;
+		}
+
+		span {
+			font-weight: 100;
+		}
+
+		span:nth-child(2) {
+			display: block;
+			padding-left: 60px;
+		}
+	}
 }
