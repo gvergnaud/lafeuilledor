@@ -1,0 +1,541 @@
+[{
+    "ID": 305,
+    "title": "Colloques",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/colloques\/",
+    "date": "2015-05-31T14:01:46",
+    "modified": "2015-05-31T14:01:46",
+    "format": "standard",
+    "slug": "colloques",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=305",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T13:01:46",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T13:01:46",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/305",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/305\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/305\/revisions"
+        },
+        "name": "Colloques",
+        "en_name": "",
+        "category": "La formation"
+    },
+    "terms": []
+}, {
+    "ID": 304,
+    "title": "Universit\u00e9s",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/universites\/",
+    "date": "2015-05-31T14:01:28",
+    "modified": "2015-05-31T14:01:33",
+    "format": "standard",
+    "slug": "universites",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=304",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T13:01:28",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T13:01:33",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/304",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/304\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/304\/revisions"
+        },
+        "name": "Universit\u00e9s",
+        "en_name": "",
+        "category": "La formation"
+    },
+    "terms": []
+}, {
+    "ID": 303,
+    "title": "Ateliers de reliure",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/ateliers-de-reliure\/",
+    "date": "2015-05-31T14:01:15",
+    "modified": "2015-05-31T14:01:15",
+    "format": "standard",
+    "slug": "ateliers-de-reliure",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=303",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T13:01:15",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T13:01:15",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/303",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/303\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/303\/revisions"
+        },
+        "name": "Ateliers de reliure",
+        "en_name": "",
+        "category": "La formation"
+    },
+    "terms": []
+}, {
+    "ID": 302,
+    "title": "Centre des arts du livre",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/centre-des-arts-du-livre\/",
+    "date": "2015-05-31T14:00:44",
+    "modified": "2015-05-31T14:00:52",
+    "format": "standard",
+    "slug": "centre-des-arts-du-livre",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=302",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T13:00:44",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T13:00:52",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/302",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/302\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/302\/revisions"
+        },
+        "name": "Centre des arts du livre",
+        "en_name": "",
+        "category": "La formation"
+    },
+    "terms": []
+}, {
+    "ID": 301,
+    "title": "Ecoles de reliure",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/ecoles-de-reliure\/",
+    "date": "2015-05-31T14:00:25",
+    "modified": "2015-05-31T14:00:25",
+    "format": "standard",
+    "slug": "ecoles-de-reliure",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=301",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T13:00:25",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T13:00:25",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/301",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/301\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/301\/revisions"
+        },
+        "name": "Ecoles de reliure",
+        "en_name": "",
+        "category": "La formation"
+    },
+    "terms": []
+}, {
+    "ID": 300,
+    "title": "Maroquinniers",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/maroquinniers\/",
+    "date": "2015-05-31T13:59:52",
+    "modified": "2015-05-31T13:59:52",
+    "format": "standard",
+    "slug": "maroquinniers",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=300",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T12:59:52",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T12:59:52",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/300",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/300\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/300\/revisions"
+        },
+        "name": "Maroquinniers",
+        "en_name": "",
+        "category": "La dorure"
+    },
+    "terms": []
+}, {
+    "ID": 299,
+    "title": "Librairie, papeterie de luxe et cartonniers",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/librairie-papeterie-de-luxe-et-cartonniers\/",
+    "date": "2015-05-31T13:59:27",
+    "modified": "2015-05-31T13:59:27",
+    "format": "standard",
+    "slug": "librairie-papeterie-de-luxe-et-cartonniers",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=299",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T12:59:27",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T12:59:27",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/299",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/299\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/299\/revisions"
+        },
+        "name": "Librairie, papeterie de luxe et cartonniers",
+        "en_name": "",
+        "category": "La dorure"
+    },
+    "terms": []
+}, {
+    "ID": 298,
+    "title": "Restauration de livres",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/restauration-de-livres\/",
+    "date": "2015-05-31T13:58:55",
+    "modified": "2015-05-31T13:58:55",
+    "format": "standard",
+    "slug": "restauration-de-livres",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=298",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T12:58:55",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T12:58:55",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/298",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/298\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/298\/revisions"
+        },
+        "name": "Restauration de livres",
+        "en_name": "",
+        "category": "La dorure"
+    },
+    "terms": []
+}, {
+    "ID": 297,
+    "title": "Relieurs amateurs",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/relieurs-amateurs\/",
+    "date": "2015-05-31T13:58:35",
+    "modified": "2015-05-31T13:58:35",
+    "format": "standard",
+    "slug": "relieurs-amateurs",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=297",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T12:58:35",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T12:58:35",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/297",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/297\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/297\/revisions"
+        },
+        "name": "Relieurs amateurs",
+        "en_name": "",
+        "category": "La dorure"
+    },
+    "terms": []
+}, {
+    "ID": 296,
+    "title": "Relieurs manuels et relieurs m\u00e9canis\u00e9s",
+    "status": "publish",
+    "type": "clients",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/clients\/relieurs-manuels-et-relieurs-mecanises\/",
+    "date": "2015-05-31T13:57:29",
+    "modified": "2015-05-31T13:58:06",
+    "format": "standard",
+    "slug": "relieurs-manuels-et-relieurs-mecanises",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=clients&#038;p=296",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-31T12:57:29",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-31T12:58:06",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/296",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/296\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/296\/revisions"
+        },
+        "name": "Relieurs manuels et relieurs m\u00e9canis\u00e9s",
+        "en_name": "",
+        "category": "La dorure"
+    },
+    "terms": []
+}]

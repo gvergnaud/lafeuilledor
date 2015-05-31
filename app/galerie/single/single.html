@@ -5,8 +5,8 @@
 
 
     <div class="infos">
-        <h1>{{sgl.post.title}}</h1>
-        <p>{{sgl.post.description}}</p>
+        <h1 ng-bind-html="sgl.post.title"></h1>
+        <p ng-bind-html="sgl.post.description"></p>
     </div>
 
     <button class="back" ui-sref="galerie">Retour aux Réalisations</button>

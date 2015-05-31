@@ -45,7 +45,7 @@ angular.module('animations.atelier', [])
             }
         };
     })
-    .animation('.infos', function(){
+    .animation('.Infos', function(){
 
         var prevDate = 1980;
 
@@ -53,21 +53,21 @@ angular.module('animations.atelier', [])
 
             enter: function(element, done) {
 
-                element[0].querySelector('.trait').classList.add('hidden');
-                element[0].querySelector('.lieu').classList.add('hidden');
+                element[0].querySelector('.Infos-trait').classList.add('hidden');
+                element[0].querySelector('.Infos-lieu').classList.add('hidden');
 
                 var onCountStop = function(){
                     setTimeout(function(){
-                        element[0].querySelector('.trait').classList.remove('hidden');
+                        element[0].querySelector('.Infos-trait').classList.remove('hidden');
                         setTimeout(function(){
-                            element[0].querySelector('.lieu').classList.remove('hidden');
+                            element[0].querySelector('.Infos-lieu').classList.remove('hidden');
                         }, 350);
                     }, 750);
                     done();
                 };
 
                 var dateUp = new countUp(
-                    element[0].querySelector('.date'),
+                    element[0].querySelector('.Infos-date'),
                     prevDate,
                     element.scope().section.date,
                     0,
@@ -83,9 +83,45 @@ angular.module('animations.atelier', [])
             },
 
             leave: function(element, done) {
-                element[0].querySelector('.trait').classList.add('hidden');
-                element[0].querySelector('.lieu').classList.add('hidden');
+                element[0].querySelector('.Infos-trait').classList.add('hidden');
+                element[0].querySelector('.Infos-lieu').classList.add('hidden');
                 done();
+            }
+        };
+    })
+    .animation('.clientsView', function(){
+
+        return {
+
+            enter: function(element, done) {
+
+                var container = element[0].querySelector('.container');
+
+                if(!container) return;
+
+                TweenMax.set(container, {
+                    x: '100%'
+                });
+
+                TweenMax.to(container, .8, {
+                    x: '0%',
+                    ease: Power2.easeOut,
+                    onComplete: done
+                });
+
+            },
+
+            leave: function(element, done) {
+                var container = element[0].querySelector('.container');
+
+                if(!container) return;
+
+                TweenMax.to(container, .8, {
+                    x: '100%',
+                    ease: Power2.easeOut,
+                    onComplete: done
+                });
+
             }
         };
     });

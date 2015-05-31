@@ -23,16 +23,18 @@
 @black: #262626;
 @opaqueBlack: rgba(0,0,0,.8);
 @gray: #515151;
+@lightGray: #95928e;
 @beige: #e6dcd1;
 @white: #E0D5C4;
 @saumon: #ce7259;
-@darkSaumon: #d5472e;
+@darkSaumon: #c13c25;
 // sizes
 @border: 15px;
 @topBorder: 40px;
 // FONTS
 @title: 'Pistilli';
 @subtitle: 'Montserrat';
+@paragraph: 'Montserrat';
 // EASEs
 @easeInOut: cubic-bezier(.4,.01,.6,1);
 @easeIn: cubic-bezier(.66,.01,.66,.73);
@@ -61,6 +63,7 @@ body {
 ::-webkit-scrollbar {
     height: 7px;
     width: 7px;
+    z-index: 15;
 }
 
 ::-webkit-scrollbar-track {
@@ -117,6 +120,17 @@ button{
     width: 50px;
     margin: 50px 0;
     background: url("../assets/images/zigouigoui.svg") no-repeat;
+}
+
+.scroll{
+    height: 40px;
+    width: 40px;
+    margin: 50px 0;
+    cursor: pointer;
+    background: url("../assets/images/scroll.png") no-repeat;
+    line-height: 100px;
+    font-family: @subtitle;
+    font-style: normal;
 }
 
 .arrowLeft{

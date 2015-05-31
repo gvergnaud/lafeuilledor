@@ -1,6 +1,11 @@
 <div
     id="atelierContainer"
-    class="container {{atlr.history[atlr.current].name}}"
+    class="container textureBg {{atlr.history[atlr.current].name}}"
+    ng-class="{
+        beige: atlr.current === 0 || atlr.current === 2 ||atlr.current === 4,
+        saumon: atlr.current === 3 || atlr.current === 5,
+        dark: atlr.current === 1
+    }"
     data-on-wheel
     data-down="atlr.down()"
     data-up="atlr.up()"
@@ -12,36 +17,57 @@
         data-drag-up="atlr.up()"
     ></timeline>
 
-    <div class="background" ng-repeat="(index, section) in atlr.history" ng-class="{
-        active: atlr.current === index
-    }">
-        <img full-frame ng-src="{{section.bg}}" alt="{{name}}">
+    <div
+        class="background"
+        ng-class="{
+            active: atlr.current === index
+        }"
+        ng-repeat="(index, section) in atlr.history"
+        ng-if="section.image"
+    >
+        <img full-frame ng-src="{{section.image.sizes.large}}" alt="{{name}}">
     </div>
 
     <div>
-        <div class="infos" ng-repeat="section in atlr.history | index:atlr.current | limitTo:1">
-            <p class="date">{{section.date}}</p>
-            <div class="trait"></div>
-            <p class="lieu">{{section.lieu}}</p>
+        <div class="Infos" ng-repeat="section in atlr.history | index:atlr.current | limitTo:1">
+            <p class="Infos-date">{{section.date}}</p>
+            <p class="Infos-aujourdhui">{{app.language === 'fr' ? 'Aujourd\'hui' : 'Today'}}</p>
+            <div class="Infos-trait"></div>
+            <p class="Infos-lieu">{{section.lieu}}</p>
         </div>
 
         <div
             class="center {{section.name}}"
             ng-repeat="section in atlr.history | index:atlr.current | limitTo:1"
+            ng-class="{
+                beige: atlr.current === 0 || atlr.current === 2 ||atlr.current === 4,
+                saumon: atlr.current === 3 || atlr.current === 5,
+                dark: atlr.current === 1
+            }"
         >
-            <p class="stagger baseline">{{section.baseline}}</p>
+            <h1 class="stagger title" ng-bind-html="section.title"></h1>
             <div class="stagger fioriture"></div>
-            <text-clip
-                class="stagger title"
-                image-url="assets/images/texture.jpg"
-                image-width="300"
-                image-height="200"
-                content="{{section.title}}"
-                text-size="200"
-            ></text-clip>
-            <!-- <h1 class="stagger title">{{section.title}}</h1> -->
-            <p class="stagger content">{{section.content}}</p>
+
+            <div class="flexContainer">
+                <h2 class="stagger baseline" ng-bind-html="section.baseline"></h2>
+                <p class="stagger content" ng-bind-html="section.content"></p>
+            </div>
+
+            <button
+                class="stagger learnMoreButton"
+                ui-sref="formation"
+                ng-if="section.name === 'aujourdhui'"
+            >
+                {{ app.language === 'fr' ? 'En savoir plus' : 'Learn more' }}
+            </button>
+
+            <i class="stagger scroll" ng-if="section.name === 'introduction'" ng-click="atlr.down()">Scroll</i>
         </div>
     </div>
+
+
+    <button class="clientsButton" ui-sref="atelier.clients">{{ app.language === 'fr' ? 'Nos Clients' : 'Our CLients' }}</button>
+
+    <div class="clientsView" ui-view="clients"></div>
 
 </div>

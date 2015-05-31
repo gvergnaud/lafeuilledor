@@ -1,46 +1,54 @@
+.halfRight{
+    #savoirContainer{
+        right: 0;
+    }
+}
+
+.halfLeft{
+    #savoirContainer{
+        left: 0;
+    }
+}
+
 #savoirContainer{
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 5;
-
-    nav{
-
-    }
 
     .Details{
         position: absolute;
-        height: 100%;
-        width: 50%;
-        left: 0;
-        padding-right: 7%;
+        width: 100%;
+        min-height: 50%;
+        right: 0;
+        top: 50%;
         box-sizing: border-box;
-        overflow: auto;
 
         background-color: @beige;
         z-index: 5;
 
-        text-align: right;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         justify-content: center;
+        align-items: flex-start;
 
         &-content{
             width: 500px;
             max-width: 90%;
+            margin: 0 auto;
 
             h1{
-                margin: 2rem 0;
-                text-align: right;
+                margin: 6rem 0 3rem 0;
                 font-family: @title;
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+                font-weight: normal;
                 color: @black;
             }
 
             h2{
-                margin: 2rem 0;
-                text-align: right;
+                margin: 3rem 0;
                 font-family: @subtitle;
                 font-weight: normal;
                 font-size: 1.5rem;
@@ -48,11 +56,11 @@
             }
 
             p{
-                margin: 2rem 0;
-                margin-left: 50px;
-                text-align: right;
+                margin: 3rem 0;
                 font-size: 1rem;
                 line-height: 1.5rem;
+                font-family: @paragraph;
+                font-size: .9rem;
             }
 
             &-contact{
@@ -63,9 +71,10 @@
 
     .Picture{
         position: absolute;
-        height: 100%;
-        width: 50%;
-        right: 0;
+        height: 50%;
+        width: 100%;
+        left: 0;
+        top: 0;
 
         background-color: @black;
         z-index: 4;

@@ -1,7 +1,18 @@
 #atelierContainer{
 
-    background-color: @black;
-    color: white;
+
+    button.clientsButton{
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        width: 150px;
+        font-size: .6rem;
+        .transform(translateY(-50%) rotate(90deg));
+    }
+
+    // DEFAULT STYLE
+
+    .transition(1s ease);
 
     div.background{
         position: absolute;
@@ -17,26 +28,31 @@
 
         &.active{
             .transform(scale(1));
-            opacity: .22;
+            opacity: .15;
             .transition(5s cubic-bezier(.17,.67,.38,.99) 1.5s);
         }
     }
 
-    div.infos{
+    .Infos{
         position: absolute;
         left: 50px;
         top: 50%;
         width: 100px;
         font-family: @subtitle;
+        opacity: 1;
 
-        .date{
-            color: @saumon;
+        &-date{
             font-size: 1rem;
             font-weight: bold;
-
         }
 
-        .trait{
+        &-aujourdhui{
+            font-size: 1rem;
+            font-weight: bold;
+            display: none;
+        }
+
+        &-trait{
             background-color: @gray;
             width: 40px;
             height: 1px;
@@ -49,7 +65,7 @@
             }
         }
 
-        .lieu{
+        &-lieu{
             color: @gray;
             text-transform: uppercase;
             font-size: .8rem;
@@ -70,7 +86,7 @@
         position: absolute;
         top: 0;
         left: 50%;
-        width: 600px;
+        width: 650px;
         max-width: 100%;
         height: 100%;
 
@@ -79,25 +95,16 @@
         align-items: center;
         flex-direction: column;
 
-        text-align: center;
         z-index: 1;
         cursor: -webkit-grab;
 
 
         .transform(translateX(-50%));
 
-        .title{
-            font-family: @title;
-            font-size: 10rem;
-            margin: 0;
-            margin-bottom: 50px;
-            font-weight: normal;
-            color: @beige;
-        }
 
-        .baseline{
+
+        .title{
             font-family: @subtitle;
-            color: @gray;
             text-transform: uppercase;
             font-size: .8rem;
             font-weight: bold;
@@ -107,21 +114,215 @@
 
         }
 
-        .content{
+        .flexContainer{
 
+            display: flex;
+            flex-direction: rows;
+            justify-content: center;
+            align-items: flex-start;
+
+        }
+
+        .baseline{
+            flex: 5;
+            margin: 0 20px;
+            box-sizing: border-box;
+
+            font-family: @title;
+            font-size: 2.5rem;
+            font-weight: normal;
+            text-align: right;
+        }
+
+        .content{
+            flex: 5;
+            margin: 0 20px;
+            box-sizing: border-box;
+            font-family: @paragraph;
+            font-size: .9rem;
+        }
+
+        .learnMoreButton{
+            display: none;
         }
     }
 
-    &.rencontre{
+    // Page Type STYLE
 
+
+    &.beige{
+        background-color: @beige;
+        color: @black;
+
+        .Infos-date, .Infos-aujourdhui{
+            color: @saumon;
+        }
+
+        timeline{
+            .point{
+                background: @black;
+            }
+        }
     }
 
-    &.fondation{
+    &.saumon{
+        background-color: @darkSaumon;
+        color: @beige;
 
+        &.textureBg{
+            &::after {
+                opacity: .2;
+            }
+        }
+
+        .Infos-date, .Infos-aujourdhui{
+            color: @beige;
+        }
+
+        timeline{
+            .point{
+                background: @beige;
+            }
+        }
     }
 
-    &.bl{
+    &.dark{
+        background-color: #000;
+        color: @beige;
+        &.textureBg{
+            &::after {
+                opacity: .15;
+            }
+        }
 
+        .Infos-date, .Infos-aujourdhui{
+            color: @saumon;
+        }
+
+        timeline{
+            .point{
+                background: @beige;
+            }
+        }
     }
 
+
+    // Custom Page Style
+
+    &.introduction{
+        .Infos{
+            opacity: 0;
+        }
+    }
+
+    &.aujourdhui{
+        .Infos{
+            &-date{
+                display: none;
+            }
+            &-aujourdhui{
+                display: block;
+            }
+        }
+    }
+
+
+
+    .center{
+
+        &.beige{
+            color: @black;
+
+            .baseline{
+                color: @saumon;
+            }
+
+            .content, .title{
+                color: @gray;
+            }
+        }
+
+        &.saumon{
+            color: @beige;
+        }
+
+        &.dark{
+            color: @beige;
+
+            .content{
+                color: @lightGray;
+            }
+        }
+
+        &.introduction{
+            .baseline{
+                display: none;
+            }
+
+            .title{
+                font-family: @title;
+                color: @saumon;
+                font-size: 6rem;
+                font-weight: normal;
+                text-transform: none;
+                margin: 0;
+                text-align: center;
+            }
+
+            .content{
+                font-family: @paragraph;
+                font-weight: normal;
+                text-align: justify;
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+                -webkit-column-gap: 40px;
+                -moz-column-gap: 40px;
+                column-gap: 40px;
+
+                p{
+                    margin: 0;
+                }
+            }
+        }
+
+        &.rencontre{
+            width: 535px;
+        }
+
+        &.creation{
+            .baseline{
+                font-size: 3rem;
+            }
+
+            .flexContainer{
+                flex-direction:row-reverse;
+                align-items: center;
+            }
+
+            .baseline{
+                text-align: left;
+            }
+
+            .content{
+                text-align: right;
+            }
+        }
+
+        &.aujourdhui{
+            .content{
+                display: none;
+            }
+            .baseline{
+                text-align: center;
+                width: 400px;
+                font-size: 3rem;
+            }
+            .learnMoreButton{
+                .transition(none);
+                display: block;
+                margin-top: 50px;
+            }
+        }
+    }
 }

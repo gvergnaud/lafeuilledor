@@ -6,15 +6,16 @@ angular.module('services.Api', [
     .factory('Api', function($q, $http, SERVER) {
         // Service logic
 
-        
 
-        var _data= {
+
+        var _data = {
             menu: false,
             histoire: false,
             savoirFaire: false,
             realisations: false,
             conferences: false,
-            formations: false
+            formations: false,
+            clients: false
         };
 
         var _language = 'fr';
@@ -46,7 +47,8 @@ angular.module('services.Api', [
 
                 if(!_data.histoire || reload){
 
-                    $http.get(SERVER.API + '/posts?type=histoire')
+                    // $http.get(SERVER.API + '/posts?type=histoire')
+                    $http.get('data/histoire.json')
                         .success(function(data){
 
 
@@ -84,7 +86,7 @@ angular.module('services.Api', [
                 if(!_data.savoirFaire || reload){
 
                     // $http.get(SERVER.API + '/posts?type=savoir_faire')
-                    $http.get('savoir-faire.json')
+                    $http.get('data/savoir-faire.json')
                         .success(function(data){
 
 
@@ -92,6 +94,7 @@ angular.module('services.Api', [
                                 savoirFaire.push({
                                     slug: savoir.slug,
                                     image: savoir.meta.image,
+                                    column: savoir.meta.column,
                                     title: (_language === 'fr') ? savoir.title : savoir.meta.en_title,
                                     content: (_language === 'fr') ? savoir.meta.content : savoir.meta.en_content,
                                     baseline: (_language === 'fr') ? savoir.meta.baseline : savoir.meta.en_baseline
@@ -118,7 +121,7 @@ angular.module('services.Api', [
                 if(!_data.realisations || reload){
 
                     // $http.get(SERVER.API + '/posts?type=realisations')
-                    $http.get('realisations.json')
+                    $http.get('data/realisations.json')
                         .success(function(data){
 
 
@@ -154,7 +157,7 @@ angular.module('services.Api', [
                 if(!_data.conferences || reload){
 
                     // $http.get(SERVER.API + '/posts?type=conference')
-                    $http.get('conferences.json')
+                    $http.get('data/conferences.json')
                         .success(function(data){
 
 
@@ -190,7 +193,7 @@ angular.module('services.Api', [
                 if(!_data.formations || reload){
 
                     // $http.get(SERVER.API + '/posts?type=formation')
-                    $http.get('conferences.json')
+                    $http.get('data/conferences.json')
                         .success(function(data){
 
 
@@ -220,13 +223,48 @@ angular.module('services.Api', [
             },
 
 
+            getClients: function(reload){
+                var deferred = $q.defer(),
+                    clients = [];
+
+                if(!_data.clients || reload){
+
+                    // $http.get(SERVER.API + '/posts?type=clients')
+                    $http.get('data/clients.json')
+                        .success(function(data){
+
+
+                            angular.forEach(data, function(client){
+                                clients.push({
+                                    slug: client.slug,
+                                    category: client.meta.category,
+                                    name: (_language === 'fr') ? client.meta.name : client.meta.en_name
+                                });
+                            });
+
+
+                            _data.clients = clients;
+                            deferred.resolve(clients);
+                        })
+                        .error(function (data, status){
+                            deferred.reject(data);
+                        });
+                }else{
+                    deferred.resolve(_data.clients);
+                }
+
+                return deferred.promise;
+            },
+
+
             getMenu: function(reload){
                 var deferred = $q.defer(),
                     menu = {};
 
                 if(!_data.menu || reload){
 
-                    $http.get(SERVER.API + '/posts?type=menu')
+                    // $http.get(SERVER.API + '/posts?type=menu')
+                    $http.get('data/menu.json')
                         .success(function(data){
 
                             menu.atelier = (_language === 'fr') ? data[0].meta.atelier : data[0].meta.en_atelier;

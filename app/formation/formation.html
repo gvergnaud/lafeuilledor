@@ -9,27 +9,27 @@
 
     <div class="center" ui-sref="formation">
         <header ng-class="{hidden: fc.detailsOpen}">
-            <h1>{{fc.headerTitle}}</h1>
+            <h1>{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmit our expertise around the world' }}</h1>
             <div class="fioriture"></div>
         </header>
 
         <div class="formationsConferences">
             <section class="Formations"  ng-click="app.stopEventPropagation($event)">
-                <h2 class="Formations-title">Formations</h2>
+                <h2 class="Formations-title">{{ app.language === 'fr' ? 'Formations' : 'Training' }}</h2>
                 <div class="Formations-list">
                     <article
                         class="Formations-list-item"
                         ng-repeat="(index, formation) in fc.formations"
                         ui-sref="formation.openedFormation({slug: formation.slug})"
                     >
-                        <h4>{{formation.title}}</h4>
+                        <h4 ng-bind-html="formation.title"></h4>
                         <span>{{'0' + (index + 1)}}</span>
                     </article>
                 </div>
             </section>
 
             <section class="Conferences" ng-click="app.stopEventPropagation($event)">
-                <h2 class="Conferences-title">Conférences</h2>
+                <h2 class="Conferences-title">{{ app.language === 'fr' ? 'Conférences' : 'Conferences' }}</h2>
                 <div class="Conferences-list">
                     <article
                         class="Conferences-list-item"
@@ -37,7 +37,7 @@
                         ui-sref="formation.openedConference({slug: conference.slug})"
                     >
                         <span>{{'0' + (index + 1)}}</span>
-                        <h4>{{conference.title}}</h4>
+                        <h4 ng-bind-html="conference.title"></h4>
                     </article>
                 </div>
             </section>

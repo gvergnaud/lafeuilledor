@@ -38,8 +38,6 @@ angular.module('App.formation', [
         fc.conferences = conferences;
         fc.formations = formations;
 
-        fc.headerTitle = (Api.getLanguage() === 'fr') ? 'Transmettre un savoir-faire à l\'international' : '';
-
         fc.detailsOpen = ($state.current.name !== 'formation');
 
         $rootScope.$on('$stateChangeSuccess', function(e, state){
@@ -49,7 +47,7 @@ angular.module('App.formation', [
         $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
 
             fc.headerTitle = (Api.getLanguage() === 'fr') ? 'Transmettre un savoir-faire à l\'international' : '';
-            
+
             Api.getConferences().then(function(conferences){
                 fc.conferences = conferences;
             });

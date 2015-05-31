@@ -1,31 +1,46 @@
 <div
     id="savoirFaireContainer"
     class="container"
-    data-on-wheel
-    data-up="sf.prev()"
-    data-down="sf.next()"
 >
-    <div class="background" ng-class="{ active: sf.loaded }">
-        <img full-frame ng-src="{{sf.bg}}" />
+    <div class="background">
+        <img full-frame src="assets/images/IMG_9520.jpg" />
     </div>
 
-    <div class="center" ng-class="{ hidden: sf.detailsOpen }">
+    <div class="center" ui-sref="savoirfaire">
+        <header ng-class="{hidden: sf.detailsOpen}">
+            <h1>{{ app.language === 'fr' ? 'Découvrez le savoir-faire de La Feuille d\'Or' : 'Discover the expertise of La Feuille d\'Or' }}</h1>
+            <div class="fioriture"></div>
+        </header>
 
-        <h2>{{sf.baseline}}</h2>
+        <div class="Lists">
+            <section class="Left"  ng-click="app.stopEventPropagation($event)">
+                <div class="Left-list">
+                    <article
+                        class="Left-list-item"
+                        ng-repeat="(index, savoir) in sf.savoirsLeft"
+                        ng-click="sf.openRight(savoir.slug)"
+                    >
+                        <h4 ng-bind-html="savoir.title"></h4>
+                        <span>{{'0' + (index + 1)}}</span>
+                    </article>
+                </div>
+            </section>
 
-        <div class="fioriture"></div>
-
-        <div class="savoir-list">
-            <button class="savoir"
-                ng-repeat="savoir in sf.savoirs"
-                ng-click="sf.openDetails(savoir.slug)"
-            >
-                {{savoir.title}}
-            </button>
+            <section class="Right" ng-click="app.stopEventPropagation($event)">
+                <div class="Right-list">
+                    <article
+                        class="Right-list-item"
+                        ng-repeat="(index, savoir) in sf.savoirsRight"
+                        ng-click="sf.openLeft(savoir.slug)"
+                    >
+                        <span>{{'0' + (index + 1)}}</span>
+                        <h4 ng-bind-html="savoir.title"></h4>
+                    </article>
+                </div>
+            </section>
         </div>
-
     </div>
 
-    <div class="savoirView" ui-view="savoir"></div>
+    <div class="{{sf.animClass}}" ui-view="savoir"></div>
 
 </div>

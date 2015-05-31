@@ -1,20 +1,33 @@
-#formationContainer{
+#clientsContainer{
 
-    .background{
+    z-index: 10;
+    position: absolute;
+
+
+    button.atelierButton{
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        width: 150px;
+        font-size: .6rem;
+        .transform(translateY(-50%) rotate(90deg));
+        z-index: 11;
+    }
+
+
+    .clientsBackground{
         position: absolute;
         height: 100%;
         width: 100%;
 
-        background-color: @black;
-
-        z-index: -1;
+        background-color: #1D1D1D;
 
         img{
-            opacity: .9;
+            opacity: .22;
         }
     }
 
-    .center {
+    .clientsCenter {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -31,10 +44,6 @@
 
         header{
             margin-top: 100px;
-            .transition(.3s ease);
-            &.hidden{
-                opacity: 0;
-            }
 
             h1{
                 color: @beige;
@@ -49,26 +58,26 @@
             }
         }
 
-        .formationsConferences{
+        .Lists{
             position: relative;
             height: 400px;
             width: 100%;
         }
     }
 
-    .Formations{
+    .Dorure{
         position: absolute;
         right: 55%;
         text-align: right;
     }
 
-    .Conferences{
+    .Formation{
         position: absolute;
         left: 55%;
         text-align: left;
     }
 
-    .Formations, .Conferences{
+    .Dorure, .Formation{
 
         &-title{
             font-family: @title;
@@ -87,24 +96,14 @@
             &-item{
 
                 margin: 10px 0;
-                cursor: pointer;
 
                 h4{
                     display: inline-block;
                     margin: 10px;
                     text-transform: lowercase;
-                    .transition(.2s ease);
 
                     &::first-letter{
                         text-transform: uppercase;
-                    }
-
-                    &:hover{
-                        color: @saumon;
-                    }
-
-                    &:active{
-                        color: @darkSaumon;
                     }
                 }
 
@@ -112,14 +111,6 @@
                     font-family: @title;
                     color: @saumon;
                     font-size: 1.2rem;
-                }
-
-                &:hover{
-                    color: @saumon;
-                }
-
-                &:active{
-                    color: @darkSaumon;
                 }
             }
         }

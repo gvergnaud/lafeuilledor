@@ -14,7 +14,7 @@ angular.module('App.savoirfaire', [
                 views: {
                     'main': {
                         resolve: {
-                            savoirs: function(Api){
+                            savoirs: function(Api) {
                                 return Api.getSavoirFaire();
                             }
                         },
@@ -28,78 +28,51 @@ angular.module('App.savoirfaire', [
     .controller('SfCtrl', function($scope, $rootScope, $state, $timeout, Api, savoirs) {
 
         var sf = this;
-        sf.savoirs = savoirs;
 
-        $rootScope.$on('APP_LANGUAGE_CHANGE', function(){
-            Api.getSavoirFaire().then(function(savoirs){
-                sf.savoirs = savoirs;
+        function computeData(savoirs){
+            sf.savoirs = savoirs;
+
+            sf.savoirsLeft = savoirs.filter(function(savoir) {
+                return savoir.column === 'gauche';
             });
+
+            sf.savoirsRight = savoirs.filter(function(savoir) {
+                return savoir.column === 'droite';
+            });
+        }
+
+        computeData(savoirs);
+
+
+        sf.detailsOpen = $state.current.name !== 'savoirfaire';
+        sf.animClass = 'halfLeft';
+
+        sf.openLeft = function(slug) {
+            sf.detailsOpen = true;
+            sf.animClass = 'halfLeft';
+            $state.go('savoirfaire.savoir', {
+                slug: slug
+            });
+        };
+
+        sf.openRight = function(slug) {
+            sf.detailsOpen = true;
+            sf.animClass = 'halfRight';
+            $state.go('savoirfaire.savoir', {
+                slug: slug
+            });
+        };
+
+
+        $rootScope.$on('APP_LANGUAGE_CHANGE', function() {
+            Api.getSavoirFaire().then(computeData);
         });
 
-        sf.loaded = false;
-        sf.baseline = 'Découvrez le savoir-faire de La Feuille d\'Or';
-        sf.bg = '../../wordpress/wp-content/uploads/2015/05/IMG_9535-2000x1333.jpg';
-
-        $timeout(function(){
-            sf.loaded = true;
-        }, 200);
-
-        $rootScope.$on('$stateChangeSuccess', function($event, nextState){
-            if (nextState.name === 'savoirfaire' && sf.detailsOpen){
-                $timeout(function(){
+        $rootScope.$on('$stateChangeSuccess', function($event, nextState) {
+            if (nextState.name === 'savoirfaire' && sf.detailsOpen) {
+                $timeout(function() {
                     sf.detailsOpen = false;
-                }, 1000);
+                }, 200);
             }
         });
-
-
-        var slugArray = savoirs.map(function(savoir){
-            return savoir.slug;
-        });
-        var isOpening = false;
-
-        sf.current = 0;
-        sf.detailsOpen = ($state.current.name !== 'savoirfaire');
-
-        sf.openDetails = function(slug){
-            if (!isOpening) {
-
-                isOpening = true;
-                $timeout(function(){
-                    isOpening = false;
-                }, 1000);
-
-                sf.detailsOpen = true;
-
-                sf.current = slugArray.indexOf(slug);
-
-                $timeout(function(){
-                    $state.go('savoirfaire.savoir', {slug: slug});
-                }, 500);
-            }
-        };
-
-
-
-        sf.next = function(){
-            if(!sf.detailsOpen) return;
-
-            if(slugArray[sf.current + 1]){
-                sf.openDetails(slugArray[sf.current + 1]);
-            }
-            else{
-                sf.openDetails(slugArray[0]);
-            }
-        };
-
-        sf.prev = function(){
-            if(!sf.detailsOpen) return;
-
-            if(slugArray[sf.current - 1]){
-                sf.openDetails(slugArray[sf.current - 1]);
-            }
-            else{
-                sf.openDetails(slugArray[slugArray.length - 1]);
-            }
-        };
     });
