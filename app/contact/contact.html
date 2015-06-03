@@ -1,42 +1,42 @@
-<div id="contactContainer" class="bgBeige">
+<div id="contactContainer" class="container textureBg">
 
     <header>
-        <h2 class="firstTitle">Besoin d'un renseignement ?</h2>
+        <h2 class="firstTitle">{{ app.language === 'fr' ? 'Besoin d\'un renseignement ?' : 'Need more information?' }}</h2>
         <div class="fioriture"></div>
     </header>
 
     <form class="halfScreen">
         <span>
-            <label for="name">Nom</label>
+            <label for="name">{{ app.language === 'fr' ? 'Nom' : 'Name' }}</label>
             <input type="text" name="name" />
         </span>
-        
+
         <span>
             <label for="mail">Email</label>
             <input type="email" name="mail" />
         </span>
-        
+
         <span>
-            <label for="subject">Sujet</label>
+            <label for="subject">{{ app.language === 'fr' ? 'Sujet' : 'Subject' }}</label>
             <input type="text" name="subject" />
         </span>
-        
+
         <span>
             <label for="message">Message</label>
             <textarea name="message"></textarea>
         </span>
 
         <span>
-            <input class="btn-black" type="submit" value="Envoyer">
+            <button class="btn-black" type="submit">{{ app.language === 'fr' ? 'Envoyer' : 'Send' }}</button>
         </span>
     </form>
 
     <section class="informations halfScreen">
         <h1 class="name">Atelier la feuille d'or</h1>
         <h2 class="address">7, rue de la Tour d'Auvergne 75009 Paris</h2>
-        <h4>Téléphone : <span>+33 1 42 82 17 36</span></h4>
+        <h4>{{ app.language === 'fr' ? 'Téléphone' : 'Phone' }} : <span>+33 1 42 82 17 36</span></h4>
         <h4>Email : <span>lafeuilledor@free.fr</span></h4>
-        <h4>Horaires : <span>Du mardi au vendredi</span>
+        <h4>{{ app.language === 'fr' ? 'Horaires' : 'Opening time' }} : <span>{{ app.language === 'fr' ? 'Du mardi au vendredi' : 'Tuesday to Friday' }}</span>
         </h4>
         <h4><span>9h30 / 12h30 - 14h / 18h<span></h4>
         <h4>Métro : <img src="./assets/images/metro2.png"><span class="metro2">Anvers</span></h4>
