@@ -1,31 +1,47 @@
-<div id="contactContainer">
+<div id="contactContainer" class="bgBeige">
 
     <header>
-        <h2>Besoin d'un renseignement ?</h2>
+        <h2 class="firstTitle">Besoin d'un renseignement ?</h2>
         <div class="fioriture"></div>
     </header>
 
-    <form>
-        <label for="name">Nom : </label>
-        <input type="text" name="name" />
+    <form class="halfScreen">
+        <span>
+            <label for="name">Nom</label>
+            <input type="text" name="name" />
+        </span>
+        
+        <span>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" />
+        </span>
+        
+        <span>
+            <label for="subject">Sujet</label>
+            <input type="text" name="subject" />
+        </span>
+        
+        <span>
+            <label for="message">Message</label>
+            <textarea name="message"></textarea>
+        </span>
 
-        <label for="mail">eMail : </label>
-        <input type="email" name="mail" />
-
-        <label for="subject">Sujet : </label>
-        <input type="text" name="subject" />
-
-        <label for="message">Message : </label>
-        <textarea name="message"></textarea>
+        <span>
+            <input class="btn-black" type="submit" value="Envoyer">
+        </span>
     </form>
 
-    <section class="informations">
+    <section class="informations halfScreen">
         <h1 class="name">Atelier la feuille d'or</h1>
-        <h2 class="address">7 rue de la Tour d'Auvergne, 75009 Paris</h2>
-        <h4>Téléphone : +33 1 42 82 17 36</h4>
-        <h4>Email : lafeuilledor@free.fr</h4>
-        <h4>Horaires : Du mardi au vendredi 9h30 / 12h30 - 14h / 18h</h4>
-        <h4>Métro : <i class="metro2">Anvers</i> <i class="metro7">Cadet</i> </h4>
+        <h2 class="address">7, rue de la Tour d'Auvergne 75009 Paris</h2>
+        <h4>Téléphone : <span>+33 1 42 82 17 36</span></h4>
+        <h4>Email : <span>lafeuilledor@free.fr</span></h4>
+        <h4>Horaires : <span>Du mardi au vendredi</span>
+        </h4>
+        <h4><span>9h30 / 12h30 - 14h / 18h<span></h4>
+        <h4>Métro : <img src="./assets/images/metro2.png"><span class="metro2">Anvers</span></h4>
+        <h4><img src="./assets/images/metro7.png"> <span class="metro7">Cadet</span></h4>
+        <h4>Bus : <span>12 - 14 - 57</span></h4>
     </section>
 
 </div>
