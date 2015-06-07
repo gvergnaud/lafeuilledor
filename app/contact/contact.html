@@ -1,11 +1,11 @@
 <div id="contactContainer" class="container textureBg">
 
     <header>
-        <h2 class="firstTitle">{{ app.language === 'fr' ? 'Besoin d\'un renseignement ?' : 'Need more information?' }}</h2>
-        <div class="fioriture"></div>
+        <h2 class="firstTitle stagger">{{ app.language === 'fr' ? 'Besoin d\'un renseignement ?' : 'Need more information?' }}</h2>
+        <div class="fioriture stagger"></div>
     </header>
 
-    <form class="halfScreen">
+    <form class="halfScreen stagger">
         <span>
             <label for="name">{{ app.language === 'fr' ? 'Nom' : 'Name' }}</label>
             <input type="text" name="name" />
@@ -31,7 +31,7 @@
         </span>
     </form>
 
-    <section class="informations halfScreen">
+    <section class="informations halfScreen stagger">
         <h1 class="name">Atelier la feuille d'or</h1>
         <h2 class="address">7, rue de la Tour d'Auvergne 75009 Paris</h2>
         <h4>{{ app.language === 'fr' ? 'Téléphone' : 'Phone' }} : <span>+33 1 42 82 17 36</span></h4>

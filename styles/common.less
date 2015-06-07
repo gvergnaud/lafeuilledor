@@ -78,6 +78,22 @@ body {
 }
 
 
+#appContainer{
+    position: absolute;
+    background-color: @beige;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    &.dark{
+        background-color: @black;
+    }
+}
 
 button{
     position: relative;
@@ -219,6 +235,19 @@ div.border {
     background-color: @beige;
 }
 
+.logo{
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    height: 30px;
+    width: 150px;
+    z-index: 15;
+
+    cursor: pointer;
+    background: @lightGray;
+}
+
 menu {
     z-index: 10;
     font-family: @subtitle;
@@ -259,13 +288,6 @@ menu {
             }
         }
     }
-}
-
-.container{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
 }
 
 .textureBg{

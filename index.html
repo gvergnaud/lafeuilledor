@@ -12,7 +12,11 @@
 	</head>
 	<body ng-controller="AppCtrl as app">
 
-		<div id="container">
+		<div id="appContainer" class="textureBg">
+			<div class="logo" ui-sref="home">
+				<!-- ... -->
+			</div>
+
 			<menu class="mainMenu">
 				<tab ui-sref="atelier">atelier</tab>
 				<tab ui-sref="savoirfaire">savoir-faire</tab>
@@ -65,6 +69,7 @@
 		<!-- Constants -->
         <script src="app/Constants.js"></script>
 		<!-- Animations -->
+		<script src="app/appAnimations.js"></script>
 		<script src="app/atelier/animations.js"></script>
 		<script src="app/savoirfaire/animations.js"></script>
 		<script src="app/formation/animations.js"></script>

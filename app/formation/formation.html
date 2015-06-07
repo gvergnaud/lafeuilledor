@@ -1,6 +1,6 @@
 <div
     id="formationContainer"
-    class="container"
+    class="container dark"
 >
 
     <div class="background">
@@ -9,16 +9,16 @@
 
     <div class="center" ui-sref="formation">
         <header ng-class="{hidden: fc.detailsOpen}">
-            <h1>{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmit our expertise around the world' }}</h1>
-            <div class="fioriture"></div>
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmit our expertise around the world' }}</h1>
+            <div class="fioriture stagger"></div>
         </header>
 
         <div class="formationsConferences">
             <section class="Formations"  ng-click="app.stopEventPropagation($event)">
-                <h2 class="Formations-title">{{ app.language === 'fr' ? 'Formations' : 'Training' }}</h2>
+                <h2 class="Formations-title stagger">{{ app.language === 'fr' ? 'Formations' : 'Training' }}</h2>
                 <div class="Formations-list">
                     <article
-                        class="Formations-list-item"
+                        class="Formations-list-item stagger"
                         ng-repeat="(index, formation) in fc.formations"
                         ui-sref="formation.openedFormation({slug: formation.slug})"
                     >
@@ -29,10 +29,10 @@
             </section>
 
             <section class="Conferences" ng-click="app.stopEventPropagation($event)">
-                <h2 class="Conferences-title">{{ app.language === 'fr' ? 'Conférences' : 'Conferences' }}</h2>
+                <h2 class="Conferences-title stagger">{{ app.language === 'fr' ? 'Conférences' : 'Conferences' }}</h2>
                 <div class="Conferences-list">
                     <article
-                        class="Conferences-list-item"
+                        class="Conferences-list-item stagger"
                         ng-repeat="(index, conference) in fc.conferences"
                         ui-sref="formation.openedConference({slug: conference.slug})"
                     >

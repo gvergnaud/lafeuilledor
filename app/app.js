@@ -11,8 +11,10 @@ angular.module('App', [
         'ui.router',
         'ngAnimate',
         'ngSanitize',
-        
+
         'directives.menu',
+
+        'animations.app',
 
         'services.Api'
     ])

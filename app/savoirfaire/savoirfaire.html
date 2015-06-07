@@ -1,6 +1,6 @@
 <div
     id="savoirFaireContainer"
-    class="container"
+    class="container dark"
 >
     <div class="background">
         <img full-frame src="assets/images/IMG_9520.jpg" />
@@ -8,15 +8,15 @@
 
     <div class="center" ui-sref="savoirfaire">
         <header ng-class="{hidden: sf.detailsOpen}">
-            <h1>{{ app.language === 'fr' ? 'Découvrez le savoir-faire de La Feuille d\'Or' : 'Discover the expertise of La Feuille d\'Or' }}</h1>
-            <div class="fioriture"></div>
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Découvrez le savoir-faire de La Feuille d\'Or' : 'Discover the expertise of La Feuille d\'Or' }}</h1>
+            <div class="fioriture stagger"></div>
         </header>
 
         <div class="Lists">
             <section class="Left"  ng-click="app.stopEventPropagation($event)">
                 <div class="Left-list">
                     <article
-                        class="Left-list-item"
+                        class="Left-list-item stagger"
                         ng-repeat="(index, savoir) in sf.savoirsLeft"
                         ng-click="sf.openRight(savoir.slug)"
                     >
@@ -29,7 +29,7 @@
             <section class="Right" ng-click="app.stopEventPropagation($event)">
                 <div class="Right-list">
                     <article
-                        class="Right-list-item"
+                        class="Right-list-item stagger"
                         ng-repeat="(index, savoir) in sf.savoirsRight"
                         ng-click="sf.openLeft(savoir.slug)"
                     >
