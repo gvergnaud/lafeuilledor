@@ -29,8 +29,10 @@
             <div class="shadow"></div>
             <img full-frame ng-src="{{post.cover.sizes.medium}}" alt="post.title"/>
             <div class="hover">
-                <h2 ng-bind-html="post.title"></h2>
-                <p>{{post.description}}</p>
+                <div class="text">
+                    <h2 ng-bind-html="post.title"></h2>
+                    <p>{{post.description}}</p>
+                </div>
             </div>
         </div>
     </gallery>

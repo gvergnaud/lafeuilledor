@@ -37,7 +37,7 @@
         </div>
 
         <div
-            class="center {{section.name}}"
+            class="center {{section.name}} {{app.language}}"
             ng-repeat="section in atlr.history | index:atlr.current | limitTo:1"
             ng-class="{
                 beige: atlr.current === 0 || atlr.current === 2 ||atlr.current === 4,
