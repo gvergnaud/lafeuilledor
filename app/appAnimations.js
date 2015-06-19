@@ -1,6 +1,7 @@
 (function() {
     var _animDuration = .4,
-        _staggerDuration = .1;
+        _staggerDuration = .1,
+        nextDelay = 0;
 
     angular.module('animations.app', [])
         .animation('.mainView', function($rootScope) {
@@ -10,20 +11,19 @@
 
                     var staggers = element[0].querySelectorAll('.stagger'),
                         background = element[0].querySelector('.background'),
-                        container = element[0].querySelector('.container'),
-                        delay = _animDuration + _staggerDuration * (staggers.length - 1);
+                        container = element[0].querySelector('.container');
 
                     if(!container) {
                         done();
                         return;
                     }
 
-                    var tl = new TimelineMax({paused: true, onComplete: done});
+                    var tl = new TimelineMax({paused: true});
 
                     tl
                         .from(element, _animDuration, {
                             opacity: 0,
-                            delay: delay,
+                            delay: nextDelay,
                             ease: Power2.easeOut
                         })
                         .staggerFrom(staggers, .7, {
@@ -33,7 +33,7 @@
                         }, _staggerDuration);
 
                     if(background){
-                        tl.from(background, 3.5, {
+                        tl.from(background, 3, {
                             opacity: 0,
                             scale: 1.05,
                             ease: Ease.easeOut
@@ -41,6 +41,9 @@
                     }
 
                     tl.restart();
+
+                    nextDelay = .1 + _animDuration + (_staggerDuration / 2) * (staggers.length - 1);
+                    done();
                 },
 
                 leave: function(element, done) {
@@ -61,8 +64,9 @@
                         .staggerTo(staggers, .3, {
                             x: -50,
                             opacity: 0,
-                            ease: Power2.easeIn,
-                        }, .04)
+                            ease: Back.easeIn,
+                            easeParams: [3]
+                        }, (_staggerDuration / 2) )
                         .to(element, _animDuration, {
                             opacity: 0,
                             ease: Power2.easeIn

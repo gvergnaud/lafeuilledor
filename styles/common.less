@@ -149,7 +149,7 @@ button{
 .fioriture {
     height: 30px;
     width: 50px;
-    margin: 50px 0;
+    margin: 35px 0;
     background: url("../assets/images/zigouigoui.svg") no-repeat;
 }
 
@@ -157,6 +157,7 @@ button{
     height: 40px;
     width: 40px;
     margin: 50px 0;
+    opacity: .7;
     cursor: pointer;
     background: url("../assets/images/scroll.png") no-repeat;
     line-height: 100px;
@@ -252,8 +253,9 @@ menu {
     z-index: 10;
     font-family: @subtitle;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
+    letter-spacing: 1px;
     color: @gray;
 
     cursor: pointer;
@@ -264,10 +266,14 @@ menu {
         margin: 0;
         height: @border;
         text-align: center;
+
         tab {
-            margin: 0 10px;
-            padding: 10px;
+            margin: 0 20px;
+            line-height: @topBorder;
             display: inline-block;
+            height: @topBorder;
+            box-sizing: border-box;
+
             &.active {
                 border-bottom: 4px solid @saumon;
                 color: @saumon;
@@ -278,7 +284,7 @@ menu {
         text-align: right;
         position: absolute;
         top: 0;
-        right: 20px;
+        right: 15px;
         width: 75px;
         height: @border;
 

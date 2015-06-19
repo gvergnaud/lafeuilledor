@@ -2,7 +2,7 @@ angular.module('animations.atelier', [])
     .animation('.center', function($rootScope) {
 
         var direction,
-            duration = .3,
+            duration = .4,
             stagger = .1,
             translateY = 30;
 
@@ -25,7 +25,8 @@ angular.module('animations.atelier', [])
                 TweenMax.staggerFrom(elements, duration, {
                     y: y,
                     opacity: 0,
-                    ease: Power2.easeOut,
+                    ease: Back.easeOut,
+                    easeParams: [3],
                     delay: delay,
                 }, staggerDuration, done);
             },
@@ -36,11 +37,11 @@ angular.module('animations.atelier', [])
                 var y = direction === 'down' ? -translateY : translateY
                 var staggerDuration = direction === 'down' ? stagger : -stagger;
 
-                TweenMax.staggerTo(elements, duration, {
+                TweenMax.staggerTo(elements, duration/2, {
                     y: y,
                     opacity: 0,
                     delay: .1,
-                    ease: Power2.easeIn
+                    ease: Power1.easeIn
                 }, staggerDuration, done);
             }
         };

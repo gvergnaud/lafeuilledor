@@ -50,7 +50,7 @@ angular.module('App.galerie', [
         $timeout(function(){
             glr.posts = realisations;
             glr.nbTabs = Math.ceil(glr.posts.length / glr.config.postsPerPage);
-        }, 50);
+        }, 700 + document.querySelectorAll('.stagger').length * 100);
 
         glr.config = {
             nbCol: 3,

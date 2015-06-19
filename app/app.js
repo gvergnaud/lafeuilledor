@@ -36,9 +36,10 @@ angular.module('App', [
 
             app.language = language;
             Api.setLanguage(language);
-            Api.getAll(true).then(function(data){
-                $rootScope.$emit('APP_LANGUAGE_CHANGE', language);
-            });
+            Api.getAll(true)
+                .then(function(data){
+                    $rootScope.$emit('APP_LANGUAGE_CHANGE', language);
+                });
         };
 
         app.stopEventPropagation = function(e){

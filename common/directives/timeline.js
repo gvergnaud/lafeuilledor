@@ -81,9 +81,10 @@ angular.module('directives.timeline', [])
                         if(bigPoints[scroll -.5]){
                             tl.to(bigPoints[scroll -.5], .3, {
                                 y: - 1,
-                                height: 12,
-                                width: 12,
-                                ease: Back.easeOut
+                                height: 10,
+                                width: 10,
+                                ease: Back.easeOut,
+                                easeParams: [4]
                             });
                         }
                     };

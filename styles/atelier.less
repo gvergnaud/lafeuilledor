@@ -7,7 +7,7 @@
         top: 50%;
         width: 150px;
         font-size: .6rem;
-        .transform(translateY(-50%) rotate(90deg));
+        .transform(translateY(-50%) rotate(-90deg));
     }
 
     // DEFAULT STYLE
@@ -106,7 +106,8 @@
         .title{
             font-family: @subtitle;
             text-transform: uppercase;
-            font-size: .8rem;
+            font-size: .7rem;
+            letter-spacing: 3px;
             font-weight: bold;
         }
 
@@ -139,7 +140,9 @@
             margin: 0 20px;
             box-sizing: border-box;
             font-family: @paragraph;
+            font-weight: lighter;
             font-size: .9rem;
+            line-height: 1.35rem;
         }
 
         .learnMoreButton{
@@ -177,6 +180,10 @@
 
         .Infos-date, .Infos-aujourdhui{
             color: @beige;
+        }
+
+        .Infos-trait{
+            background-color: @beige;
         }
 
         timeline{
@@ -262,7 +269,7 @@
             .title{
                 font-family: @title;
                 color: @saumon;
-                font-size: 6rem;
+                font-size: 5rem;
                 font-weight: normal;
                 text-transform: none;
                 margin: 0;
@@ -271,7 +278,6 @@
 
             .content{
                 font-family: @paragraph;
-                font-weight: normal;
                 text-align: justify;
                 -webkit-column-count: 2;
                 -moz-column-count: 2;
