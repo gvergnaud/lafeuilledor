@@ -26,8 +26,8 @@ angular.module('directives.slider', [
                 '   data-down="next()"',
                 '>',
                 '   <nav>',
-                '       <arrow-left ng-if="currentIndex !== 0" class="Slider-arrow left" ng-click="prev()"></arrow-left>',
-                '       <arrow-right ng-if="currentIndex !== pictures.length - 1" class="Slider-arrow right" ng-click="next()"></arrow-right>',
+                '       <div ng-if="currentIndex !== 0" class="Slider-arrow left" ng-click="prev()"></div>',
+                '       <div ng-if="currentIndex !== pictures.length - 1" class="Slider-arrow right" ng-click="next()"></div>',
                 '   </nav>',
                 '    <slider-image class="Slider-image" ng-repeat="picture in pictures | index:currentIndex"></slider-image>',
                 '    <slider-count class="Slider-count"></slider-count>', //{{ currentIndex + 1 + \' / \' + pictures.length}}

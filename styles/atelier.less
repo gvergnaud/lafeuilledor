@@ -155,7 +155,7 @@
 
     &.beige{
         background-color: @beige;
-        color: @black;
+        color: @gray;
 
         .Infos-date, .Infos-aujourdhui{
             color: @saumon;
@@ -239,8 +239,18 @@
 
         &.beige{
 
+            .flexContainer{
+                flex-direction:row-reverse;
+                align-items: flex-start;
+            }
+
             .baseline{
+                text-align: left;
                 color: @saumon;
+            }
+
+            .content{
+                text-align: right;
             }
 
             .content, .title{
@@ -291,26 +301,19 @@
             }
         }
 
-        &.fr.rencontre{
-            width: 535px;
+        &.rencontre{
+            width: 517px;
         }
 
         &.creation{
             .baseline{
                 font-size: 3rem;
             }
+        }
 
-            .flexContainer{
-                flex-direction:row-reverse;
-                align-items: flex-start;
-            }
-
+        &.quatre{
             .baseline{
-                text-align: left;
-            }
-
-            .content{
-                text-align: right;
+                font-size: 3rem;
             }
         }
 

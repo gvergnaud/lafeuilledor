@@ -12,6 +12,7 @@ angular.module('App.atelier', [
         'directives.onWheel',
         'directives.fullFrame',
         'directives.textClip',
+        'directives.zigouigoui',
 
         'services.Api',
 
@@ -82,6 +83,23 @@ angular.module('App.atelier', [
         atlr.down = function(){
             atlr.changeCurrent('down');
         };
+
+        atlr.getColor = function(){
+            if(atlr.current === 0 || atlr.current === 2 ||atlr.current === 4){
+                // beige theme
+                return '#515151';
+            }
+
+            else if(atlr.current === 3 || atlr.current === 5){
+                // saumon theme
+                return '#e6dcd1';
+            }
+
+            else if(atlr.current === 1){
+                // dark theme
+                return '#e6dcd1';
+            }
+        }
 
 
         $rootScope.$on('APP_LANGUAGE_CHANGE', function() {

@@ -6,24 +6,29 @@
 
     background-color: rgba(0,0,0, .8);
 
+    nav{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
     &-arrow{
 
         position: absolute;
-        height: 50px;
-        width: 50px;
-        top: 50%;
+        height: 100%;
+        width: 50%;
+        top: 0;
 
-        cursor: pointer;
         z-index: 11;
 
-        .transform(translateY(-50%));
-
         &.left{
-            left: 20px;
+            cursor: url("../assets/images/arrowleft.svg"), pointer;
+            left: 0;
         }
 
         &.right{
-            right: 20px;
+            cursor: url("../assets/images/arrowright.svg"), pointer;
+            right: 0;
         }
     }
 

@@ -2,8 +2,8 @@
     id="atelierContainer"
     class="container textureBg {{atlr.history[atlr.current].name}}"
     ng-class="{
-        beige: atlr.current === 0 || atlr.current === 2 ||atlr.current === 4,
-        saumon: atlr.current === 3 || atlr.current === 5,
+        beige: !(atlr.current % 2),
+        saumon: atlr.current % 2 && atlr.current !== 1,
         dark: atlr.current === 1
     }"
     data-on-wheel
@@ -37,16 +37,16 @@
         </div>
 
         <div
-            class="center {{section.name}} {{app.language}}"
+            class="center {{section.name + ' ' + app.language}}"
             ng-repeat="section in atlr.history | index:atlr.current | limitTo:1"
             ng-class="{
-                beige: atlr.current === 0 || atlr.current === 2 ||atlr.current === 4,
-                saumon: atlr.current === 3 || atlr.current === 5,
+                beige: !(atlr.current % 2),
+                saumon: atlr.current % 2 && atlr.current !== 1,
                 dark: atlr.current === 1
             }"
         >
             <h1 class="stagger title" ng-bind-html="section.title"></h1>
-            <div class="stagger fioriture"></div>
+            <zigouigoui class="stagger" data-color="{{::atlr.getColor()}}" data-no-animation="atlr.current !== 0 && atlr.current !== 5"></zigouigoui>
 
             <div class="flexContainer">
                 <h2 class="stagger baseline" ng-bind-html="section.baseline"></h2>

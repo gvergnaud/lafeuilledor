@@ -74,7 +74,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: @saumon;
+    background-color: @saumon;
 }
 
 
@@ -146,11 +146,11 @@ button{
     -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
-.fioriture {
-    height: 30px;
-    width: 50px;
-    margin: 35px 0;
-    background: url("../assets/images/zigouigoui.svg") no-repeat;
+zigouigoui{
+    display: block;
+    height: 20px;
+    width: 60px;
+    margin: 35px auto;
 }
 
 .scroll{
@@ -223,6 +223,7 @@ div.border {
         height: 100%;
     }
 }
+
 [ui-view="main"] {
     left: 0;
     right: 0;
@@ -315,6 +316,7 @@ menu {
 h1, h2, h3, h4, h5 {
     margin: 0;
 }
+
 .firstTitle {
     color: @grey-light;
     text-align: center;
@@ -323,14 +325,4 @@ h1, h2, h3, h4, h5 {
     font-size: .7rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-}
-
-
-// BACKGROUND
-.bgBeige {
-    background: url('../assets/images/bg-beige.jpg') no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    width: 100%;
-    height: 100%;
 }

@@ -102,6 +102,8 @@ angular.module('directives.gallery', [])
 
                         $scope.isThumbnailsOpen = false;
 
+                        TweenMax.set('#galerieContainer .text', {opacity: 0});
+
                         TweenMax.staggerTo(elements, .7, {
                             width: 0,
                             ease: Power4.easeInOut
@@ -113,6 +115,8 @@ angular.module('directives.gallery', [])
                     if (!$scope.isThumbnailsOpen) {
 
                         $scope.isThumbnailsOpen = true;
+
+                        TweenMax.set('#galerieContainer .text', {opacity: 1});
 
                         TweenMax.staggerTo(elements, .7, {
                             width: $scope.width,

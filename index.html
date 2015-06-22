@@ -18,10 +18,10 @@
 			</div>
 
 			<menu class="mainMenu">
-				<tab ui-sref="atelier">atelier</tab>
-				<tab ui-sref="savoirfaire">savoir-faire</tab>
-				<tab ui-sref="galerie">réalisations</tab>
-				<tab ui-sref="formation">transmission du savoir</tab>
+				<tab ui-sref="atelier">{{ app.language === 'fr' ? 'atelier' : 'workshop' }}</tab>
+				<tab ui-sref="savoirfaire">{{ app.language === 'fr' ? 'savoir-faire' : 'expertise' }}</tab>
+				<tab ui-sref="galerie">{{ app.language === 'fr' ? 'réalisations' : 'our work' }}</tab>
+				<tab ui-sref="formation">{{ app.language === 'fr' ? 'transmission du savoir' : 'education' }}</tab>
 				<tab ui-sref="contact">contact</tab>
 			</menu>
 
@@ -62,7 +62,8 @@
 		<script src="common/directives/textClip.js"></script>
 		<script src="common/directives/gallery.js"></script>
 		<script src="common/directives/slider.js"></script>
-        <script src="common/directives/arrows.js"></script>
+		<script src="common/directives/arrows.js"></script>
+        <script src="common/directives/zigouigoui.js"></script>
 		<!-- Filters -->
 		<script src="common/filters/index.js"></script>
 		<script src="common/filters/slice.js"></script>
