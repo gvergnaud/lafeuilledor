@@ -14,7 +14,8 @@ angular.module('directives.slider', [
 
             scope: {
                 sliderFullscreen: '=',
-                pictures: '='
+                pictures: '=',
+                noCrop: '='
             },
 
             template: [
@@ -110,12 +111,21 @@ angular.module('directives.slider', [
 
             restrict: 'E',
 
-            template: '<img full-frame ng-src="{{picture.sizes.large}}"/>',
+            template: [
+                '<img full-frame no-crop="noCrop" ng-src="{{picture.sizes.large}}"/>',
+            ].join(),
 
             link: function(scope, element, attrs) {
-                element[0].querySelector('img').addEventListener('load', function(){
-                    TweenMax.from(this, .2, {
-                        opacity: 0
+
+                var img = element[0].querySelector('img');
+
+                TweenMax.set(img, {
+                    opacity: 0
+                });
+
+                img.addEventListener('load', function(){
+                    TweenMax.to(img, .2, {
+                        opacity: 1
                     });
                 });
             }

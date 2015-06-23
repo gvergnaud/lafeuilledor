@@ -132,6 +132,7 @@ angular.module('services.Api', [
                                     pictures: realisation.meta.pictures,
                                     cover: realisation.meta.cover,
                                     title: (_language === 'fr') ? realisation.title : realisation.meta.en_title,
+                                    baseline: (_language === 'fr') ? realisation.meta.baseline : realisation.meta.en_baseline,
                                     description: (_language === 'fr') ? realisation.meta.description : realisation.meta.en_description
                                 });
                             });

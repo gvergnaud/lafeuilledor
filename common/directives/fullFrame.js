@@ -8,6 +8,10 @@ angular.module('directives.fullFrame', [])
 
             restrict: 'A',
 
+			scope: {
+				noCrop: '='
+			},
+
             link: function(scope, element, attrs){
 
                 var parent = element.parent();
@@ -30,17 +34,32 @@ angular.module('directives.fullFrame', [])
                         overflow: 'hidden'
                     });
 
-                    if( (parentWidth / parentHeight) > (elementWidth / elementHeight) ){
-                        element.css({
-                            width: parentWidth + 'px',
-                            height: ''
-                        });
-                    }else{
-                        element.css({
-                            height: parentHeight + 'px',
-                            width: ''
-                        });
-                    }
+					if(!scope.noCrop){
+	                    if( (parentWidth / parentHeight) > (elementWidth / elementHeight) ){
+	                        element.css({
+	                            width: parentWidth + 'px',
+	                            height: ''
+	                        });
+	                    }else{
+	                        element.css({
+	                            height: parentHeight + 'px',
+	                            width: ''
+	                        });
+	                    }
+					}
+					else{
+						if( (parentWidth / parentHeight) <= (elementWidth / elementHeight) ){
+	                        element.css({
+	                            width: parentWidth + 'px',
+	                            height: ''
+	                        });
+	                    }else{
+	                        element.css({
+	                            height: parentHeight + 'px',
+	                            width: ''
+	                        });
+	                    }
+					}
                 };
 
                 style();

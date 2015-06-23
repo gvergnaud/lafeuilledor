@@ -1,11 +1,12 @@
 <div id="singleContainer">
 
 
-    <slider pictures="sgl.post.pictures"></slider>
+    <slider no-crop="true" pictures="sgl.post.pictures"></slider>
 
 
     <div class="infos">
         <h1 ng-bind-html="sgl.post.title"></h1>
+        <h2 ng-bind-html="sgl.post.baseline"></h2>
         <p ng-bind-html="sgl.post.description"></p>
     </div>
 
