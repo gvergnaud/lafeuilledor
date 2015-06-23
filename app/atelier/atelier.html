@@ -55,7 +55,7 @@
 
             <button
                 class="stagger learnMoreButton"
-                ui-sref="formation"
+                ng-click="app.go('formation')"
                 ng-if="section.name === 'aujourdhui'"
             >
                 {{ app.language === 'fr' ? 'En savoir plus' : 'Learn more' }}

@@ -23,7 +23,7 @@ angular.module('directives.menu', [
             link: function(scope, element, attrs){
 
                 function onStateChange(event, toState){
-                    if($state.includes(attrs.uiSref)){
+                    if($state.includes(attrs.stateRef)){
                         element[0].classList.add('active');
                     }else{
                         element[0].classList.remove('active');

@@ -12,6 +12,10 @@
         data-drag-down="glr.down()"
         data-drag-up="glr.up()"
     ></timeline>
+    <div class="TlInfos" ng-repeat="post in glr.posts | index:(glr.current * glr.config.postsPerPage)">
+        <p class="TlInfos-date">{{post.date}}</p>
+        <div class="TlInfos-trait"></div>
+    </div>
 
     <gallery
         class="center"

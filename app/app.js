@@ -24,10 +24,11 @@ angular.module('App', [
         $urlRouterProvider.otherwise('/');
 
     })
-    .controller('AppCtrl', function($scope, $rootScope, Api) {
+    .controller('AppCtrl', function($scope, $rootScope, $state, $timeout, Api) {
         var app = this;
 
         app.language = 'fr';
+        app.sectionAnimationType = 'animForward';
 
         Api.getAll();
 
@@ -44,5 +45,42 @@ angular.module('App', [
 
         app.stopEventPropagation = function(e){
             e.stopPropagation();
+        };
+
+        var tabArray = [
+            'home',
+            'atelier',
+            'savoirfaire',
+            'galerie',
+            'formation',
+            'contact'
+        ];
+
+        app.go = function(nextStateName, params){
+
+            var currentTab = tabArray.filter(function(tab){
+                return $state.includes(tab);
+            })[0];
+
+            var nextTab = tabArray.filter(function(tab){
+                return tab === nextStateName;
+            })[0];
+
+            if(
+                currentTab &&
+                nextTab &&
+                tabArray.indexOf(currentTab) < tabArray.indexOf(nextTab)
+            ){
+
+                app.sectionAnimationType = 'animForward';
+
+            }else{
+
+                app.sectionAnimationType = 'animBackward';
+            }
+
+            $timeout(function(){
+                $state.go(nextStateName, params);
+            }, 50);
         };
     });

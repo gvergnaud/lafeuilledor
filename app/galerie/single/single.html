@@ -4,7 +4,7 @@
     <slider no-crop="true" pictures="sgl.post.pictures"></slider>
 
 
-    <div class="infos">
+    <div class="infos" ng-if="sgl.post.title || sgl.post.baseline || sgl.post.description">
         <h1 ng-bind-html="sgl.post.title"></h1>
         <h2 ng-bind-html="sgl.post.baseline"></h2>
         <p ng-bind-html="sgl.post.description"></p>
