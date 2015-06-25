@@ -7,12 +7,14 @@ angular.module('App', [
         'App.galerie',
         'App.formation',
         'App.contact',
+        'App.mobile',
 
         'ui.router',
         'ngAnimate',
         'ngSanitize',
 
         'directives.menu',
+        'directives.bindScreenWidth',
 
         'animations.app',
 
@@ -29,6 +31,7 @@ angular.module('App', [
 
         app.language = 'fr';
         app.sectionAnimationType = 'animForward';
+        app.minWidth = 960;
 
         Api.getAll();
 
@@ -83,4 +86,5 @@ angular.module('App', [
                 $state.go(nextStateName, params);
             }, 50);
         };
+
     });

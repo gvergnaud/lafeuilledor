@@ -6,8 +6,6 @@ angular.module('services.Api', [
     .factory('Api', function($q, $http, SERVER) {
         // Service logic
 
-
-
         var _data = {
             menu: false,
             histoire: false,
@@ -131,12 +129,18 @@ angular.module('services.Api', [
                                     date: realisation.meta.date,
                                     pictures: realisation.meta.pictures,
                                     cover: realisation.meta.cover,
+                                    bookBinder: realisation.meta.book_binder,
+                                    bookBinderUrl: realisation.meta.book_binder_url,
                                     title: (_language === 'fr') ? realisation.title : realisation.meta.en_title,
                                     baseline: (_language === 'fr') ? realisation.meta.baseline : realisation.meta.en_baseline,
                                     description: (_language === 'fr') ? realisation.meta.description : realisation.meta.en_description
                                 });
                             });
 
+
+                            realisations.sort(function(a, b){
+                                return b.date - a.date;
+                            });
 
                             _data.realisations = realisations;
                             deferred.resolve(realisations);

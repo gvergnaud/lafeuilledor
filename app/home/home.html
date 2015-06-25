@@ -1,12 +1,17 @@
-<div id="homeContainer" class="container textureBg">
+<div id="homeContainer" animation-home class="container textureBg">
 
-    <div class="background">
+    <div class="background grayscale">
         <video full-frame preload="auto" autoplay="true" loop="loop"  muted="muted">
-    		<source src="assets/background.webm" type="video/webm">
+    		<source src="assets/background-v1.webm" type="video/webm">
     	</video>
     </div>
 
-    <main class="center">
+    <header class="Logo" ng-if="animation.logo">
+        <h1 class="Logo-title">Atelier La Feuille d'Or</h1>
+        <!-- <h2 class="Logo-baseline">dorure sur cuir <br> & marquage à chaud</h2> -->
+    </header>
+
+    <main class="center" ng-if="false || animation.center">
 
         <header>
             <h1 class="stagger">{{ app.language === 'fr' ? 'Choisissez votre chapitre pour découvrir l\'histoire' : 'Choose your chapiter to discover the story' }}</h1>
@@ -16,22 +21,22 @@
         <section class="Chapiter">
 
             <article ng-click="app.go('atelier')" class="Chapiter-item left stagger">
-                <h2 class="Chapiter-item-title">l'Atelier</h2>
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'L\'Atelier' : 'Workshop' }}</h2>
                 <span class="Chapiter-item-number">01</span>
             </article>
 
             <article ng-click="app.go('savoirfaire')" class="Chapiter-item right stagger">
-                <h2 class="Chapiter-item-title">Savoir-Faire</h2>
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Savoir-Faire' : 'Expertise' }}</h2>
                 <span class="Chapiter-item-number">02</span>
             </article>
 
             <article ng-click="app.go('galerie')" class="Chapiter-item left stagger">
-                <h2 class="Chapiter-item-title">Réalisations</h2>
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Réalisations' : 'Our Work' }}</h2>
                 <span class="Chapiter-item-number">03</span>
             </article>
 
             <article ng-click="app.go('formation')" class="Chapiter-item right stagger">
-                <h2 class="Chapiter-item-title">Transmission du savoir</h2>
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Transmission du savoir' : 'Education' }}</h2>
                 <span class="Chapiter-item-number">04</span>
             </article>
 

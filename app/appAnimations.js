@@ -148,4 +148,41 @@
             }
         };
     })
+
+    .animation('.sideView', function(){
+
+        return {
+
+            enter: function(element, done) {
+
+                var container = element[0].querySelector('.container');
+
+                if(!container) return;
+
+                TweenMax.set(container, {
+                    x: '100%'
+                });
+
+                TweenMax.to(container, .8, {
+                    x: '0%',
+                    ease: Power2.easeOut,
+                    onComplete: done
+                });
+
+            },
+
+            leave: function(element, done) {
+                var container = element[0].querySelector('.container');
+
+                if(!container) return;
+
+                TweenMax.to(container, .8, {
+                    x: '100%',
+                    ease: Power2.easeOut,
+                    onComplete: done
+                });
+
+            }
+        };
+    })
 })();

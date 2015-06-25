@@ -1,0 +1,106 @@
+#mobileContainer{
+
+    overflow: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+
+        background-color: #161616;
+
+        img{
+            opacity: .15;
+        }
+    }
+
+    nav{
+        position: fixed;
+        right: 20px;
+        top: 10px;
+        z-index: 10;
+
+        color: @beige;
+        font-family: @subtitle;
+        text-transform: uppercase;
+        font-size: .8rem;
+
+        cursor: pointer;
+
+        span{
+
+            &.active{
+                color: @saumon;
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+        padding: 70px 20px;
+        box-sizing: border-box;
+        color: @black;
+        position: relative;
+
+
+        .title{
+            font-family: @title;
+            text-align: center;
+            font-weight: normal;
+            margin: 30px 0;
+        }
+
+        .baseline{
+            font-family: @subtitle;
+            color: @saumon;
+            font-weight: normal;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        &.presentation {
+            background-color: @black;
+            color: @beige;
+
+            .paragraph{
+                color: @lightGray;
+            }
+        }
+
+        &.savoirfaire{
+
+            .savoir{
+                text-align: center;
+                font-family: @subtitle;
+            }
+        }
+
+        &.contact {
+
+            background-color: #f6eadd;
+
+            .informations{
+                text-align: center;
+
+                h4 {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .content{
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+    }
+}

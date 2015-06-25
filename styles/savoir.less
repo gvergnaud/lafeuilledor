@@ -44,7 +44,7 @@
                 font-family: @title;
                 font-size: 2.2rem;
                 font-weight: normal;
-                color: @black;
+                color: #313131;
             }
 
             h2{
@@ -64,8 +64,20 @@
                 font-size: .9rem;
             }
 
-            &-contact{
-                margin-bottom: 50px;
+            &-contactButton{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                .transform(translate(-50%, -50%));
+                background-color: @saumon;
+
+                &:hover{
+                    background-color: @darkSaumon;
+                }
+
+                &:active{
+                    background-color: @darkerSaumon;
+                }
             }
         }
     }
