@@ -45,7 +45,8 @@ angular.module('App.savoirfaire', [
 
 
         sf.detailsOpen = $state.current.name !== 'savoirfaire';
-        sf.animClass = 'halfLeft';
+        // sf.animClass = 'halfLeft';
+
 
         sf.openLeft = function(slug) {
             sf.detailsOpen = true;
@@ -53,6 +54,7 @@ angular.module('App.savoirfaire', [
             $state.go('savoirfaire.savoir', {
                 slug: slug
             });
+            $('.halfRight').style.cursor="crosshair";
         };
 
         sf.openRight = function(slug) {
@@ -61,6 +63,7 @@ angular.module('App.savoirfaire', [
             $state.go('savoirfaire.savoir', {
                 slug: slug
             });
+            $('.halfLeft').style.cursor="crosshair";
         };
 
 
