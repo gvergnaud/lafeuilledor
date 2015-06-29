@@ -17,9 +17,9 @@
 			<div ng-if="screenWidth < app.minWidth" ng-include src="'app/mobile/mobile.html'"></div>
 
 			<div id="appContainer" class="textureBg" ng-if="screenWidth >= app.minWidth">
-				<div class="logo" ng-click="app.go('home')">
-					<!-- ... -->
-				</div>
+				<section class="logo" ng-click="app.go('home')">
+					<h1>la feuille d'or</h1>
+				</section>
 
 				<menu class="mainMenu">
 					<tab ng-click="app.go('atelier')" state-ref="atelier">{{ app.language === 'fr' ? 'atelier' : 'workshop' }}</tab>
@@ -47,7 +47,7 @@
 				<div class="border right"></div>
 				<div class="border bottom"></div>
 				<div class="border left"></div>
-				<a class="mentionsLegales" target="_blank" href="/mentions-legales.html">mentions legales</a>
+				<a class="mentionsLegales" target="_blank" href="mentions-legales.html">mentions legales</a>
 			</div>
 		<!-- Lib -->
 		<script src="bower_components/countUp.js/countUp.js"></script>

@@ -7,16 +7,18 @@ angular.module('services.Api', [
         // Service logic
 
         var _data = {
-            menu: false,
             histoire: false,
             savoirFaire: false,
             realisations: false,
             conferences: false,
             formations: false,
-            clients: false
+            clients: false,
+            partners: false
         };
 
         var _language = 'fr';
+
+        var _fakeData = true;
 
         // Public API here
         var Api = {
@@ -45,8 +47,7 @@ angular.module('services.Api', [
 
                 if(!_data.histoire || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=histoire')
-                    $http.get('data/histoire.json')
+                    $http.get(_fakeData ? 'data/histoire.json' : SERVER.API + '/posts?type=histoire')
                         .success(function(data){
 
 
@@ -83,8 +84,7 @@ angular.module('services.Api', [
 
                 if(!_data.savoirFaire || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=savoir_faire')
-                    $http.get('data/savoir-faire.json')
+                    $http.get(_fakeData ? 'data/savoir-faire.json' : SERVER.API + '/posts?type=savoir_faire')
                         .success(function(data){
 
 
@@ -118,8 +118,7 @@ angular.module('services.Api', [
 
                 if(!_data.realisations || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=realisations')
-                    $http.get('data/realisations.json')
+                    $http.get(_fakeData ? 'data/realisations.json' : SERVER.API + '/posts?type=realisations')
                         .success(function(data){
 
 
@@ -161,8 +160,7 @@ angular.module('services.Api', [
 
                 if(!_data.conferences || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=conference')
-                    $http.get('data/conferences.json')
+                    $http.get(_fakeData ? 'data/conferences.json' : SERVER.API + '/posts?type=conference')
                         .success(function(data){
 
 
@@ -197,8 +195,7 @@ angular.module('services.Api', [
 
                 if(!_data.formations || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=formation')
-                    $http.get('data/conferences.json')
+                    $http.get(_fakeData ? 'data/formations.json' : SERVER.API + '/posts?type=formation')
                         .success(function(data){
 
 
@@ -234,8 +231,7 @@ angular.module('services.Api', [
 
                 if(!_data.clients || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=clients')
-                    $http.get('data/clients.json')
+                    $http.get(_fakeData ? 'data/clients.json' : SERVER.API + '/posts?type=clients')
                         .success(function(data){
 
 
@@ -261,32 +257,32 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-
-            getMenu: function(reload){
+            getPartners: function(reload){
                 var deferred = $q.defer(),
-                    menu = {};
+                    partners = [];
 
-                if(!_data.menu || reload){
+                if(!_data.partners || reload){
 
-                    // $http.get(SERVER.API + '/posts?type=menu')
-                    $http.get('data/menu.json')
+                    $http.get(_fakeData ? 'data/partners.json' : SERVER.API + '/posts?type=partners')
                         .success(function(data){
 
-                            menu.atelier = (_language === 'fr') ? data[0].meta.atelier : data[0].meta.en_atelier;
-                            menu.savoir_faire = (_language === 'fr') ? data[0].meta.savoir_faire : data[0].meta.en_savoir_faire;
-                            menu.galerie = (_language === 'fr') ? data[0].meta.galerie : data[0].meta.en_galerie;
-                            menu.transmission = (_language === 'fr') ? data[0].meta.transmission : data[0].meta.en_transmission;
-                            menu.contact = data[0].meta.contact;
+
+                            angular.forEach(data, function(client){
+                                partners.push({
+                                    link: client.meta.link,
+                                    name: (_language === 'fr') ? client.title : client.meta.en_title
+                                });
+                            });
 
 
-                            _data.menu = menu;
-                            deferred.resolve(menu);
+                            _data.partners = partners;
+                            deferred.resolve(partners);
                         })
                         .error(function (data, status){
                             deferred.reject(data);
                         });
                 }else{
-                    deferred.resolve(_data.menu);
+                    deferred.resolve(_data.partners);
                 }
 
                 return deferred.promise;
@@ -303,7 +299,8 @@ angular.module('services.Api', [
                     this.getRealisations(reload),
                     this.getFormations(reload),
                     this.getConferences(reload),
-                    this.getMenu(reload)
+                    this.getClients(reload),
+                    this.getPartners(reload),
                 ]).then(function(){
                     deferred.resolve(_data);
                 });

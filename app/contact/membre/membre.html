@@ -8,25 +8,28 @@
 
     <div class="membreCenter">
         <header>
-            <h1>{{ app.language === 'fr' ? 'Nous nous engageons' : 'we engage ourself' }}</h1>
+            <h1>{{ app.language === 'fr' ? 'Nous nous engageons' : 'our commitment' }}</h1>
             <zigouigoui data-color="#e6dcd1"></zigouigoui>
         </header>
 
         <div class="Lists">
             <section class="List">
-                <h2 class="List-title">{{ app.language === 'fr' ? 'Membre de' : 'Member of' }}</h2>
+                <h2 class="List-title">{{ app.language === 'fr' ? 'Nos partenaires' : 'Our partners' }}</h2>
                 <div class="List-list">
                     <article
                         class="List-list-item"
-                        ng-repeat="(index, item) in mb.list"
+                        ng-repeat="(index, partner) in mb.partners"
                     >
-                        <a target='_blank' ng-href="{{item.url}}">{{item.name}}</a>
+                        <a
+                            target='_blank'
+                            ng-href="{{partner.url}}"
+                            ng-bind-html="partner.name"></a>
                     </article>
                 </div>
             </section>
         </div>
     </div>
 
-    <button class="backButton" ui-sref="contact">{{ app.language === 'fr' ? 'Retour' : 'Back' }}</button>
+    <button class="backButton btnSaumon" ui-sref="contact">{{ app.language === 'fr' ? 'Retour' : 'Back' }}</button>
 
 </div>

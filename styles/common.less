@@ -139,6 +139,19 @@ button{
         right: 0;
         position: absolute;
     }
+
+    &.btnSaumon{
+
+        background-color: @saumon;
+
+        &:hover{
+            background-color: @darkSaumon;
+        }
+
+        &:active{
+            background-color: @darkerSaumon;
+        }
+    }
 }
 
 .grayscale{
@@ -241,13 +254,21 @@ div.border {
 .logo{
     display: inline-block;
     position: absolute;
-    top: 5px;
+    top: 0;
     left: @border;
-    height: 30px;
+    height: @topBorder;
     width: 150px;
     z-index: 15;
-
     cursor: pointer;
+
+    h1 {
+        font-family: @subtitle;
+        font-weight: bold;
+        font-size: .7rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        line-height: @topBorder;
+    }
     // background: @lightGray;
 }
 
