@@ -29,11 +29,6 @@ angular.module('App.savoirfaire', [
 
         var sf = this;
 
-
-        console.log($scope.app.state.name);
-        console.log($scope);
-
-
         function computeData(savoirs){
             sf.savoirs = savoirs;
 
