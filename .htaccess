@@ -1,4 +1,5 @@
-AuthUserFile /kunden/homepages/15/d576140538/htdocs/preprod/.htpasswd
+AuthUserFile 
+/kunden/homepages/15/d576140538/htdocs/preprod/.htpasswd
 AuthName "Restricted Access"
 AuthType Basic
 <limit GET>

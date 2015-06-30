@@ -9,13 +9,13 @@
 
     <div class="center" ui-sref="formation">
         <header ng-class="{hidden: fc.detailsOpen}">
-            <h1 class="stagger">{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmit our expertise around the world' }}</h1>
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmission of a knowledge' }}</h1>
             <zigouigoui class="stagger" data-color="#e6dcd1"></zigouigoui>
         </header>
 
         <div class="formationsConferences">
             <section class="Formations"  ng-click="app.stopEventPropagation($event)">
-                <h2 class="Formations-title stagger">{{ app.language === 'fr' ? 'Formations' : 'Training' }}</h2>
+                <h2 class="Formations-title stagger">{{ app.language === 'fr' ? 'Formations' : 'Workshop' }}</h2>
                 <div class="Formations-list">
                     <article
                         class="Formations-list-item stagger"
@@ -29,7 +29,7 @@
             </section>
 
             <section class="Conferences" ng-click="app.stopEventPropagation($event)">
-                <h2 class="Conferences-title stagger">{{ app.language === 'fr' ? 'Conférences' : 'Conferences' }}</h2>
+                <h2 class="Conferences-title stagger">{{ app.language === 'fr' ? 'Conférences' : 'Lectures' }}</h2>
                 <div class="Conferences-list">
                     <article
                         class="Conferences-list-item stagger"

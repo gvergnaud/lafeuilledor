@@ -104,7 +104,7 @@
                                 scope.animation.center = true;
                             });
                         }, 4000);
-                    }, 2500);
+                    }, 4800);
 
                 }
             }
