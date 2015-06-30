@@ -21,7 +21,7 @@
                         ng-repeat="(index, client) in clts.clientsDorure"
                     >
                         <h4>{{client.name}}</h4>
-                        <span>{{'0' + (index + 1)}}</span>
+                        <!-- <span>{{''0' + (index + 1)'}}</span> -->
                     </article>
                 </div>
             </section>
@@ -33,7 +33,7 @@
                         class="Formation-list-item"
                         ng-repeat="(index, client) in clts.clientsFormation"
                     >
-                        <span>{{'0' + (index + 1)}}</span>
+                        <!-- <span>{{''0' + (index + 1)'}}</span> -->
                         <h4>{{client.name}}</h4>
                     </article>
                 </div>
@@ -41,6 +41,6 @@
         </div>
     </div>
 
-    <button class="atelierButton" ui-sref="atelier">{{ app.language === 'fr' ? 'Retour' : 'Back' }}</button>
+    <button class="atelierButton btnSaumon" ui-sref="atelier">{{ app.language === 'fr' ? 'Retour' : 'Back' }}</button>
 
 </div>

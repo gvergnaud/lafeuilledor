@@ -12,7 +12,7 @@
     transform: @value;
 }
 
-.box-shadow(@value){
+.box-shadow(@value) {
     box-shadow: @value;
     -webkit-box-shadow: @value;
     -moz-box-shadow: @value;
@@ -31,8 +31,9 @@
 @white: #E0D5C4;
 @saumon: #ce7259;
 @darkSaumon: #c13c25;
+@darkerSaumon: #9f301c;
 // sizes
-@border: 15px;
+@border: 13px;
 @topBorder: 40px;
 // FONTS
 @title: 'Pistilli';
@@ -138,6 +139,19 @@ button{
         right: 0;
         position: absolute;
     }
+
+    &.btnSaumon{
+
+        background-color: @saumon;
+
+        &:hover{
+            background-color: @darkSaumon;
+        }
+
+        &:active{
+            background-color: @darkerSaumon;
+        }
+    }
 }
 
 .grayscale{
@@ -240,14 +254,22 @@ div.border {
 .logo{
     display: inline-block;
     position: absolute;
-    top: 5px;
-    left: 15px;
-    height: 30px;
+    top: 0;
+    left: @border;
+    height: @topBorder;
     width: 150px;
     z-index: 15;
-
     cursor: pointer;
-    background: @lightGray;
+
+    h1 {
+        font-family: @subtitle;
+        font-weight: bold;
+        font-size: .7rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        line-height: @topBorder;
+    }
+    // background: @lightGray;
 }
 
 menu {
@@ -255,7 +277,6 @@ menu {
     font-family: @subtitle;
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: bold;
     letter-spacing: 1px;
     color: @gray;
 
@@ -281,11 +302,12 @@ menu {
             }
         }
     }
+
     &.lang {
         text-align: right;
         position: absolute;
         top: 0;
-        right: 15px;
+        right: @border;
         width: 75px;
         height: @border;
 
@@ -295,6 +317,18 @@ menu {
             }
         }
     }
+}
+
+.mentionsLegales{
+    position: absolute;
+    bottom: 0;
+    right: @border;
+    z-index: 100;
+    font-family: @subtitle;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: none;
+    color: rgb(213, 205, 186);
 }
 
 .textureBg{
