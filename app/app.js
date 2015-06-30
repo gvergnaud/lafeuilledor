@@ -29,6 +29,8 @@ angular.module('App', [
     .controller('AppCtrl', function($scope, $rootScope, $state, $timeout, Api) {
         var app = this;
 
+        app.state = $state;
+
         app.language = 'fr';
         app.sectionAnimationType = 'animForward';
         app.minWidth = 960;
