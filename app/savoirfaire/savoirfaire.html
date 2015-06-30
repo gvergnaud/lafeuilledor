@@ -6,7 +6,11 @@
         <img full-frame src="assets/images/IMG_9520.jpg" />
     </div>
 
-    <div class="center" ui-sref="savoirfaire">
+    <div
+        class="center"
+        ng-class="{cross: app.state.current.name !== 'savoirfaire'}"
+        ui-sref="savoirfaire"
+    >
         <header ng-class="{hidden: sf.detailsOpen}">
             <h1 class="stagger">{{ app.language === 'fr' ? 'Découvrez le savoir-faire de La Feuille d\'Or' : 'Discover the expertise of La Feuille d\'Or' }}</h1>
             <div class="">

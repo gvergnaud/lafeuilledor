@@ -7,7 +7,11 @@
         <img full-frame src="assets/images/carte.jpg" />
     </div>
 
-    <div class="center" ui-sref="formation">
+    <div
+        class="center" 
+        ng-class="{cross: app.state.current.name !== 'formation'}"
+        ui-sref="formation"
+    >
         <header ng-class="{hidden: fc.detailsOpen}">
             <h1 class="stagger">{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmission of a knowledge' }}</h1>
             <zigouigoui class="stagger" data-color="#e6dcd1"></zigouigoui>

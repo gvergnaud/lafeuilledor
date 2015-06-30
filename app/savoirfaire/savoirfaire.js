@@ -54,7 +54,6 @@ angular.module('App.savoirfaire', [
             $state.go('savoirfaire.savoir', {
                 slug: slug
             });
-            $('.halfRight').style.cursor="crosshair";
         };
 
         sf.openRight = function(slug) {
@@ -63,7 +62,6 @@ angular.module('App.savoirfaire', [
             $state.go('savoirfaire.savoir', {
                 slug: slug
             });
-            $('.halfLeft').style.cursor="crosshair";
         };
 
 
