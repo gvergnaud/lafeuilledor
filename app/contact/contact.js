@@ -38,22 +38,30 @@ angular.module('App.contact', [
             };
 
             Api.send(message)
-                .then(function success(data) {
-                    successMessage();
-                    console.log('message envoyé !', data);
-                }, function error(){
-                    errorMessage();
-                });
+                .then(onSuccess, onError);
+
+            function onSuccess(data) {
+                e.target.name.value =
+                    e.target.mail.value =
+                    e.target.subject.value =
+                    e.target.message.value = '';
+                displaySuccessMessage();
+            }
+
+            function onError(err){
+                console.log(err);
+                displayErrorMessage();
+            }
         };
 
-        function successMessage(){
+        function displaySuccessMessage(){
             contact.sendMessageSuccess = true;
             $timeout(function(){
                 contact.sendMessageSuccess = false;
             }, 3000);
         }
 
-        function errorMessage(){
+        function displayErrorMessage(){
             contact.sendMessageError = true;
             $timeout(function(){
                 contact.sendMessageError = false;
