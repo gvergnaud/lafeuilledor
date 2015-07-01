@@ -4,6 +4,19 @@
         nextDelay = 0;
 
     angular.module('animations.app', [])
+    .animation('.Loader', function(){
+        return {
+            leave: function(element, done){
+                TweenMax.to(element, .8, {
+                    opacity: 0,
+                    onComplete: function() {
+                        element.css('display', 'none');
+                        done();
+                    }
+                });
+            }
+        };
+    })
     .animation('.animForward', function($rootScope) {
 
         return {
