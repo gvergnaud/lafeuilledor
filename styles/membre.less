@@ -92,16 +92,18 @@
                     text-decoration: none;
                     font-weight: normal;
 
-                    &::first-letter{
-                        text-transform: uppercase;
-                    }
+                    &.clicable{
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
 
-                    &:hover{
-                        color: @saumon;
-                    }
+                        &:hover{
+                            color: @saumon;
+                        }
 
-                    &:active{
-                        color: @darkSaumon;
+                        &:active{
+                            color: @darkSaumon;
+                        }
                     }
                 }
             }

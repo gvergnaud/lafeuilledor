@@ -14,6 +14,10 @@
 	</head>
 	<body ng-controller="AppCtrl as app" bind-screen-width>
 
+			<div class="Loader">
+				
+			</div>
+
 			<div ng-if="screenWidth < app.minWidth" ng-include src="'app/mobile/mobile.html'"></div>
 
 			<div id="appContainer" class="textureBg" ng-if="screenWidth >= app.minWidth">
