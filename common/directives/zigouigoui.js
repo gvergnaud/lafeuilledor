@@ -4,7 +4,7 @@ angular.module('directives.zigouigoui', [])
     .directive('zigouigoui', function() {
 
 
-        var getAnimation = function(fillPaths, strokePaths){
+        var getAnimation = function(fillPaths, strokePaths, duration){
             TweenMax.set(fillPaths, {
                 opacity: 0
             });
@@ -18,7 +18,7 @@ angular.module('directives.zigouigoui', [])
                 path.style.strokeDasharray = (length)+" "+(length);
                 path.style.strokeDashoffset = (/Firefox/i.test(navigator.userAgent))? length/strokeWidth : length;
 
-                tl.to(path.style, 1.7, {
+                tl.to(path.style, duration, {
                     strokeDashoffset: 0,
                     delay: -.5
                 });
@@ -38,7 +38,9 @@ angular.module('directives.zigouigoui', [])
 
             scope: {
                 color: '@',
-                noAnimation: '='
+                noAnimation: '=',
+                noDelay: '=',
+                animationDuration: '='
             },
 
             template: [
@@ -84,11 +86,16 @@ angular.module('directives.zigouigoui', [])
                 }
 
                 if (!scope.noAnimation){
-                    var tl = getAnimation(fillPaths, strokePaths);
+                    var tl = getAnimation(fillPaths, strokePaths, scope.animationDuration || 1.7);
 
-                    setTimeout(function(){
+                    if(scope.noDelay) {
                         tl.restart();
-                    }, 1500);
+                    }
+                    else {
+                        setTimeout(function(){
+                            tl.restart();
+                        }, 1500);
+                    }
                 }
             }
         };

@@ -9,13 +9,29 @@
 		<meta name="viewport" content="width=device-width">
 		<link href='bower_components/normalize.css/normalize.css' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<style>
+			.Loader{
+				position: absolute;
+				top:0;
+				left:0;
+				width: 100%;
+				height: 100%;
+				z-index: 1000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				background-color: #262626;
+			}
+		</style>
 		<link rel="stylesheet/less" href="styles/main.less">
 		<script src="bower_components/less.js/dist/less.js"></script>
 	</head>
 	<body ng-controller="AppCtrl as app" bind-screen-width>
 
-			<div class="Loader">
-				
+			<div class="Loader" ng-if="!app.loaded">
+				<zigouigoui data-color="#e6dcd1" no-delay="true" animation-duration="1.5"></zigouigoui>
 			</div>
 
 			<div ng-if="screenWidth < app.minWidth" ng-include src="'app/mobile/mobile.html'"></div>
