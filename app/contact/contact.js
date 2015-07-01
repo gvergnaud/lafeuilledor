@@ -37,6 +37,8 @@ angular.module('App.contact', [
                 content: e.target.message.value.trim()
             };
 
+            if (!message.name || !message.mail || !message.subject || !message.content) return;
+
             Api.send(message)
                 .then(onSuccess, onError);
 

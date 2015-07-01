@@ -18,7 +18,7 @@ angular.module('services.Api', [
         };
 
         var _language = 'fr',
-            _fakeData = true;
+            _fakeData = false;
 
         // Public API here
         var Api = {
@@ -310,8 +310,13 @@ angular.module('services.Api', [
 
                 $http.post(SERVER.MAIL, message)
                     .success(function(data, status){
-                        console.log('success! status : ', status);
-                        deferred.resolve(data);
+                        console.log('status : ', status);
+                        if(data.status === 'success') {
+                            deferred.resolve(data);
+                        }
+                        else{
+                            deferred.reject(data);
+                        }
                     })
                     .error(function(err, status){
                         console.log(err, status);
