@@ -1,0 +1,17 @@
+<div id="singleContainer">
+
+    <slider no-crop="true" pictures="sgl.post.pictures"></slider>
+
+    <div class="infos" relative-max-height="190" ng-if="sgl.post.title || sgl.post.baseline || sgl.post.description">
+        <h1 ng-bind-html="sgl.post.title"></h1>
+        <h2 ng-bind-html="sgl.post.baseline"></h2>
+        <p ng-bind-html="sgl.post.description"></p>
+        <a
+            target="_blank"
+            ng-if="sgl.post.bookBinder"
+            ng-class="{clicable: sgl.post.bookBinderUrl}"
+            ng-href="{{sgl.post.bookBinderUrl}}">{{ app.language === 'fr' ? 'Relieur' : 'Binder'}} : {{sgl.post.bookBinder}}</a>
+    </div>
+
+    <button class="back" ui-sref="galerie">Retour aux Réalisations</button>
+</div>

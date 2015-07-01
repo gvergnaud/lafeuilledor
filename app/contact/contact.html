@@ -1,1 +1,72 @@
-<p>contact</p>
+<div id="contactContainer" class="container textureBg">
+
+
+    <div class="center">
+        <header>
+            <h2 class="firstTitle stagger">{{ app.language === 'fr' ? 'Besoin d\'un renseignement ?' : 'Need more information?' }}</h2>
+            <zigouigoui class="stagger"></zigouigoui>
+        </header>
+
+        <div class="Lists">
+
+            <form class="Left stagger" ng-submit="contact.send($event);">
+                <span>
+                    <label for="name">{{ app.language === 'fr' ? 'Nom' : 'Name' }}</label>
+                    <input type="text" name="name" required />
+                </span>
+
+                <span>
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" required/>
+                </span>
+
+                <span>
+                    <label for="subject">{{ app.language === 'fr' ? 'Sujet' : 'Subject' }}</label>
+                    <input type="text" name="subject" required/>
+                </span>
+
+                <span>
+                    <label for="message">Message</label>
+                    <textarea name="message" required></textarea>
+                </span>
+
+                <span>
+                    <button class="btn-black" type="submit">{{ app.language === 'fr' ? 'Envoyer' : 'Send' }}</button>
+                </span>
+            </form>
+
+            <section class="informations Right stagger">
+                <h1 class="name">Atelier La Feuille d'Or</h1>
+                <h2 class="address"> 7, rue de La Tour d'Auvergne - 75009 Paris</h2>
+                <h4>{{ app.language === 'fr' ? 'Téléphone' : 'Phone' }} : <span>+33 (0)1 42 82 17 36</span></h4>
+                <h4>Email : <span>lafeuilledor@free.fr</span></h4>
+                <h4>{{ app.language === 'fr' ? 'Horaires' : 'Opening hours' }} : <span>{{ app.language === 'fr' ? 'Du mardi au vendredi' : 'Tuesday to Friday' }}</span>
+                </h4>
+                <h4><span>9h30 / 12h30 - 14h / 18h<span></h4>
+                <h4>Métro : <img src="./assets/images/metro2.png"><span class="metro2">Anvers</span><img src="./assets/images/metro7.png"> <span class="metro7">Cadet</span><img src="./assets/images/metro12.png"> <span class="metro12">Notre-Dame-de-Lorette</span></h4>
+                <h4>Bus : <span>85 - 26 - 32 - 43</span></h4>
+            </section>
+
+        </div>
+
+    </div>
+
+    <section
+        class="MessageBox Success"
+        ng-if="contact.sendMessageSuccess"
+    >
+        <h1>{{ app.language === 'fr' ? 'Envoi réussit !' : 'Message sended!' }}</h1>
+    </section>
+
+    <section
+        class="MessageBox Error"
+        ng-if="contact.sendMessageError"
+    >
+        <h1>{{ app.language === 'fr' ? 'Oups, echec de l\'envoi.' : 'Oups. It failed.' }}</h1>
+    </section>
+
+    <button class="membreButton" ui-sref="contact.membre">{{ app.language === 'fr' ? 'Partenaires' : 'Partners' }}</button>
+
+    <div class="sideView" ui-view="membre"></div>
+
+</div>

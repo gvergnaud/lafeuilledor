@@ -1,0 +1,66 @@
+.Slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: rgb(40,40,40);
+
+    nav{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-arrow{
+
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: 0;
+
+        z-index: 11;
+
+        &.left{
+            cursor: url("../assets/images/arrowleft.svg"), pointer;
+            left: 0;
+        }
+
+        &.right{
+            cursor: url("../assets/images/arrowright.svg"), pointer;
+            right: 0;
+        }
+    }
+
+    &-count{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 6px;
+
+        background-color: rgba(0,0,0, .5);
+        z-index: 11;
+
+        &-progress{
+            position: absolute;
+            display: block;
+            height: 100%;
+
+            background-color: #d5472e;
+            .transition(1s ease);
+        }
+    }
+
+    slider-image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgb(40,40,40);
+        .box-shadow(0px 0px 300px 10px rgba(0,0,0,.8));
+        img{
+            .box-shadow(0px 0px 100px 10px rgba(0,0,0,.8));
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+<div
+    id="clientsContainer"
+    class="container"
+>
+    <div class="clientsBackground">
+        <img full-frame src="assets/images/IMG_9647.jpg" />
+    </div>
+
+    <div class="clientsCenter">
+        <header>
+            <h1>{{ app.language === 'fr' ? 'Ils nous font confiance' : 'They trust us' }}</h1>
+            <zigouigoui data-color="#e6dcd1"></zigouigoui>
+        </header>
+
+        <div class="Lists">
+            <section class="Dorure">
+                <h2 class="Dorure-title">{{ app.language === 'fr' ? 'La Dorure' : 'The Gilding' }}</h2>
+                <div class="Dorure-list">
+                    <article
+                        class="Dorure-list-item"
+                        ng-repeat="(index, client) in clts.clientsDorure"
+                    >
+                        <h4>{{client.name}}</h4>
+                        <!-- <span>{{''0' + (index + 1)'}}</span> -->
+                    </article>
+                </div>
+            </section>
+
+            <section class="Formation">
+                <h2 class="Formation-title">{{ app.language === 'fr' ? 'La Formation' : 'The Training' }}</h2>
+                <div class="Formation-list">
+                    <article
+                        class="Formation-list-item"
+                        ng-repeat="(index, client) in clts.clientsFormation"
+                    >
+                        <!-- <span>{{''0' + (index + 1)'}}</span> -->
+                        <h4>{{client.name}}</h4>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <button class="atelierButton btnSaumon" ui-sref="atelier">{{ app.language === 'fr' ? 'Retour' : 'Back' }}</button>
+
+</div>

@@ -1,25 +1,73 @@
 <div
-    class="container {{atlr.history[atlr.current].name}}"
+    id="atelierContainer"
+    class="container textureBg {{atlr.history[atlr.current].name}}"
+    ng-class="{
+        beige: !(atlr.current % 2),
+        saumon: atlr.current % 2 && atlr.current !== 1,
+        dark: atlr.current === 1
+    }"
     data-on-wheel
     data-down="atlr.down()"
     data-up="atlr.up()"
 >
 
-    <timeline></timeline>
+    <timeline
+        frame-count="atlr.history.length"
+        data-drag-down="atlr.down()"
+        data-drag-up="atlr.up()"
+    ></timeline>
 
     <div
-        ng-repeat="section in atlr.history"
-        class="center {{section.name}}"
+        class="slideBackground"
         ng-class="{
-            after: atlr.current < atlr.history.indexOf(section),
-            before: atlr.current > atlr.history.indexOf(section),
-            active: atlr.current === atlr.history.indexOf(section)
+            active: atlr.current === index
         }"
+        ng-repeat="(index, section) in atlr.history"
+        ng-if="section.image"
     >
-        <p class="baseline">{{section.baseline}}</p>
-        <div class="fioriture"> // </div>
-        <h1 class="title">{{section.title}}</h1>
-        <p class="content">{{section.content}}</p>
+        <img full-frame ng-src="{{section.image.sizes.large}}" alt="{{name}}">
     </div>
+
+    <div>
+        <div class="Infos" ng-repeat="section in atlr.history | index:atlr.current | limitTo:1">
+            <p class="Infos-date">{{section.date}}</p>
+            <p class="Infos-aujourdhui">{{app.language === 'fr' ? 'Aujourd\'hui' : 'Today'}}</p>
+            <div class="Infos-trait"></div>
+            <p class="Infos-lieu">{{section.lieu}}</p>
+        </div>
+
+        <div
+            class="center {{section.name + ' ' + app.language}}"
+            ng-repeat="section in atlr.history | index:atlr.current | limitTo:1"
+            ng-class="{
+                beige: !(atlr.current % 2),
+                saumon: atlr.current % 2 && atlr.current !== 1,
+                dark: atlr.current === 1
+            }"
+        >
+            <h1 class="stagger title" ng-bind-html="section.title"></h1>
+            <zigouigoui class="stagger" data-color="{{::atlr.getColor()}}" data-no-animation="atlr.current !== 0 && atlr.current !== 5"></zigouigoui>
+
+            <div class="flexContainer">
+                <h2 class="stagger baseline" ng-bind-html="section.baseline"></h2>
+                <p class="stagger content" ng-bind-html="section.content"></p>
+            </div>
+
+            <button
+                class="stagger learnMoreButton"
+                ng-click="app.go('formation')"
+                ng-if="section.name === 'aujourdhui'"
+            >
+                {{ app.language === 'fr' ? 'En savoir plus' : 'Learn more' }}
+            </button>
+
+            <i class="stagger scroll" ng-if="section.name === 'introduction'" ng-click="atlr.down()">Scroll</i>
+        </div>
+    </div>
+
+
+    <button class="clientsButton" ui-sref="atelier.clients">{{ app.language === 'fr' ? 'Nos Clients' : 'Our CLients' }}</button>
+
+    <div class="sideView" ui-view="clients"></div>
 
 </div>

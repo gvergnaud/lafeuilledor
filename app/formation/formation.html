@@ -1,1 +1,54 @@
-<p>formations / conférences</p>
+<div
+    id="formationContainer"
+    class="container dark"
+>
+
+    <div class="background">
+        <img full-frame src="assets/images/carte.jpg" />
+    </div>
+
+    <div
+        class="center" 
+        ng-class="{cross: app.state.current.name !== 'formation'}"
+        ui-sref="formation"
+    >
+        <header ng-class="{hidden: fc.detailsOpen}">
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Transmettre un savoir-faire à l\'international' : 'Transmission of a knowledge' }}</h1>
+            <zigouigoui class="stagger" data-color="#e6dcd1"></zigouigoui>
+        </header>
+
+        <div class="formationsConferences">
+            <section class="Formations"  ng-click="app.stopEventPropagation($event)">
+                <h2 class="Formations-title stagger">{{ app.language === 'fr' ? 'Formations' : 'Workshop' }}</h2>
+                <div class="Formations-list">
+                    <article
+                        class="Formations-list-item stagger"
+                        ng-repeat="(index, formation) in fc.formations"
+                        ui-sref="formation.openedFormation({slug: formation.slug})"
+                    >
+                        <h4 ng-bind-html="formation.title"></h4>
+                        <span>{{'0' + (index + 1)}}</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="Conferences" ng-click="app.stopEventPropagation($event)">
+                <h2 class="Conferences-title stagger">{{ app.language === 'fr' ? 'Conférences' : 'Lectures' }}</h2>
+                <div class="Conferences-list">
+                    <article
+                        class="Conferences-list-item stagger"
+                        ng-repeat="(index, conference) in fc.conferences"
+                        ui-sref="formation.openedConference({slug: conference.slug})"
+                    >
+                        <span>{{'0' + (index + 1)}}</span>
+                        <h4 ng-bind-html="conference.title"></h4>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="formationView" ui-view="formation"></div>
+    <div class="conferenceView" ui-view="conference"></div>
+
+</div>

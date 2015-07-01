@@ -1,0 +1,61 @@
+[{
+    "ID": 53,
+    "title": "menu principal",
+    "status": "publish",
+    "type": "menu",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/menu\/menu\/",
+    "date": "2015-05-03T09:20:58",
+    "modified": "2015-05-11T22:43:29",
+    "format": "standard",
+    "slug": "menu",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=menu&#038;p=53",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-05-03T08:20:58",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-05-11T21:43:29",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/53",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/53\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/53\/revisions"
+        },
+        "atelier": "Atelier",
+        "savoir_faire": "Savoir-Faire",
+        "galerie": "R\u00e9alisations",
+        "transmission": "Transmission du savoir",
+        "contact": "Contact",
+        "en_atelier": "",
+        "en_savoir_faire": "",
+        "en_galerie": "",
+        "en_transmission": ""
+    },
+    "terms": []
+}]

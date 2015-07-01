@@ -1,7 +1,9 @@
 'use strict';
 
-angular.module('directives.menu', [])
-    .directive('menu', function($state){
+angular.module('directives.menu', [
+    'ui.router'
+])
+    .directive('menu', function(){
 
         return {
 
@@ -12,7 +14,7 @@ angular.module('directives.menu', [])
             }
         };
     })
-    .directive('tab', function($rootScope){
+    .directive('tab', function($rootScope, $state, Api){
 
         return {
 
@@ -21,20 +23,25 @@ angular.module('directives.menu', [])
             link: function(scope, element, attrs){
 
                 function onStateChange(event, toState){
-                    if(toState.name === attrs.uiSref){
+                    if($state.includes(attrs.stateRef)){
                         element[0].classList.add('active');
                     }else{
                         element[0].classList.remove('active');
                     }
                 }
 
+                function onLanguageChange(){
+
+                }
+
                 $rootScope.$on('$stateChangeSuccess', onStateChange);
 
 
                 element.on('$destroy', function(){
-                    console.log('destroy tab')
                     $rootScope.$on('$stateChangeSuccess', onStateChange);
                 });
+
+
 
             }
         };

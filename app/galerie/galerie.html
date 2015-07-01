@@ -1,1 +1,46 @@
-<p>galerie</p>
+<div
+    id="galerieContainer"
+    class="container textureBg"
+    data-main-view-animation="none"
+    data-on-wheel
+    data-down="glr.down()"
+    data-up="glr.up()"
+>
+
+    <timeline
+        data-frame-count="glr.nbTabs"
+        data-drag-down="glr.down()"
+        data-drag-up="glr.up()"
+    ></timeline>
+    <div class="TlInfos" ng-repeat="post in glr.posts | index:(glr.current * glr.config.postsPerPage)">
+        <p class="TlInfos-date">{{post.date}}</p>
+        <div class="TlInfos-trait"></div>
+    </div>
+
+    <gallery
+        class="center"
+        gallery-nb-col="{{glr.config.nbCol}}"
+        gallery-col-margin="{{glr.config.margin}}"
+        gallery-col-width="{{glr.config.width}}"
+        is-thumbnails-open="glr.isThumbnailsOpen"
+    >
+        <div
+            gallery-element
+            gallery-open-on-click="{{post.slug}}"
+            class="thumbnail animate-{{glr.direction}}"
+            ng-repeat="post in glr.posts | slice : glr.config.postsPerPage : glr.current">
+
+            <div class="shadow"></div>
+            <img full-frame ng-src="{{post.cover.sizes.medium}}" alt="post.title"/>
+            <div class="hover">
+                <div class="text">
+                    <h2 ng-bind-html="post.title"></h2>
+                    <p>{{post.baseline}}</p>
+                </div>
+            </div>
+        </div>
+    </gallery>
+
+    <div class="singleView" ui-view="single"></div>
+
+</div>

@@ -1,0 +1,84 @@
+[ui-view="single"]{
+
+
+
+    #singleContainer{
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        .infos{
+            position: absolute;
+            width: 200px;
+            top: 20px;
+            right: 20px;
+
+            padding: 50px;
+
+            overflow: auto;
+            z-index: 11;
+            background-color: @opaqueBlack;
+
+            h1{
+                color: @beige;
+                font-family: @title;
+                font-weight: normal;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                margin-bottom: 15px;
+            }
+
+            h2{
+                color: @saumon;
+                font-family: @subtitle;
+                font-weight: normal;
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+
+            p{
+                color: @beige;
+                font-family: @paragraph;
+                font-weight: lighter;
+                font-size: .9rem;
+                line-height: 1.5rem;
+            }
+
+            a{
+                color: @lightGray;
+                text-decoration: none;
+                font-weight: normal;
+                text-transform: lowercase;
+
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+
+                &.clicable{
+                    &:hover{
+                        color: @saumon;
+                    }
+
+                    &:active{
+                        color: @darkSaumon;
+                    }
+                }
+
+            }
+        }
+
+        .back{
+            width: 275px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            z-index: 11;
+
+            font-weight: normal;
+            font-size: 13px;
+            text-transform: none;
+            .transform(translateX(-50%));
+        }
+    }
+}

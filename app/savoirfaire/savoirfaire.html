@@ -1,7 +1,53 @@
-<div id="scene">
+<div
+    id="savoirFaireContainer"
+    class="container dark"
+>
+    <div class="background">
+        <img full-frame src="assets/images/IMG_9520.jpg" />
+    </div>
+
+    <div
+        class="center"
+        ng-class="{cross: app.state.current.name !== 'savoirfaire'}"
+        ui-sref="savoirfaire"
+    >
+        <header ng-class="{hidden: sf.detailsOpen}">
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Découvrez le savoir-faire de La Feuille d\'Or' : 'Discover the expertise of La Feuille d\'Or' }}</h1>
+            <div class="">
+                <zigouigoui class="stagger" data-color="#e6dcd1"></zigouigoui>
+            </div>
+        </header>
+
+        <div class="Lists">
+            <section class="Left"  ng-click="app.stopEventPropagation($event)">
+                <div class="Left-list">
+                    <article
+                        class="Left-list-item stagger"
+                        ng-repeat="(index, savoir) in sf.savoirsLeft"
+                        ng-click="sf.openRight(savoir.slug)"
+                        ng-style="sf.styleLeft"
+                    >
+                        <h4 ng-bind-html="savoir.title"></h4>
+                        <span>{{'0' + (index + 1)}}</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="Right" ng-click="app.stopEventPropagation($event)">
+                <div class="Right-list">
+                    <article
+                        class="Right-list-item stagger"
+                        ng-repeat="(index, savoir) in sf.savoirsRight"
+                        ng-click="sf.openLeft(savoir.slug)"
+                    >
+                        <span>{{'0' + (index + 1)}}</span>
+                        <h4 ng-bind-html="savoir.title"></h4>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="{{sf.animClass}}" ui-view="savoir"></div>
 
 </div>
-
-<div ui-view="info"></div>
-
-<div ui-view="visual"></div>

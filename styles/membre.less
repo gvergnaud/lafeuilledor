@@ -1,0 +1,109 @@
+#membreContainer{
+
+    z-index: 10;
+    position: absolute;
+    top: 0;
+
+
+    button.backButton{
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        width: 150px;
+        font-size: .6rem;
+        .transform(translateY(-50%) rotate(90deg));
+        z-index: 11;
+    }
+
+
+    .membreBackground{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        background-color: #1D1D1D;
+
+        img{
+            opacity: .22;
+        }
+    }
+
+    .membreCenter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        overflow: auto;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        header{
+            margin-top: 100px;
+
+            h1{
+                padding-left: 0; // pour enlever le style de la page contact
+                color: @beige;
+                font-family: @subtitle;
+                font-weight: bold;
+                font-size: .7rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
+    .List{
+
+        &-title{
+            font-family: @title;
+            font-size: 2.5rem;
+            color: @beige;
+            font-weight: normal;
+            margin-bottom: 50px;
+        }
+
+        &-list{
+
+            font-family: @subtitle;
+            font-weight: 300;
+            color: @lightGray;
+            font-size: 1rem;
+
+            &-item{
+
+                margin: 20px 0;
+
+                a{
+
+                    padding-left: 0; // pour enlever le style de la page contact
+                    margin: 10px;
+
+                    color: @lightGray;
+                    text-decoration: none;
+                    font-weight: normal;
+
+                    &.clicable{
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
+
+                        &:hover{
+                            color: @saumon;
+                        }
+
+                        &:active{
+                            color: @darkSaumon;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

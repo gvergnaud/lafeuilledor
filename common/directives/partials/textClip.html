@@ -1,0 +1,10 @@
+<div>
+	<svg class="filledTitle" style="font-size:{{textSize}}px; height:{{textSize}}px; width:100%;">
+		<defs>
+			<pattern id="background" patternUnits="userSpaceOnUse" width="1280" height="800" >
+				<image xlink:href="{{imageUrl}}" width="1280" height="800" top="0" left="0" style="margin:0;padding:0;" />
+			</pattern>
+		</defs>
+		<text class="clip" ng-y="textSize - 10"x="50%" text-anchor="middle">{{content}}</text>
+	</svg>
+</div>

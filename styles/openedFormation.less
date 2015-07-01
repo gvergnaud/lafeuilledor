@@ -1,0 +1,65 @@
+#openedContainer{
+
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: @beige;
+
+    .box-shadow(0px 0px 60px rgba(0,0,0,.6));
+
+    &.formation {
+        right: 0;
+    }
+
+    &.conference {
+        left: 0;
+    }
+
+    .Image {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        top: 0;
+        background: @black;
+
+        img {
+            opacity: .7;
+        }
+    }
+
+    .Details {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+
+        background: @beige;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &-content{
+            margin: 0 10%;
+
+            h1{
+                color: @saumon;
+                font-family: @subtitle;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            p{
+                font-family: @subtitle;
+                font-weight: normal;
+                color: @black;
+            }
+
+            button{
+                margin-top: 20px;
+            }
+        }
+    }
+
+}

@@ -1,1 +1,53 @@
-<p>home</p>
+<div id="homeContainer" animation-home class="container textureBg">
+
+    <div class="background">
+        <video full-frame preload="auto" autoplay="true" loop="loop"  muted="muted">
+            <source src="assets/background-v2-nb.webm" type="video/webm">
+    		<source src="assets/background-v2-nb.mp4" type="video/webm">
+    	</video>
+    </div>
+
+    <header class="Logo" ng-if="animation.logo">
+        <h1 class="Logo-title">Atelier La Feuille d'Or</h1>
+        <!-- <h2 class="Logo-baseline">dorure sur cuir <br> & marquage à chaud</h2> -->
+    </header>
+
+    <main class="center" ng-if="false || animation.center">
+
+        <h1 class="stagger">Atelier La Feuille d'Or</h1>
+
+        <header>
+            <h1 class="stagger">{{ app.language === 'fr' ? 'Choisissez votre chapitre pour découvrir l\'histoire' : 'Choose your chapiter to discover the story' }}</h1>
+            <zigouigoui class="stagger" data-color="#e6dcd1"></zigouigoui>
+        </header>
+
+        <section class="Chapiter">
+
+            <article ng-click="app.go('atelier')" class="Chapiter-item left stagger">
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'L\'Atelier' : 'Workshop' }}</h2>
+                <span class="Chapiter-item-number">01</span>
+            </article>
+
+            <article ng-click="app.go('savoirfaire')" class="Chapiter-item right stagger">
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Savoir-Faire' : 'Savoir-Faire' }}</h2>
+                <span class="Chapiter-item-number">02</span>
+            </article>
+
+            <article ng-click="app.go('galerie')" class="Chapiter-item left stagger">
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Réalisations' : 'Our Work' }}</h2>
+                <span class="Chapiter-item-number">03</span>
+            </article>
+
+            <article ng-click="app.go('formation')" class="Chapiter-item right stagger">
+                <h2 class="Chapiter-item-title">{{ app.language === 'fr' ? 'Transmission du savoir' : 'Education' }}</h2>
+                <span class="Chapiter-item-number">04</span>
+            </article>
+
+        </section>
+
+        <a class="stagger" href="#" target="_BLANK"><img class="logo-epv" src="./assets/images/logo_epv_long.jpg"></a>
+
+
+    </main>
+
+</div>
