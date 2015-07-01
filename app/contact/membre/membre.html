@@ -22,7 +22,8 @@
                     >
                         <a
                             target='_blank'
-                            ng-href="{{partner.url}}"
+                            ng-href="{{partner.link}}"
+                            ng-class="{clicable: !!partner.link}"
                             ng-bind-html="partner.name"></a>
                     </article>
                 </div>
