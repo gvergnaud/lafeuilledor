@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="App">
+	<head>
+		<meta charset="utf-8">
+		<title>Atelier La Feuille d'Or | Dorure sur cuir à Paris</title>
+		<meta name="description" content="La Feuille d'Or, atelier de dorure sur cuir à Paris depuis 1989, réalise  des titrages et décoration de livres pour les professionnels. L'atelier propose des formations et conférences à l'international.">
+		<meta name="keywords" content="dorure sur cuir, doreur sur cuir, dorure reliure, reliure dorure artisanale, dorure restauration, dorure or, dorure, feuille d'or, doreur paris, doreur france, artisanat français, savoir faire français, dorure livre, ancien, dorure feuille or, livres anciens, restauration livres anciens, conservation livre, restauration archive, dorure technique, dorure moderne, dorure à chaud, dorure classique, dorure contemporaine, reliure pastiche, stage dorure, workshop dorure, atelier dorure, cours dorure, titre livre, titrage livre, formation dorure sur cuir, restauration livre ancien formation, conférences dorure sur cuir, photo dorure cuir, image dorure cuir, réalisation dorure livre, livre rare, doreur expérimenté, dorure technique, dorure courante, dorure contemporaine, expert doreur, reliure pastiche, imitation livre ancien">
+		<meta name="author" content="Pascale Thérond">
+		<meta name="viewport" content="width=device-width">
+		<link href='bower_components/normalize.css/normalize.css' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<style>
+			.Loader{
+				position: absolute;
+				top:0;
+				left:0;
+				width: 100%;
+				height: 100%;
+				z-index: 1000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				background-color: #262626;
+			}
+		</style>
+		<link rel="stylesheet" href="dist/main.min.css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body ng-controller="AppCtrl as app" bind-screen-width>
+
+			<div class="Loader" ng-if="!app.loaded">
+				<zigouigoui data-color="#e6dcd1" no-delay="true" animation-duration="1.5"></zigouigoui>
+			</div>
+
+			<div ng-if="screenWidth < app.minWidth" ng-include src="'app/mobile/mobile.html'"></div>
+
+			<div id="appContainer" class="textureBg" ng-if="screenWidth >= app.minWidth">
+				<section class="logo" ng-click="app.go('home')">
+					<h1>la feuille d'or</h1>
+				</section>
+
+				<menu class="mainMenu">
+					<tab ng-click="app.go('atelier')" state-ref="atelier">{{ app.language === 'fr' ? 'atelier' : 'the studio' }}</tab>
+					<tab ng-click="app.go('savoirfaire')" state-ref="savoirfaire">{{ app.language === 'fr' ? 'savoir-faire' : 'savoir-faire' }}</tab>
+					<tab ng-click="app.go('galerie')" state-ref="galerie">{{ app.language === 'fr' ? 'réalisations' : 'our work' }}</tab>
+					<tab ng-click="app.go('formation')" state-ref="formation">{{ app.language === 'fr' ? 'transmission du savoir' : 'education' }}</tab>
+					<tab ng-click="app.go('contact')" state-ref="contact">contact</tab>
+				</menu>
+
+				<menu class="lang">
+					<tab
+						ng-click="app.changeLanguage('fr')"
+						ng-class="{currentLang: app.language === 'fr'}"
+					>fr</tab>
+					 |
+					<tab
+						ng-click="app.changeLanguage('en')"
+						ng-class="{currentLang: app.language === 'en'}"
+					>en</tab>
+				</menu>
+				<!-- Main View -->
+				<div class="mainView {{app.sectionAnimationType}}" ui-view="main"></div>
+
+				<div class="border top"></div>
+				<div class="border right"></div>
+				<div class="border bottom"></div>
+				<div class="border left"></div>
+				<a class="mentionsLegales" target="_blank" href="mentions-legales.html">mentions legales</a>
+			</div>
+		<script src="dist/vendors.min.js"></script>
+        <script src="dist/app.min.js"></script>
+	</body>
+</html>

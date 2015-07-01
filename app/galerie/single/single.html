@@ -7,6 +7,7 @@
         <h2 ng-bind-html="sgl.post.baseline"></h2>
         <p ng-bind-html="sgl.post.description"></p>
         <a
+            target="_blank"
             ng-if="sgl.post.bookBinder"
             ng-class="{clicable: sgl.post.bookBinderUrl}"
             ng-href="{{sgl.post.bookBinderUrl}}">{{ app.language === 'fr' ? 'Relieur' : 'Binder'}} : {{sgl.post.bookBinder}}</a>
