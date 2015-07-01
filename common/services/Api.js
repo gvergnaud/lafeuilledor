@@ -18,7 +18,7 @@ angular.module('services.Api', [
 
         var _language = 'fr';
 
-        var _fakeData = true;
+        var _fakeData = false;
 
         // Public API here
         var Api = {
