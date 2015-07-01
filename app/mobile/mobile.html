@@ -1,0 +1,69 @@
+<div id="mobileContainer" ng-controller="MobileCtrl">
+
+    <nav class="lang">
+        <span
+            ng-click="app.changeLanguage('fr')"
+            ng-class="{active: app.language === 'fr'}"
+        >fr</span>
+         |
+        <span
+            ng-click="app.changeLanguage('en')"
+            ng-class="{active: app.language === 'en'}"
+        >en</span>
+    </nav>
+
+    <section class="presentation">
+
+        <div class="background">
+            <img full-frame src="assets/images/bn.jpg" />
+        </div>
+
+        <div class="content">
+            <h1 class="title">La Feuille d'Or</h1>
+            <zigouigoui data-color="#e6dcd1"></zigouigoui>
+            <h2 class="baseline">
+                {{ app.language === 'fr' ? 'Atelier de dorure sur cuir & marquage à chaud' : 'Book-gilding Workshop' }}
+            </h2>
+            <p class="paragraph" ng-bind-html="introduction"></p>
+        </div>
+    </section>
+
+    <section class="savoirfaire">
+
+        <h1 class="title">{{ app.language === 'fr' ? 'Notre Savoir-Faire' : 'Our Expertise' }} </h1>
+        <zigouigoui></zigouigoui>
+        <p class="savoir" ng-repeat="savoir in savoirs" ng-bind-html="savoir.title"></p>
+    </section>
+
+    <section class="contact">
+        <div class="content">
+            <h1 class="title"> {{ app.language === 'fr' ? 'Contacter l\'Atelier' : 'Get in touch' }}</h1>
+            <zigouigoui></zigouigoui>
+
+            <h2 class="baseline"> 7, rue de la Tour d'Auvergne <br> 75009 Paris</h2>
+
+            <div class="informations">
+                <h4>{{ app.language === 'fr' ? 'Téléphone' : 'Phone' }} : </h4>
+                <p>+33 (0)1 42 82 17 36</p>
+
+                <h4>Email : </h4>
+                <p>lafeuilledor@free.fr</p>
+
+                <h4>{{ app.language === 'fr' ? 'Horaires' : 'Opening time' }} : </h4>
+                <p>{{ app.language === 'fr' ? 'Du mardi au vendredi' : 'Tuesday to Friday' }}</p>
+                <p>9h30 / 12h30 - 14h / 18h</p>
+
+                <h4>Métro : </h4>
+                <p>
+                    <span class="metro2"><img src="./assets/images/metro2.png"> Anvers</span>
+                    <span class="metro7"><img src="./assets/images/metro7.png"> Cadet</span>
+                </p>
+
+                <h4>Bus : </h4>
+                <p>
+                    12 - 14 - 57
+                </p>
+            </div>
+        </div>
+    </section>
+</div>

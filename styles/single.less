@@ -16,6 +16,7 @@
 
             padding: 50px;
 
+            overflow: auto;
             z-index: 11;
             background-color: @opaqueBlack;
 
@@ -42,6 +43,28 @@
                 font-weight: lighter;
                 font-size: .9rem;
                 line-height: 1.5rem;
+            }
+
+            a{
+                color: @lightGray;
+                text-decoration: none;
+                font-weight: normal;
+                text-transform: lowercase;
+
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+
+                &.clicable{
+                    &:hover{
+                        color: @saumon;
+                    }
+
+                    &:active{
+                        color: @darkSaumon;
+                    }
+                }
+
             }
         }
 

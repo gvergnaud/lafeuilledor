@@ -6,6 +6,35 @@
         opacity: .17;
     }
 
+
+    .Logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .transform(translate(-50%, -50%));
+
+        color: @beige;
+
+        &-title {
+            color: @beige;
+            font-family: @subtitle;
+            font-weight: bold;
+            font-size: .7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &-baseline {
+            color: @beige;
+            font-family: @subtitle;
+            font-weight: normal;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 30px;
+        }
+    }
+
     .background{
         position: absolute;
         top: 0;

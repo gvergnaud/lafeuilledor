@@ -1,0 +1,266 @@
+[{
+    "ID": 461,
+    "title": "Les Ateliers de Paris",
+    "status": "publish",
+    "type": "partners",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/partners\/les-ateliers-de-paris\/",
+    "date": "2015-06-28T21:06:47",
+    "modified": "2015-06-28T21:06:47",
+    "format": "standard",
+    "slug": "les-ateliers-de-paris",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=partners&#038;p=461",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-06-28T20:06:47",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-06-28T20:06:47",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/461",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/461\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/461\/revisions"
+        },
+        "en_title": "",
+        "link": "http:\/\/www.ateliersdeparis.com"
+    },
+    "terms": []
+}, {
+    "ID": 460,
+    "title": "Les Amis de la Bibliotheca Wittockiana : Mus\u00e9e de la Reliure et des Arts du Livre de Bruxelles",
+    "status": "publish",
+    "type": "partners",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/partners\/les-amis-de-la-bibliotheca-wittockiana-musee-de-la-reliure-et-des-arts-du-livre-de-bruxelles\/",
+    "date": "2015-06-28T21:06:13",
+    "modified": "2015-06-28T21:06:23",
+    "format": "standard",
+    "slug": "les-amis-de-la-bibliotheca-wittockiana-musee-de-la-reliure-et-des-arts-du-livre-de-bruxelles",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=partners&#038;p=460",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-06-28T20:06:13",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-06-28T20:06:23",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/460",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/460\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/460\/revisions"
+        },
+        "en_title": "",
+        "link": "http:\/\/wittockiana.org\/"
+    },
+    "terms": []
+}, {
+    "ID": 459,
+    "title": "Les Amis de la Reliure d\u2019Art",
+    "status": "publish",
+    "type": "partners",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/partners\/les-amis-de-la-reliure-dart\/",
+    "date": "2015-06-28T21:05:54",
+    "modified": "2015-06-28T21:05:54",
+    "format": "standard",
+    "slug": "les-amis-de-la-reliure-dart",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=partners&#038;p=459",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-06-28T20:05:54",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-06-28T20:05:54",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/459",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/459\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/459\/revisions"
+        },
+        "en_title": "",
+        "link": ""
+    },
+    "terms": []
+}, {
+    "ID": 458,
+    "title": "L\u2019Association Pour la Promotion des Arts de la Reliure",
+    "status": "publish",
+    "type": "partners",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/partners\/lassociation-pour-la-promotion-des-arts-de-la-reliure\/",
+    "date": "2015-06-28T20:56:58",
+    "modified": "2015-06-28T20:56:58",
+    "format": "standard",
+    "slug": "lassociation-pour-la-promotion-des-arts-de-la-reliure",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=partners&#038;p=458",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-06-28T19:56:58",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-06-28T19:56:58",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/458",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/458\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/458\/revisions"
+        },
+        "en_title": "",
+        "link": ""
+    },
+    "terms": []
+}, {
+    "ID": 457,
+    "title": "La Chambre Syndicale Nationale de la Reliure, Brochure, Dorure (CSRNBD)",
+    "status": "publish",
+    "type": "partners",
+    "author": {
+        "ID": 1,
+        "username": "gabriel",
+        "name": "gabriel",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "gabriel",
+        "slug": "gabriel",
+        "URL": "",
+        "avatar": "http:\/\/1.gravatar.com\/avatar\/70c47b97767a78049cdefd4ce02da0f5?s=96",
+        "description": "",
+        "registered": "2015-04-29T16:56:04+00:00",
+        "meta": {
+            "links": {
+                "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+                "archives": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1\/posts"
+            }
+        }
+    },
+    "content": "",
+    "parent": null,
+    "link": "http:\/\/lafeuilledor.paris\/wordpress\/partners\/la-chambre-syndicale-nationale-de-la-reliure-brochure-dorure-csrnbd\/",
+    "date": "2015-06-28T20:56:38",
+    "modified": "2015-06-28T20:56:39",
+    "format": "standard",
+    "slug": "la-chambre-syndicale-nationale-de-la-reliure-brochure-dorure-csrnbd",
+    "guid": "http:\/\/lafeuilledor.paris\/wordpress\/?post_type=partners&#038;p=457",
+    "excerpt": null,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "date_tz": "Etc\/GMT+1",
+    "date_gmt": "2015-06-28T19:56:38",
+    "modified_tz": "Etc\/GMT+1",
+    "modified_gmt": "2015-06-28T19:56:39",
+    "meta": {
+        "links": {
+            "self": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/457",
+            "author": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/users\/1",
+            "collection": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts",
+            "replies": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/457\/comments",
+            "version-history": "http:\/\/lafeuilledor.paris\/wordpress\/wp-json\/posts\/457\/revisions"
+        },
+        "en_title": "",
+        "link": "http:\/\/www.csnrbd.fr\/"
+    },
+    "terms": []
+}]

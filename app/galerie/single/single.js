@@ -6,6 +6,7 @@ angular.module('App.galerie.single', [
 
         'directives.slider',
         'directives.fullFrame',
+        'directives.relativeMaxHeight',
 
         'filters.index'
     ])

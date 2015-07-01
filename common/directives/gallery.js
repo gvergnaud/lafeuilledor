@@ -167,6 +167,23 @@ angular.module('directives.gallery', [])
 
                 $rootScope.$on('GALLERY_VALUE_CHANGE', setPosition);
 
+                element.on('mouseenter', function(e){
+                    var infoDateElement = document.querySelector('.TlInfos-date');
+
+                    var dateUp = new countUp(
+                        infoDateElement,
+                        infoDateElement.innerHTML,
+                        scope.post.date,
+                        0,
+                        .2,
+                        {
+                            separator: false
+                        }
+                    );
+
+                    dateUp.start();
+                });
+
                 element.on('$destroy', function(){
                     galleryCtrl.removeElement(element);
                 });

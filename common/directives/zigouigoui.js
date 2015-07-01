@@ -20,12 +20,7 @@ angular.module('directives.zigouigoui', [])
 
                 tl.to(path.style, 1.7, {
                     strokeDashoffset: 0,
-                    delay: -.5,
-                    onUpdate: function(){
-                        var n = document.createTextNode(' ');
-                        document.body.appendChild(n);
-                        document.body.removeChild(n);
-                    }
+                    delay: -.5
                 });
             });
 

@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('App.contact', [
+        'App.contact.membre',
         'ui.router'
     ])
     .config(function($stateProvider) {
