@@ -1,8 +1,3 @@
-.halfScreen {
-	width: 50%;
-	height: 100%;
-	float: left;
-}
 #contactContainer{
 
 	button.membreButton{
@@ -12,18 +7,65 @@
         width: 150px;
         font-size: .6rem;
         .transform(translateY(-50%) rotate(-90deg));
+		z-index: 10;
     }
 
-	header {
-		.firstTitle {
-			padding: 50px 0 25px;
-		}
-		zigouigoui{
-			position: relative;
-			margin: 0 auto;
-			margin-bottom: 30px;
-		}
+	.center {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        overflow: auto;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        header{
+            .transition(.3s ease);
+            &.hidden{
+                opacity: 0;
+            }
+
+            h1{
+                color: @beige;
+                font-family: @subtitle;
+                font-weight: bold;
+                font-size: .7rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            .fioriture{
+                margin: 50px auto 0;
+            }
+        }
+
+        .Lists{
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+    }
+
+	.Left, .Right {
+		width: 50%;
 	}
+
+	.Left{
+        position: absolute;
+        right: 50%;
+        text-align: right;
+    }
+
+    .Right{
+        position: absolute;
+        left: 50%;
+        text-align: left;
+    }
 
 	form {
 		font-family: @subtitle;
@@ -75,6 +117,7 @@
 		line-height: 3rem;
 		padding-left: 40px;
 		font-weight: normal;
+		width: 350px;
 	}
 	h2.address {
 		color: @saumon;

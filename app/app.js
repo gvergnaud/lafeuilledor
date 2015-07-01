@@ -30,10 +30,13 @@ angular.module('App', [
         var app = this;
 
         app.state = $state;
-
         app.language = 'fr';
         app.sectionAnimationType = 'animForward';
         app.minWidth = 960;
+
+        $timeout(function(){
+            app.loaded = true;
+        }, 2200);
 
         Api.getAll();
 
