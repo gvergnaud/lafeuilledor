@@ -10,6 +10,48 @@
 		z-index: 10;
     }
 
+	.MessageBox{
+
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 250px;
+		height: 70px;
+
+		.transform(translate(-50%, -50%));
+		.box-shadow(1px 1px 10px rgba(0,0,0,.3));
+		background-color: @beige;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		z-index: 10;
+
+		h1 {
+			font-family: @subtitle;
+			font-size: .7rem;
+			font-weight: bold;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+		}
+
+		&.Success {
+			h1 {
+				color: green;
+			}
+		}
+
+		&.Error {
+			h1 {
+				color: red;
+			}
+		}
+	}
+
 	.center {
         position: absolute;
         width: 100%;

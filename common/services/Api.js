@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('services.Api', [
-        'Constants'
+        'Constants',
+        'config.httpPostFix'
     ])
     .factory('Api', function($q, $http, SERVER) {
         // Service logic
@@ -16,13 +17,11 @@ angular.module('services.Api', [
             partners: false
         };
 
-        var _language = 'fr';
-
-        var _fakeData = false;
+        var _language = 'fr',
+            _fakeData = true;
 
         // Public API here
         var Api = {
-
 
             setLanguage: function(language){
                 switch (language){
@@ -224,7 +223,6 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-
             getClients: function(reload){
                 var deferred = $q.defer(),
                     clients = [];
@@ -288,7 +286,6 @@ angular.module('services.Api', [
                 return deferred.promise;
             },
 
-
             getAll: function(reload){
 
                 var deferred = $q.defer();
@@ -304,6 +301,22 @@ angular.module('services.Api', [
                 ]).then(function(){
                     deferred.resolve(_data);
                 });
+
+                return deferred.promise;
+            },
+
+            send: function(message) {
+                var deferred = $q.defer();
+
+                $http.post(SERVER.MAIL, message)
+                    .success(function(data, status){
+                        console.log('success! status : ', status);
+                        deferred.resolve(data);
+                    })
+                    .error(function(err, status){
+                        console.log(err, status);
+                        deferred.reject(err);
+                    });
 
                 return deferred.promise;
             }

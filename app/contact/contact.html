@@ -9,25 +9,25 @@
 
         <div class="Lists">
 
-            <form class="Left stagger">
+            <form class="Left stagger" ng-submit="contact.send($event);">
                 <span>
                     <label for="name">{{ app.language === 'fr' ? 'Nom' : 'Name' }}</label>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" required />
                 </span>
 
                 <span>
                     <label for="mail">Email</label>
-                    <input type="email" name="mail" />
+                    <input type="email" name="mail" required/>
                 </span>
 
                 <span>
                     <label for="subject">{{ app.language === 'fr' ? 'Sujet' : 'Subject' }}</label>
-                    <input type="text" name="subject" />
+                    <input type="text" name="subject" required/>
                 </span>
 
                 <span>
                     <label for="message">Message</label>
-                    <textarea name="message"></textarea>
+                    <textarea name="message" required></textarea>
                 </span>
 
                 <span>
@@ -50,6 +50,20 @@
         </div>
 
     </div>
+
+    <section
+        class="MessageBox Success"
+        ng-if="contact.sendMessageSuccess"
+    >
+        <h1>{{ app.language === 'fr' ? 'Envoi réussit !' : 'Message sended!' }}</h1>
+    </section>
+
+    <section
+        class="MessageBox Error"
+        ng-if="contact.sendMessageError"
+    >
+        <h1>{{ app.language === 'fr' ? 'Oups, echec de l\'envoi.' : 'Oups. It failed.' }}</h1>
+    </section>
 
     <button class="membreButton" ui-sref="contact.membre">{{ app.language === 'fr' ? 'Partenaires' : 'Partners' }}</button>
 
