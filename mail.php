@@ -7,10 +7,11 @@
         isset($_POST["content"])
     ) {
 
-        $to = "gabriel.vergnaud@gmail.com";
+        $to = "lafeuilledor@free.fr";
         $subject = $_POST["subject"];
         $name = $_POST["name"];
         $from = $_POST["mail"];
+        $message = $_POST["content"];
 
         /* En-têtes de l'e-mail */
         $header = 'From: ' . $name . ' <' . $from . '>'."\r\n\r\n";
