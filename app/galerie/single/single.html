@@ -13,5 +13,5 @@
             ng-href="{{sgl.post.bookBinderUrl}}">{{ app.language === 'fr' ? 'Relieur' : 'Binder'}} : {{sgl.post.bookBinder}}</a>
     </div>
 
-    <button class="back" ui-sref="galerie">Retour aux Réalisations</button>
+    <button class="back" ui-sref="galerie">{{ app.language === 'fr' ? 'Retour aux Réalisations' : 'Back to our work' }}</button>
 </div>

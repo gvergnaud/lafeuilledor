@@ -9,7 +9,7 @@
 
                     var container = element[0].querySelector('.container'),
                         image = element[0].querySelector('.Image'),
-                        details = element[0].querySelector('.Details');
+                        details = element[0].querySelectorAll('.Details');
 
                     if (!container) return;
 
@@ -18,7 +18,8 @@
                     });
 
                     TweenMax.set(details, {
-                        height: '100%',
+                        top: '0%',
+                        minHeight: '100%',
                         zIndex: 1
                     });
 
@@ -31,7 +32,8 @@
                             ease: Power2.easeOut
                         })
                         .to(details, _animDuration, {
-                            height: '50%',
+                            top: '50%',
+                            minHeight: '50%',
                             ease: Power2.easeOut,
                             onComplete: done
                         });
@@ -63,7 +65,8 @@
                     });
 
                     TweenMax.set(details, {
-                        height: '100%'
+                        top: '0%',
+                        minHeight: '100%',
                     });
 
 
@@ -75,7 +78,8 @@
                             ease: Power2.easeOut
                         })
                         .to(details, _animDuration, {
-                            height: '50%',
+                            top: '50%',
+                            minHeight: '50%',
                             ease: Power2.easeOut,
                             onComplete: done
                         });

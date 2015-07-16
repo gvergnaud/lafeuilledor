@@ -11,8 +11,9 @@
     <section class="Details textureBg">
         <div class="Details-content">
             <h1 ng-bind-html="post.title"></h1>
-            <p><strong>{{ app.language === 'fr' ? 'Niveau : ' : 'Level : ' }}</strong>{{post.level}}</p>
-            <p><strong>{{ app.language === 'fr' ? 'Durée : ' : 'Duration : ' }} </strong>{{post.duree}}</p>
+            <p ng-if="!!post.description" ng-bind-html="post.description"></p>
+            <p ng-if="!!post.level"><strong>{{ app.language === 'fr' ? 'Niveau : ' : 'Level : ' }}</strong>{{post.level}}</p>
+            <p ng-if="!!post.duree"><strong>{{ app.language === 'fr' ? 'Durée : ' : 'Duration : ' }} </strong>{{post.duree}}</p>
             <button ng-click="app.go('contact')">{{ app.language === 'fr' ? 'Contacter l\'atelier' : 'Contact the workshop' }}</button>
         </div>
     </section>
