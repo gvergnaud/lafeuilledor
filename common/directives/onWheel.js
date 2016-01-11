@@ -3,7 +3,8 @@
 angular.module('directives.onWheel', [])
     .directive('onWheel', function(){
 
-
+      var _thisScroll = 100,
+          _lastScroll = 0;
 
         return {
 
@@ -12,17 +13,27 @@ angular.module('directives.onWheel', [])
             link: function(scope, element, attrs){
 
                 var onWheel = function(e){
-                    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-                    if(delta < 0){
-                        scope.$apply(function(){
-                            scope.$eval(attrs.down);
-                        });
+
+                    _thisScroll = new Date().getTime();
+
+                    if ((_thisScroll - _lastScroll) > 50) {
+
+                        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+                        if (delta < 0) {
+                            scope.$apply(function() {
+                                scope.$eval(attrs.down);
+                            });
+                        } else {
+                            scope.$apply(function() {
+                                scope.$eval(attrs.up);
+                            });
+                        }
+
                     }
-                    else{
-                        scope.$apply(function(){
-                            scope.$eval(attrs.up);
-                        });
-                    }
+
+                    _lastScroll = new Date().getTime();
+
                 };
 
                 var onKeydown = function(e){
@@ -40,9 +51,6 @@ angular.module('directives.onWheel', [])
                             break;
                     }
                 };
-
-
-
 
                 element.on('mousewheel', onWheel);
                 element.on('DOMMouseScroll', onWheel);
