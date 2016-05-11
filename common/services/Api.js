@@ -126,6 +126,7 @@ angular.module('services.Api', [
                                     slug: realisation.slug,
                                     date: realisation.meta.date,
                                     pictures: realisation.meta.pictures,
+                                    category: realisation.meta.category,
                                     cover: realisation.meta.cover,
                                     bookBinder: realisation.meta.book_binder,
                                     bookBinderUrl: realisation.meta.book_binder_url,

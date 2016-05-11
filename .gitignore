@@ -2,6 +2,7 @@ node_modules
 bower_components
 backup
 dist
+wordpress
 npm-debug.log
 .tmp
 .idea
